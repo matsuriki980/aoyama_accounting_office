@@ -1,0 +1,37 @@
+/*!
+global > color
+------------------------------
+*/
+:root {
+  --color-primary: #303030;
+  --color-font-base: #1D1D1D;
+  --color-accent: #3F4F8A;
+  --color-bg-gray: #EFEFEF;
+  --color-bg-light-gray: #FCFAFA;
+  --color-font-light: #B1B1B1;
+  --color-white: #FFFFFF;
+}
+
+/*!
+global > font
+------------------------------
+*/
+:root {
+  --font-family-base: "Zen Kaku Gothic Antique", sans-serif;
+  --font-family-en: "Outfit", sans-serif;
+}
+
+/*!
+global > z-index
+------------------------------
+*/
+:root {
+  --z-index-header: 30;
+  --z-index-default: 1;
+  --z-index-negative: -1;
+}
+
+/*!
+page > privacy-policy > privacy-policy-layout
+------------------------------
+*//*# sourceMappingURL=privacy-policy-layout.css.map */
