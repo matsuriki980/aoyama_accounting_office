@@ -38,8 +38,13 @@ project-root/
 ├─ index.html  
 ├─ about.html  
 ├─ service.html  
+├─ feature.html  
+├─ voice.html  
+├─ voice-detail.html  
 ├─ contact.html  
 ├─ news.html  
+├─ news-detail.html  
+├─ privacy-policy.html  
 ├─ package.json  
 └─ .gitignore  
 
