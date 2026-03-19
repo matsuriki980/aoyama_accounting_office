@@ -4,3 +4,265 @@
 layout > header
 ------------------------------
 */
+.l-header {
+  padding: 18rem;
+
+  @include g.mq() {
+    padding: 36rem;
+  }
+}
+
+.l-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.l-header__logo {
+  width: 125rem;
+
+  @include g.mq() {
+    width: 165rem;
+  }
+}
+
+.l-header__content {
+  display: flex;
+  align-items: center;
+  gap: 36rem;
+}
+
+.l-gnav__nav {
+  display: none;
+
+  @include g.mq() {
+    display: block;
+  }
+}
+
+.l-gnav__list {
+  @include g.mq() {
+    display: flex;
+    gap: 36rem;
+  }
+}
+
+.l-gnav__item {
+}
+
+.l-gnav__link {
+  @include g.mq() {
+    font-size: 14rem;
+  }
+}
+
+.l-header__btn-wrap {
+  display: flex;
+  gap: 7rem;
+  align-items: center;
+}
+
+.l-header__btn {
+  width: 39rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.l-header__contact-btn {
+  border: 1px var(--color-primary) solid;
+  display: grid;
+  place-items: center;
+
+  .icon {
+    width: 16rem;
+    aspect-ratio: 1/1;
+    mask-image: url(../../assets/img/mail-icon.svg);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: var(--color-primary);
+  }
+}
+
+.l-hamburger {
+  background: var(--color-primary);
+  border: 1px var(--color-primary) solid;
+  position: relative;
+
+  span {
+    display: inline-block;
+    width: 16rem;
+    height: 1px;
+    background-color: var(--color-white);
+    position: absolute;
+  }
+}
+
+.l-hamburger_open {
+  span {
+    right: 11.5rem;
+
+    &:nth-of-type(1) {
+      width: 17rem;
+      top: 16rem;
+    }
+    &:nth-of-type(2) {
+      width: 12rem;
+      bottom: 16rem;
+    }
+  }
+}
+
+.l-hamburger_close {
+  position: fixed;
+  top: 18rem;
+  right: 18rem;
+  border: 1px var(--color-white) solid;
+
+  &:nth-of-type(1) {
+    transform: rotate(160deg);
+  }
+  &:nth-of-type(2) {
+    width: 12rem;
+    bottom: 16rem;
+  }
+}
+
+.l-menu {
+  @include g.mq() {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &::backdrop {
+    display: none;
+  }
+}
+
+.l-menu__inner {
+  @include g.mq() {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+  }
+}
+
+.l-menu__nav {
+  background: var(--color-primary);
+  padding: 24rem 18rem;
+  width: 100vw;
+
+  @include g.mq() {
+    width: auto;
+  }
+}
+
+.l-menu__logo {
+  width: 125rem;
+
+  @include g.mq() {
+    margin-left: 60rem;
+    width: 165rem;
+  }
+}
+
+.l-menu__list {
+  margin-top: 16rem;
+
+  @include g.mq() {
+    margin-top: 40rem;
+    padding-inline: 120rem;
+  }
+}
+
+.l-menu__item {
+  padding-block: 16rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-white);
+
+  &:nth-of-type(2),
+  &:nth-of-type(3) {
+    /* 2階層があるナビのみ幅指定 */
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  @include g.mq() {
+    &:nth-of-type(2) {
+      grid-template-columns: 145rem 300rem;
+    }
+    &:nth-of-type(3) {
+      grid-template-columns: 145rem 200rem;
+    }
+  }
+}
+
+.l-menu__link {
+  display: block;
+
+  @include g.mq() {
+    font-size: 17rem;
+  }
+}
+
+.l-menu__list_child {
+  @include g.mq() {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+.l-menu__item_child {
+}
+
+.l-menu__link_child {
+  color: var(--color-font-light);
+  font-size: 14rem;
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 8rem;
+    height: 1px;
+    background-color: var(--color-font-light);
+  }
+}
+
+.l-menu__img-wrap {
+  display: none;
+
+  @include g.mq() {
+    display: block;
+  }
+}
+
+.l-menu-img {
+  @include g.mq() {
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.l-menu__decoration {
+  display: none;
+
+  @include g.mq() {
+    display: block;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 170rem;
+    position: absolute;
+    bottom: 0;
+    left: -30rem;
+    font-family: var(--font-family-en);
+    font-weight: 100;
+    line-height: 0.7;
+    white-space: nowrap;
+    letter-spacing: -0.05em;
+  }
+}
