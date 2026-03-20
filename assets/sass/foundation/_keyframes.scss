@@ -1,0 +1,17 @@
+@use "../global" as g;
+
+/*!
+foundation > keyframes
+------------------------------
+*/
+
+
+/* テキストを横に流す */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
