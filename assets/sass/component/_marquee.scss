@@ -1,0 +1,29 @@
+@use "../global" as g;
+@use "../foundation/keyframes";
+
+/*!
+foundation > marquee
+------------------------------
+*/
+
+.c-marquee {
+  @include g.mq() {
+    display: block !important;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+
+    &__inner {
+      display: inline-block;
+      animation: marquee 15s linear infinite;
+    }
+
+    span {
+      font-size: 170rem;
+      font-weight: 100;
+      font-family: var(--font-family-en);
+      line-height: 1;
+    }
+  }
+}
