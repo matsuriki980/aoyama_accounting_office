@@ -8,10 +8,9 @@ export const initializeHamburgerMenu = () => {
   const cloceBtn = document.querySelector(".js-menu__button_close");
   // const closeBtn = document.querySelector(".js-header-menu-close-button");
 
- // if (!menu || !openBtn || !cloceBtn) return;
+  // if (!menu || !openBtn || !cloceBtn) return;
 
-  menu.showModal();
-
-  // btn.addEventListener("click", () => {
-  // });
+  openBtn.addEventListener("click", () => {
+    menu.showModal();
+  });
 };
