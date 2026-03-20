@@ -35,6 +35,14 @@ global > z-index
 }
 
 /*!
+global > timing
+------------------------------
+*/
+:root {
+  --duration-base: 0.3s;
+}
+
+/*!
 foundation > reset
 ------------------------------
 */
@@ -278,7 +286,7 @@ utility > utility
 
 @media screen and (min-width: 900px) {
   .u-link-hover {
-    transition: opacity 0.3s;
+    transition: opacity var(--duration-base);
   }
 }
 @media screen and (min-width: 900px) and (any-hover: hover) {
@@ -292,8 +300,9 @@ utility > utility
   background-position: 0 100%;
   background-size: 0 1px;
   background-repeat: no-repeat;
-  transition: background-size 0.3s;
+  transition: background-size var(--duration-base);
   display: block;
+  line-height: 1;
 }
 @media screen and (min-width: 900px) {
   .u-text-hover {
@@ -318,6 +327,43 @@ component > lead
 component > title
 ------------------------------
 */
+/*!
+foundation > keyframes
+------------------------------
+*/
+/* テキストを横に流す */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+/*!
+foundation > marquee
+------------------------------
+*/
+@media screen and (min-width: 900px) {
+  .c-marquee {
+    display: block !important;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+  }
+  .c-marquee__inner {
+    display: inline-block;
+    animation: marquee 15s linear infinite;
+  }
+  .c-marquee span {
+    font-size: 170rem;
+    font-weight: 100;
+    font-family: var(--font-family-en);
+    line-height: 1;
+  }
+}
+
 /*!
 layout > container
 ------------------------------
@@ -406,12 +452,21 @@ layout > header
   width: 39rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
+  border: 1px var(--color-primary) solid;
 }
 
 .l-header__contact-btn {
-  border: 1px var(--color-primary) solid;
   display: grid;
   place-items: center;
+  transition: background-color var(--duration-base);
+}
+@media screen and (min-width: 900px) and (any-hover: hover) {
+  .l-header__contact-btn:hover {
+    background-color: var(--color-primary);
+  }
+  .l-header__contact-btn:hover .icon {
+    background-color: var(--color-white);
+  }
 }
 .l-header__contact-btn .icon {
   width: 16rem;
@@ -425,12 +480,21 @@ layout > header
   -webkit-mask-size: contain;
           mask-size: contain;
   background-color: var(--color-primary);
+  transition: background-color var(--duration-base);
 }
 
 .l-hamburger {
   background: var(--color-primary);
-  border: 1px var(--color-primary) solid;
   position: relative;
+  transition: background-color var(--duration-base);
+}
+@media screen and (min-width: 900px) and (any-hover: hover) {
+  .l-hamburger:hover {
+    background-color: var(--color-white);
+  }
+  .l-hamburger:hover span {
+    background-color: var(--color-primary);
+  }
 }
 .l-hamburger span {
   display: inline-block;
@@ -438,6 +502,7 @@ layout > header
   height: 1px;
   background-color: var(--color-white);
   position: absolute;
+  transition: background-color var(--duration-base);
 }
 
 .l-hamburger_open span {
@@ -489,6 +554,10 @@ layout > header
   background: var(--color-primary);
   padding: 24rem 18rem;
   width: 100vw;
+  background-image: url(../img/bg_texture.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 @media screen and (min-width: 900px) {
   .l-menu__nav {
@@ -517,9 +586,20 @@ layout > header
 }
 
 .l-menu__item {
-  padding-block: 16rem;
   border-bottom: 1px solid var(--color-border);
   color: var(--color-white);
+  padding-block: 16rem;
+  background-image: linear-gradient(var(--color-white), var(--color-white));
+  background-position: 0 100%;
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  transition: background-size var(--duration-base);
+}
+@media (any-hover: hover) {
+  .l-menu__item:has(.l-menu__link:hover) {
+    /* 1階層目のリンクをホバーしたときのみ、下線を100% */
+    background-size: 100% 1px;
+  }
 }
 .l-menu__item:nth-of-type(2), .l-menu__item:nth-of-type(3) {
   /* 2階層があるナビのみ幅指定 */
@@ -544,6 +624,7 @@ layout > header
   }
 }
 
+/* 2階層目 */
 @media screen and (min-width: 900px) {
   .l-menu__list_child {
     display: grid;
@@ -557,13 +638,19 @@ layout > header
   display: flex;
   gap: 6rem;
   align-items: center;
+  transition: color var(--duration-base);
+}
+@media (any-hover: hover) {
+  .l-menu__link_child:hover {
+    color: var(--color-white);
+  }
 }
 .l-menu__link_child::before {
   content: "";
   display: block;
   width: 8rem;
   height: 1px;
-  background-color: var(--color-font-light);
+  background-color: currentColor;
 }
 
 .l-menu__img-wrap {
@@ -583,22 +670,17 @@ layout > header
   }
 }
 
-.l-menu__decoration {
+.l-menu__marquee {
   display: none;
 }
 @media screen and (min-width: 900px) {
-  .l-menu__decoration {
-    display: block;
+  .l-menu__marquee {
+    bottom: -18rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .l-menu__marquee span {
     color: rgba(255, 255, 255, 0.4);
-    font-size: 170rem;
-    position: absolute;
-    bottom: 0;
-    left: -30rem;
-    font-family: var(--font-family-en);
-    font-weight: 100;
-    line-height: 0.7;
-    white-space: nowrap;
-    letter-spacing: -0.05em;
   }
 }
 
