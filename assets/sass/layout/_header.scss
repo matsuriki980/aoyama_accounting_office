@@ -47,9 +47,6 @@ layout > header
   }
 }
 
-.l-gnav__item {
-}
-
 .l-gnav__link {
   @include g.mq() {
     font-size: 14rem;
@@ -66,12 +63,25 @@ layout > header
   width: 39rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
+  border: 1px var(--color-primary) solid;
 }
 
 .l-header__contact-btn {
-  border: 1px var(--color-primary) solid;
   display: grid;
   place-items: center;
+  transition: background-color var(--duration-base);
+
+  @include g.mq() {
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--color-primary);
+
+        .icon {
+          background-color: var(--color-white);
+        }
+      }
+    }
+  }
 
   .icon {
     width: 16rem;
@@ -81,13 +91,26 @@ layout > header
     mask-repeat: no-repeat;
     mask-size: contain;
     background-color: var(--color-primary);
+    transition: background-color var(--duration-base);
   }
 }
 
 .l-hamburger {
   background: var(--color-primary);
-  border: 1px var(--color-primary) solid;
   position: relative;
+  transition: background-color var(--duration-base);
+
+  @include g.mq() {
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--color-white);
+
+        span {
+          background-color: var(--color-primary);
+        }
+      }
+    }
+  }
 
   span {
     display: inline-block;
@@ -95,6 +118,7 @@ layout > header
     height: 1px;
     background-color: var(--color-white);
     position: absolute;
+    transition: background-color var(--duration-base);
   }
 }
 
@@ -152,6 +176,10 @@ layout > header
   background: var(--color-primary);
   padding: 24rem 18rem;
   width: 100vw;
+  background-image: url(../img/bg_texture.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
   @include g.mq() {
     width: auto;
@@ -177,9 +205,21 @@ layout > header
 }
 
 .l-menu__item {
-  padding-block: 16rem;
   border-bottom: 1px solid var(--color-border);
   color: var(--color-white);
+  padding-block: 16rem;
+  background-image: linear-gradient(var(--color-white), var(--color-white));
+  background-position: 0 100%;
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  transition: background-size var(--duration-base);
+
+  @media (any-hover: hover) {
+    &:has(.l-menu__link:hover) {
+      /* 1階層目のリンクをホバーしたときのみ、下線を100% */
+      background-size: 100% 1px;
+    }
+  }
 
   &:nth-of-type(2),
   &:nth-of-type(3) {
@@ -206,14 +246,12 @@ layout > header
   }
 }
 
+/* 2階層目 */
 .l-menu__list_child {
   @include g.mq() {
     display: grid;
     grid-template-columns: repeat(2, auto);
   }
-}
-
-.l-menu__item_child {
 }
 
 .l-menu__link_child {
@@ -222,13 +260,20 @@ layout > header
   display: flex;
   gap: 6rem;
   align-items: center;
+  transition: color var(--duration-base);
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-white);
+    }
+  }
 
   &::before {
     content: "";
     display: block;
     width: 8rem;
     height: 1px;
-    background-color: var(--color-font-light);
+    background-color: currentColor;
   }
 }
 
@@ -249,20 +294,16 @@ layout > header
   }
 }
 
-.l-menu__decoration {
+.l-menu__marquee {
   display: none;
 
   @include g.mq() {
-    display: block;
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 170rem;
-    position: absolute;
-    bottom: 0;
-    left: -30rem;
-    font-family: var(--font-family-en);
-    font-weight: 100;
-    line-height: 0.7;
-    white-space: nowrap;
-    letter-spacing: -0.05em;
+    bottom: -18rem;
+  }
+
+  @include g.mq() {
+    span {
+      color: rgba(255, 255, 255, 0.4);
+    }
   }
 }
