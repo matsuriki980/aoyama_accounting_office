@@ -32,7 +32,7 @@ utility > utility
 
 .u-link-hover {
   @include g.mq() {
-    transition: opacity 0.3s;
+    transition: opacity var(--duration-base);
 
     @media (any-hover: hover) {
       &:hover {
@@ -47,8 +47,9 @@ utility > utility
   background-position: 0 100%;
   background-size: 0 1px;
   background-repeat: no-repeat;
-  transition: background-size 0.3s;
+  transition: background-size var(--duration-base);
   display: block;
+  line-height: 1;
 
   @include g.mq() {
     padding-bottom: 4rem;
@@ -60,3 +61,4 @@ utility > utility
     }
   }
 }
+
