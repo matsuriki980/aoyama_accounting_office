@@ -1,0 +1,30 @@
+@use "../global" as g;
+@use "../foundation/keyframes";
+
+/*!
+foundation > nav-child
+------------------------------
+*/
+
+.c-nav__link_child {
+  color: var(--color-font-light);
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+  transition: color var(--duration-base);
+  font-size: 14rem;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-white);
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 8rem;
+    height: 1px;
+    background-color: currentColor;
+  }
+}

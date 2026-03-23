@@ -205,7 +205,7 @@ layout > header
 }
 
 .l-menu__item {
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border-light);
   color: var(--color-white);
   padding-block: 16rem;
   background-image: linear-gradient(var(--color-white), var(--color-white));
@@ -251,29 +251,6 @@ layout > header
   @include g.mq() {
     display: grid;
     grid-template-columns: repeat(2, auto);
-  }
-}
-
-.l-menu__link_child {
-  color: var(--color-font-light);
-  font-size: 14rem;
-  display: flex;
-  gap: 6rem;
-  align-items: center;
-  transition: color var(--duration-base);
-
-  @media (any-hover: hover) {
-    &:hover {
-      color: var(--color-white);
-    }
-  }
-
-  &::before {
-    content: "";
-    display: block;
-    width: 8rem;
-    height: 1px;
-    background-color: currentColor;
   }
 }
 
