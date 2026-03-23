@@ -1052,6 +1052,84 @@ layout > contact-cta
 layout > page-kv
 ------------------------------
 */
+.l-page-kv {
+  background-image: url(../img/service/service-kv-sp.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 436rem;
+  position: relative;
+  overflow: hidden;
+}
+.l-page-kv::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(29, 29, 29, 0.2) 0%, rgb(29, 29, 29) 100%);
+}
+
+.l-page-kv__content {
+  width: 100%;
+  position: absolute;
+  bottom: -15rem;
+  display: flex;
+}
+@media screen and (min-width: 900px) {
+  .l-page-kv__content {
+    bottom: -34rem;
+  }
+}
+.l-page-kv__content::before {
+  content: "";
+  display: block;
+  width: 30rem;
+  height: 1px;
+  margin: 16rem 20rem 0 0;
+  background-color: var(--color-white);
+}
+@media screen and (min-width: 900px) {
+  .l-page-kv__content::before {
+    width: 100rem;
+    margin-top: 20rem;
+  }
+}
+
+.l-page-kv__title {
+  color: var(--color-white);
+}
+
+@media screen and (min-width: 900px) {
+  .l-page-kv__title--ja {
+    font-size: 20rem;
+  }
+}
+
+.l-page-kv__title--en {
+  font-size: 88rem;
+  line-height: 1;
+  text-transform: capitalize;
+  font-family: var(--font-family-en);
+  font-weight: 200;
+  letter-spacing: -0.02em;
+}
+@media screen and (min-width: 900px) {
+  .l-page-kv__title--en {
+    font-size: 190rem;
+  }
+}
+.l-page-kv__title--en span {
+  display: block;
+}
+@media screen and (min-width: 900px) {
+  .l-page-kv__title--en span {
+    display: inline-block;
+  }
+}
+
 /*!
 layout > footer
 ------------------------------
