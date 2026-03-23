@@ -8,7 +8,28 @@ component > button
 .c-btn {
 }
 
-/* 矢印のみ */
+.c-btn__link {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 15rem;
+  align-items: center;
+
+  @include g.mq() {
+    width: auto;
+    grid-template-columns: 163rem auto;
+    gap: 20rem;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: var(--color-primary);
+  }
+}
+
+/* 矢印付 */
 .c-btn_arrow {
   width: 84rem;
   height: 30rem;
