@@ -16,7 +16,7 @@
     <meta property="og:description"
         content="青山会計事務所は静岡市駿河区を拠点に、税務・会計、相続・贈与、設立・開業支援まで幅広く対応しています。お客様の安心と成長につながるよう、ともに考え、ともに進むことを大切にしています。">
 
-    <title>青山会計事務所 | 静岡市駿河区の税務・会計・相続相談に対応する会計事務所</title>
+    <title>コンポーネントページ</title>
 
     <!-- ファビコンを設定する -->
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
@@ -174,6 +174,98 @@
     </header>
 
     <main>
+
+        <div class="l-container">
+
+            <!-- =========================================
+          c-btn
+    ======================================== -->
+            <div class="u-ptb">
+                <div class="c-btn">
+                    <a href="#" class="c-btn__link">私たちについて</a>
+                </div>
+            </div>
+
+            <!-- =========================================
+          c-news__item
+    ======================================== -->
+            <div class="u-ptb">
+                <article class="c-news__item">
+                    <a href="#" class="c-news__link">
+                        <div class="c-news__img">
+                            <img src="assets/img/news/news01.jpg" width="315" height="210" alt="白いデスクの上でパソコン作業を行う人物との手">
+                        </div>
+                        <div class="c-news__text">
+                            <div class="c-news__info">
+                                <span class="c-news__category">お知らせ</span>
+                                <time class="c-news__date" datetime="2026-01-08">2026.01.08</time>
+                            </div>
+
+                            <!-- hタグに差し替える -->
+                            <p class="c-news__title">ホームページをリニューアルしました</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+
+            <!-- =========================================
+          c-voice__item
+    ======================================== -->
+            <div class="u-ptb">
+                <article class="c-voice__item">
+                    <a href="#" class="c-voice__link">
+                        <span class="c-voice__number">(01)</span>
+                        <div class="c-voice__img">
+                            <img src="assets/img/voice/voice01.jpg" width="270" height="300" alt="">
+                        </div>
+                        <div class="c-voice__content">
+                            <p class="c-voice__name">株式会社桐嶋製作所 K・O様</p>
+                            <p class="c-voice__text">数字のプロ。言われたことだけじゃなく、提案までしてくれるのでいつも助かります</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+
+            <!-- =========================================
+          c-form__item
+    ======================================== -->
+            <div class="u-ptb">
+                <div class="c-form__item">
+                    <label for="name" class="c-form__label">
+                        <span class="c-form__label-text">お名前</span>
+                        <span class="c-form__required">必須</span>
+                    </label>
+                    <input type="text" class="c-form__text" name="name" id="name" placeholder="山田 太郎">
+                </div>
+            </div>
+
+            <div class="u-ptb">
+                <div class="c-form__item">
+                    <label for="postal-code-1" class="c-form__label">
+                        <span class="c-form__label-text">郵便番号</span>
+                    </label>
+                    <div class="c-form__postal">
+                        <input type="text" class="c-form__text" id="postal-code-1" name="postal_code_1"
+                            inputmode="numeric" pattern="\d{3}" maxlength="3" placeholder="000" title="3桁の数字を入力してください">
+
+                        <span class="c-form__postal-hyphen">-</span>
+                        <input type="text" class="c-form__text" id="postal-code-2" name="postal_code_2"
+                            inputmode="numeric" pattern="\d{4}" maxlength="4" placeholder="0000" title="4桁の数字を入力してください">
+                    </div>
+                </div>
+            </div>
+
+            <div class="u-ptb">
+                <div class="c-form__item">
+                    <label for="message" class="c-form__label">
+                        <span class="c-form__label-text">お問い合わせ内容</span>
+                        <span class="c-form__required">必須</span>
+                    </label>
+                    <textarea class="c-form__text" name="message" id="message"
+                        placeholder="お問い合わせ内容を入力してください。"></textarea>
+                </div>
+            </div>
+        </div>
 
         <!-- =========================================
      contact-cta

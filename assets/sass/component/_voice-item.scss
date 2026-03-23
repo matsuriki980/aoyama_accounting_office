@@ -1,0 +1,64 @@
+@use "../global" as g;
+@use "../foundation/keyframes";
+
+/*!
+component > voice-item
+------------------------------
+*/
+
+.c-voice__item {
+  background-color: var(--color-primary);
+}
+
+.c-voice__link {
+  display: block;
+  width: 100%;
+  padding: 30rem;
+  border-top: 1px solid var(--color-border-light);
+  border-right: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+  color: var(--color-white);
+
+  @include g.mq() {
+    padding: 60rem;
+
+    @media (any-hover: hover) {
+      &:hover {
+        img {
+          scale: 1.1;
+        }
+      }
+    }
+  }
+}
+
+.c-voice__number {
+  font-family: var(--font-family-en);
+  font-size: 14rem;
+  font-weight: 200;
+}
+
+.c-voice__img {
+  border-radius: 10rem;
+  overflow: hidden;
+  margin-top: 20rem;
+
+  @include g.mq() {
+    img {
+      transition: scale var(--duration-base);
+    }
+  }
+}
+
+.c-voice__content {
+  margin-top: 26rem;
+}
+
+.c-voice__name {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.c-voice__text {
+  margin-top: 5rem;
+  font-size: 18rem;
+}

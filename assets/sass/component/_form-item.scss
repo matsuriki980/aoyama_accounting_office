@@ -1,0 +1,49 @@
+@use "../global" as g;
+@use "../foundation/keyframes";
+
+/*!
+component > form-item
+------------------------------
+*/
+
+.c-form__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
+}
+
+.c-form__label {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.c-form__label-text {
+  font-size: 18rem;
+}
+
+.c-form__required {
+  font-size: 12rem;
+  font-weight: 500;
+  color: var(--color-red);
+}
+
+.c-form__text {
+  background-color: var(--color-bg-gray);
+  border: 1px solid rgba(48, 48, 48, 0.1);
+  padding: 7rem 17rem;
+}
+
+.c-form__text::placeholder {
+  color: var(--color-font-light);
+}
+
+.c-form__postal {
+  display: grid;
+  grid-template-columns: 66rem 10.5rem 76rem;
+  gap: 9rem;
+}
+
+.c-form__postal-hyphen {
+  font-size: 22rem;
+}
