@@ -7,23 +7,24 @@ component > marquee
 */
 
 .c-marquee {
-  @include g.mq() {
-    display: block !important;
-    width: 100%;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
+  display: block !important;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 
-    &__inner {
+  span {
+    font-size: 125rem;
+    font-weight: 100;
+    font-family: var(--font-family-en);
+    line-height: 1;
+
+    @include g.mq() {
+      font-size: 170rem;
+    }
+  }
+
+  &__inner {
       display: inline-block;
       animation: marquee 15s linear infinite;
-    }
-
-    span {
-      font-size: 170rem;
-      font-weight: 100;
-      font-family: var(--font-family-en);
-      line-height: 1;
-    }
   }
 }
