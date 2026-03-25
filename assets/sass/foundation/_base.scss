@@ -19,16 +19,17 @@ foundation > base
 
 html {
   font-size: calc(100vw / var(--base-vw));
+  scroll-behavior: smooth;
 }
 
 body {
   line-height: 2;
   font-size: 16rem;
   font-family: var(--font-family-base);
-  color: var(--color-font-base); 
+  color: var(--color-font-base);
   font-weight: 400;
 
- // @include g.mq() {
- //   font-size: 18rem;
- // }
+  // @include g.mq() {
+  //   font-size: 18rem;
+  // }
 }
