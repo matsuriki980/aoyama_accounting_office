@@ -7,9 +7,11 @@ layout > contact-cta
 .l-contact-cta {
   background-color: var(--color-primary);
   padding: 50rem 30rem;
+  margin-top: 62rem;
 
   @include g.mq() {
     padding: 90rem 60rem;
+    margin-top: 88rem;
   }
 }
 
@@ -87,7 +89,7 @@ layout > contact-cta
 
   @include g.mq() {
     flex-direction: column;
-    gap: 16rem; 
+    gap: 16rem;
   }
 }
 
