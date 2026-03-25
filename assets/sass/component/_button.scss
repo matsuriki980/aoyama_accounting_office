@@ -1,4 +1,5 @@
 @use "../global" as g;
+@use "../mixin" as m;
 
 /*!
 component > button
@@ -43,6 +44,8 @@ component > button
     display: block;
     width: 30rem;
     height: 8rem;
-    background-image: url(../img/btn_arrow.svg);
+    mask-image: url(../img/btn_arrow.svg);
+    @include m.mask-img;
+    background-color: var(--color-border);
   }
 }
