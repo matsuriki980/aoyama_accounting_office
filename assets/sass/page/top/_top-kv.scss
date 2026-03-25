@@ -1,6 +1,126 @@
 @use "../../global" as g;
+@use "../../mixin" as m;
 
 /*!
 page > top > top-kv
 ------------------------------
 */
+
+.top-kv {
+  padding-top: 97rem;
+
+  @include g.mq() {
+    padding-top: 196rem;
+  }
+}
+
+.top-kv__head {
+  margin-inline: 30rem;
+  position: relative;
+
+  @include g.mq() {
+    margin-inline: 78rem 90rem;
+  }
+}
+
+.top-kv__message-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16rem;
+
+  @include g.mq() {
+    gap: 11rem;
+  }
+}
+
+.top-kv__message {
+}
+
+.top-kv__message--en {
+  font-family: var(--font-family-en);
+  font-size: 70rem;
+  font-weight: 300;
+  text-transform: capitalize;
+  line-height: 1;
+
+  @include g.mq() {
+    font-size: 131rem;
+  }
+
+  span {
+    display: block;
+    letter-spacing: -0.05em;
+
+    @include g.mq() {
+      display: inline-block;
+    }
+  }
+}
+
+.top-kv__message--ja {
+  span {
+    display: block;
+
+    @include g.mq() {
+      display: inline-block;
+    }
+  }
+}
+
+.top-kv__scroller-btn {
+  width: 60rem;
+  aspect-ratio: 1/1;
+  border: 1px solid var(--color-font-base);
+  display: grid;
+  place-items: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  @include g.mq() {
+    width: 120rem;
+    top: 0;
+    bottom: auto;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 28rem;
+    height: 26.6rem;
+    background-image: url(../img/top/top-kv-scroller-arrow.svg);
+    @include m.background-img;
+
+    @include g.mq() {
+      width: 56rem;
+      height: 53.2rem;
+    }
+  }
+}
+
+.top-kv__img {
+  margin-top: 15rem;
+  padding-top: 25rem;
+  position: relative;
+
+  @include g.mq() {
+    margin: 0 30rem 0 0;
+    padding: 60rem 60rem 0 0;
+  }
+}
+
+.top-kv__decoration {
+  width: 60rem;
+  height: 75rem;
+  display: block;
+  background-image: url(../img/top/top-kv-decoration.svg);
+  @include m.background-img;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  @include g.mq() {
+    width: 120rem;
+    height: 150rem;
+  }
+}

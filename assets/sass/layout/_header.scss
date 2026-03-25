@@ -5,10 +5,18 @@ layout > header
 ------------------------------
 */
 .l-header {
-  padding: 18rem;
+  position: fixed;
+  z-index: var(--z-index-header);
+  inset: 0;
+  height: 76rem;
+  padding-inline: 18rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   @include g.mq() {
-    padding: 36rem;
+    height: 92rem;
+    padding-inline: 36rem;
   }
 }
 
@@ -16,6 +24,7 @@ layout > header
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .l-header__logo {

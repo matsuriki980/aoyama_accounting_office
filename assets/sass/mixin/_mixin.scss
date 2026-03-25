@@ -1,0 +1,12 @@
+@use "../global" as g;
+
+/*!
+mixin > mixin
+------------------------------
+*/
+
+@mixin background-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
