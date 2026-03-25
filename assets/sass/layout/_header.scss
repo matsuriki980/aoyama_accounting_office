@@ -284,6 +284,7 @@ layout > header
   display: none;
 
   @include g.mq() {
+    position: absolute;
     bottom: -18rem;
   }
 

@@ -6,19 +6,27 @@ page > top > top-about
 ------------------------------
 */
 .top-about {
-  display: grid;
-  grid-template-columns: 1fr;
   padding-top: 52rem;
 
   @include g.mq() {
     padding-top: 102rem;
+  }
+}
+
+.top-about__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include g.mq() {
     gap: 82rem 50rem;
   }
 }
 
 .top-about__title-wrap {
-  grid-column: 1/3;
-  grid-row: 1/2;
+  @include g.mq() {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
 }
 
 .top-about__title {
@@ -203,4 +211,37 @@ page > top > top-about
   aspect-ratio: 1/1;
   bottom: -60rem;
   left: -30rem;
+}
+
+.top-about__marquee {
+  margin-top: 53rem;
+  position: relative;
+  line-height: 0;
+
+  @include g.mq() {
+    margin-top: 150rem;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-primary);
+    position: absolute;
+    left: 0;
+  }
+
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+
+  span {
+    line-height: 0.5;
+    font-weight: 200;
+  }
 }
