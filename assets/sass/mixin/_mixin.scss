@@ -10,3 +10,9 @@ mixin > mixin
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@mixin mask-img {
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}
