@@ -1874,6 +1874,217 @@ page > top > top-service
 page > top > top-feature
 ------------------------------
 */
+.top-feature {
+  background-color: var(--color-bg-gray);
+  padding-block: 76rem;
+  position: relative;
+}
+@media screen and (min-width: 900px) {
+  .top-feature {
+    padding-block: 136rem 254rem;
+  }
+}
+
+.top-feature__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 900px) {
+  .top-feature__inner {
+    grid-template-columns: auto;
+    gap: 108rem 120rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .top-feature__title-wrap {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+}
+
+.top-feature__title-en span::before {
+  width: 180rem;
+}
+@media screen and (min-width: 900px) {
+  .top-feature__title-en span::before {
+    width: 330rem;
+  }
+}
+.top-feature__title-en span::after {
+  width: 187rem;
+}
+@media screen and (min-width: 900px) {
+  .top-feature__title-en span::after {
+    width: 466rem;
+  }
+}
+
+.top-feature__img {
+  margin: 42rem auto 0;
+  width: 286rem;
+  height: 361rem;
+  position: relative;
+}
+@media screen and (min-width: 900px) {
+  .top-feature__img {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: 0 auto auto;
+    width: 360rem;
+    height: 483rem;
+  }
+}
+.top-feature__img span {
+  overflow: hidden;
+  border-radius: 10rem;
+  display: inline-block;
+  width: 250rem;
+  height: 335rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 900px) {
+  .top-feature__img span {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+.top-feature__img span img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.top-feature__img span::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.top-feature__img span:nth-of-type(1) {
+  z-index: 2;
+  transform: translate(-50%, -50%) rotate(-6.59deg);
+}
+@media screen and (min-width: 900px) {
+  .top-feature__img span:nth-of-type(1) {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+.top-feature__img span:nth-of-type(1)::after {
+  background-color: rgba(48, 48, 48, 0.1);
+}
+.top-feature__img span:nth-of-type(2) {
+  z-index: 1;
+}
+.top-feature__img span:nth-of-type(2)::after {
+  background-color: rgba(48, 48, 48, 0.4);
+}
+
+.top-feature__content {
+  margin-top: 30rem;
+}
+@media screen and (min-width: 900px) {
+  .top-feature__content {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-top: 0;
+  }
+}
+
+.top-feature__lead {
+  font-size: 26rem;
+  font-weight: 500;
+  line-height: 1.615;
+}
+@media screen and (min-width: 900px) {
+  .top-feature__lead {
+    font-size: 40rem;
+    line-height: 1.2;
+  }
+}
+.top-feature__lead span {
+  display: block;
+}
+
+.top-feature__taxt {
+  margin-top: 18rem;
+}
+@media screen and (min-width: 900px) {
+  .top-feature__taxt {
+    margin-top: 264rem;
+  }
+}
+.top-feature__taxt span {
+  display: block;
+}
+
+.top-feature__btn {
+  margin-top: 39rem;
+}
+
+.top-feature__marquee {
+  position: absolute;
+  z-index: 0;
+  top: 320rem;
+}
+@media screen and (min-width: 900px) {
+  .top-feature__marquee {
+    top: 520rem;
+  }
+}
+
+.top-feature__marquee__inner {
+  color: var(--color-white);
+}
+
+.top-feature__decoration {
+  position: absolute;
+  display: block;
+  z-index: var(--z-index-default);
+}
+
+.top-feature__decoration--top-right {
+  width: 60rem;
+  aspect-ratio: 1/1;
+  top: 15rem;
+  right: 15rem;
+  background-image: url(../img/top/top-feature-decoration-right.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 900px) {
+  .top-feature__decoration--top-right {
+    width: 120rem;
+    top: 240rem;
+    right: 90rem;
+  }
+}
+
+.top-feature__decoration--bottom-left {
+  width: 45rem;
+  aspect-ratio: 1/1;
+  bottom: 15rem;
+  left: 15rem;
+  background-image: url(../img/top/top-feature-decoration-left.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 900px) {
+  .top-feature__decoration--bottom-left {
+    width: 90rem;
+    bottom: 150rem;
+    left: 90rem;
+  }
+}
+
 /*!
 page > top > top-voice
 ------------------------------
