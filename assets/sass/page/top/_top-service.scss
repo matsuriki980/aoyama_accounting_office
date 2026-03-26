@@ -4,3 +4,173 @@
 page > top > top-service
 ------------------------------
 */
+.top-service {
+  padding-top: 45rem;
+
+  @include g.mq() {
+    padding-top: 166rem;
+    margin-bottom: -60rem;
+  }
+}
+
+.top-service__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.top-service__title-wrap {
+}
+
+.top-service__title {
+  span {
+    &::before {
+      width: 180rem;
+
+      @include g.mq() {
+        width: 330rem;
+      }
+    }
+
+    &::after {
+      width: 195rem;
+
+      @include g.mq() {
+        width: 330rem;
+      }
+    }
+  }
+}
+
+.top-service__btn-wrap {
+  display: none;
+
+  @include g.mq() {
+    display: flex;
+    align-items: center;
+    height: 105rem;
+  }
+}
+
+.top-service__list {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 330rem);
+  margin-top: 40rem;
+
+  @include g.mq() {
+    grid-template-columns: repeat(3, 450rem);
+    justify-content: center;
+    position: relative;
+    align-items: flex-start;
+  }
+}
+
+.top-service__item {
+  padding: 45rem 30rem;
+  border-top: 1px solid var(--color-border-light-black);
+  border-right: 1px solid var(--color-border-light-black);
+  border-bottom: 1px solid var(--color-border-light-black);
+  background-color: var(--color-white);
+
+  @include g.mq() {
+    padding: 60rem 30rem 150rem;
+    border-bottom: 0px solid var(--color-border-light-black);
+  }
+
+  &:nth-of-type(2) {
+    @include g.mq() {
+      margin-top: 30rem;
+    }
+  }
+
+  &:nth-of-type(3) {
+    @include g.mq() {
+      margin-top: 60rem;
+      border-right: 0px solid var(--color-border-light-black);
+    }
+  }
+}
+
+.top-service__link:hover {
+  @include g.mq() {
+    @media (any-hover: hover) {
+      img {
+        scale: 1.1;
+      }
+    }
+  }
+}
+
+.top-service__img {
+  overflow: hidden;
+  border-radius: 10rem;
+
+  img {
+    transition: scale var(--duration-base);
+  }
+}
+
+.top-service__item-title-wrap {
+  margin-top: 25rem;
+  position: relative;
+}
+
+.top-service__item-title-ja {
+  font-size: 20rem;
+  line-height: 1.1;
+
+  @include g.mq() {
+    font-size: 28rem;
+  }
+}
+
+.top-service__item-title-en {
+  margin-top: 4rem;
+  font-family: var(--font-family-en);
+  font-weight: 100;
+  letter-spacing: 0;
+  font-size: 14rem;
+
+  @include g.mq() {
+    margin-top: 8rem;
+  }
+}
+
+/* □の装飾の設定 */
+.top-service__decoration-wrap {
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  top: 2rem;
+  right: 0;
+
+  @include g.mq() {
+    top: 4rem;
+  }
+
+  span {
+    width: 15rem;
+    aspect-ratio: 1/1;
+  }
+
+  span:nth-of-type(1) {
+    background-color: var(--color-accent);
+  }
+
+  span:nth-of-type(2) {
+    background-color: #59b9c7;
+  }
+
+  span:nth-of-type(3) {
+    background-color: #b7c8d0;
+  }
+}
+
+.top-service__arrow-btn {
+  margin-top: 11rem;
+
+  @include g.mq() {
+    margin-top: 21rem;
+  }
+}
