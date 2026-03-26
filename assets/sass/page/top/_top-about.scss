@@ -39,37 +39,15 @@ page > top > top-about
   }
 
   span {
-    letter-spacing: -0.05em;
-    display: inline-block;
-    position: relative;
-    line-height: 0.75;
-
-    &::before,
-    &::after {
-      content: "";
-      display: block;
-      height: 1px;
-      background-color: var(--color-title-border);
-      position: absolute;
-
-      @include g.mq() {
-      }
-    }
-
     &::before {
-      top: 2rem;
-      left: 0;
       width: 145rem;
 
       @include g.mq() {
-        top: 4rem;
         width: 330rem;
       }
     }
 
     &::after {
-      right: 0;
-      bottom: 0;
       width: 216rem;
 
       @include g.mq() {
