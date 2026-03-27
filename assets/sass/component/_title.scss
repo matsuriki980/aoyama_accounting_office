@@ -30,4 +30,41 @@ component > title
   @include g.mq() {
     font-size: 110rem;
   }
+
+  /* 装飾線設定 */
+  span {
+    letter-spacing: -0.05em;
+    display: inline-block;
+    position: relative;
+    line-height: 0.75;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: var(--color-title-border);
+      position: absolute;
+
+      @include g.mq() {
+      }
+    }
+
+    &::before {
+      top: 2rem;
+      left: -15rem;
+
+      @include g.mq() {
+        top: 4rem;
+      }
+    }
+
+    &::after {
+      right: -15rem;
+      bottom: 0;
+
+      @include g.mq() {
+      }
+    }
+  }
 }
