@@ -93,11 +93,7 @@ page > top > top-voice
 }
 
 .top-voice__slide-btn {
-  border: 1px solid var(--color-white);
-
-  &::before {
-    background-color: var(--color-white);
-  }
+ background-color: var(--color-white);
 }
 
 .top-voice__slide-btn--prev {
