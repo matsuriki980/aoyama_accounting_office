@@ -26,7 +26,7 @@ component > button
     content: "";
     display: block;
     height: 1px;
-    background-color: var(--color-primary);
+    background-color: currentColor;
   }
 }
 
@@ -34,18 +34,18 @@ component > button
 .c-btn_arrow {
   width: 84rem;
   height: 30rem;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--color-border);
-  border-radius: 15rem;
+  display: inline-block;
+  mask-image: url(../img/btn_arrow.svg);
+  @include m.mask-img;
+  background-color: var(--color-font-base);
+  opacity: 0.4;
+  transition: opacity var(--duration-base);
 
-  &::before {
-    content: "";
-    display: block;
-    width: 30rem;
-    height: 8rem;
-    mask-image: url(../img/btn_arrow.svg);
-    @include m.mask-img;
-    background-color: var(--color-border);
+  @include g.mq() {
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 }
