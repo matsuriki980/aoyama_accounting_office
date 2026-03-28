@@ -355,7 +355,6 @@ component > button
   display: inline-block;
   width: 84rem;
   height: 30rem;
-  display: inline-block;
   -webkit-mask-image: url(../img/btn_arrow.svg);
           mask-image: url(../img/btn_arrow.svg);
   -webkit-mask-position: center;
@@ -2210,11 +2209,15 @@ page > top > top-voice
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(3, 330rem);
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
 }
 @media screen and (min-width: 900px) {
   .top-voice__list {
     grid-template-columns: repeat(3, 420rem);
     margin-top: 0;
+    border-top: 0;
+    border-bottom: 0;
   }
 }
 
