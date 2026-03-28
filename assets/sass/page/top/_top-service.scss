@@ -123,6 +123,7 @@ page > top > top-service
 
 .top-service__link:hover {
   @include g.mq() {
+
     @media (any-hover: hover) {
       img {
         scale: 1.1;
@@ -132,6 +133,7 @@ page > top > top-service
         opacity: 1;
       }
     }
+
   }
 }
 

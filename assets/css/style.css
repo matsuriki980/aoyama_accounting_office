@@ -352,6 +352,7 @@ component > button
 
 /* 矢印付 */
 .c-btn_arrow {
+  display: inline-block;
   width: 84rem;
   height: 30rem;
   display: inline-block;
