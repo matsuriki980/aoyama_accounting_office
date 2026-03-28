@@ -4,3 +4,52 @@
 page > top > top-news
 ------------------------------
 */
+.top-news {
+  padding-block: 46rem 62rem;
+
+  @include g.mq() {
+    padding-block: 121rem 88rem;
+  }
+}
+
+.top-news__content {
+  @include g.mq() {
+    display: grid;
+    grid-template-columns: 1fr 900rem;
+    align-items: flex-start;
+  }
+}
+
+.top-news__title-wrap {
+}
+
+.top-news__title-ja {
+}
+
+.top-news__title-en {
+  font-size: 64rem;
+
+  @include g.mq() {
+    font-size: 76rem;
+  }
+}
+
+.top-news__list {
+  margin-top: 40rem;
+
+  @include g.mq() {
+    margin-top: 0;
+  }
+}
+
+.top-news__btn {
+  margin-top: 36rem;
+
+  @include g.mq() {
+    margin-top: 60rem;
+  }
+}
+
+.top-news__btn-link {
+  justify-content: flex-end;
+}

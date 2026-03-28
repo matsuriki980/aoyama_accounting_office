@@ -1,6 +1,138 @@
 @use "../../global" as g;
+@use "../../mixin" as m;
 
 /*!
 page > top > top-voice
 ------------------------------
 */
+.top-voice {
+  padding-block: 61rem 67rem;
+  background-color: var(--color-primary);
+  position: relative;
+
+  @include g.mq() {
+    padding-block: 120rem 148rem;
+
+    /* セクション上部の段状の装飾 */
+    &::before {
+      content: "";
+      display: block;
+      width: 960rem;
+      height: 159rem;
+      position: absolute;
+      top: -60rem;
+      left: 0;
+      background-image: url(../img/top/top-voice-step.svg);
+      @include m.background-img;
+    }
+  }
+}
+
+.top-voice__inner {
+  @include g.mq() {
+    overflow: hidden;
+  }
+}
+
+.top-voice__head {
+  @include g.mq() {
+    margin-inline: 30rem;
+    display: grid;
+    grid-template-columns: 450rem 1fr;
+    border-top: 1px solid var(--color-border-light);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+}
+
+.top-voice__content {
+  padding-inline: 26rem;
+
+  @include g.mq() {
+    padding: 90rem 0.47rem 60rem 90rem;
+    border-right: 1px solid var(--color-border-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.top-voice__title-wrap {
+  color: var(--color-white);
+}
+
+.top-voice__title-ja {
+  &::before {
+    background-color: var(--color-white);
+  }
+}
+
+.top-voice__title-en {
+  span {
+    display: block;
+    line-height: 0.96875;
+    font-size: 64rem;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  @include g.mq() {
+    font-size: 76rem;
+  }
+}
+
+.top-voice__slide-btn-wrap {
+  display: none;
+
+  @include g.mq() {
+    display: flex;
+    gap: 12rem;
+  }
+}
+
+.top-voice__slide-btn {
+ background-color: var(--color-white);
+}
+
+.top-voice__slide-btn--prev {
+  transform: scale(-1, 1);
+}
+
+.top-voice__slide-btn--next {
+}
+
+.top-voice__list {
+  margin-top: 37rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 330rem);
+
+  @include g.mq() {
+    grid-template-columns: repeat(3, 420rem);
+    margin-top: 0;
+  }
+}
+
+.top-voice__link {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.top-voice__btn {
+  padding-inline: 30rem;
+  margin-top: 36rem;
+  color: var(--color-white);
+
+  @include g.mq() {
+    margin-top: 89rem;
+    margin-inline: auto;
+  }
+}
+
+.top-voice__btn-link {
+  @include g.mq() {
+    justify-content: center;
+  }
+}
