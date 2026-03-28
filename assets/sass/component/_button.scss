@@ -35,10 +35,6 @@ component > button
   display: inline-block;
   width: 84rem;
   height: 30rem;
-<<<<<<< Updated upstream
-  display: inline-block;
-=======
->>>>>>> Stashed changes
   mask-image: url(../img/btn_arrow.svg);
   @include m.mask-img;
   background-color: var(--color-font-base);
