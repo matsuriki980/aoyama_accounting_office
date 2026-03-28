@@ -93,11 +93,7 @@ page > top > top-voice
 }
 
 .top-voice__slide-btn {
-<<<<<<< Updated upstream
- background-color: var(--color-white);
-=======
   background-color: var(--color-white);
->>>>>>> Stashed changes
 }
 
 .top-voice__slide-btn--prev {
@@ -112,10 +108,14 @@ page > top > top-voice
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(3, 330rem);
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
 
   @include g.mq() {
     grid-template-columns: repeat(3, 420rem);
     margin-top: 0;
+    border-top: 0;
+    border-bottom: 0;
   }
 }
 
