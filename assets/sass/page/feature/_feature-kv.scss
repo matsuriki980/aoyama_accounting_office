@@ -1,0 +1,13 @@
+@use "../../global" as g;
+
+/*!
+page > feature > feature-kv
+------------------------------
+*/
+.feature-kv {
+      background-image: url(../img/feature/feature-kv-sp.jpg);
+
+      @include g.mq() {
+        background-image: url(../img/feature/feature-kv.jpg);
+      }
+}
