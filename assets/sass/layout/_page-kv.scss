@@ -1,4 +1,5 @@
 @use "../global" as g;
+@use "../mixin" as m;
 
 /*!
 layout > page-kv
@@ -6,9 +7,7 @@ layout > page-kv
 */
 .l-page-kv {
   background-image: url(../img/service/service-kv-sp.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include m.background-img;
   width: 100%;
   height: 436rem;
   position: relative;

@@ -5,13 +5,23 @@ foundation > keyframes
 ------------------------------
 */
 
+/* テキストを左向きに流す */
 
-/* テキストを横に流す */
-@keyframes marquee {
+@keyframes marquee-left {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+/* テキストを右向きに流す */
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
