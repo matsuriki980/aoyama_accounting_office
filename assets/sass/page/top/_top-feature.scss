@@ -173,6 +173,8 @@ page > top > top-feature
 
 .top-feature__marquee__inner {
   color: var(--color-white);
+  display: inline-block;
+  animation: marquee-right 15s linear infinite;
 }
 
 .top-feature__decoration {
