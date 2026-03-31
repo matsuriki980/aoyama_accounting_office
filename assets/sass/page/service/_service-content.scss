@@ -1,0 +1,252 @@
+@use "../../global" as g;
+@use "../../mixin" as m;
+
+/*!
+page > service > service-content
+------------------------------
+*/
+.service {
+  padding-block: 64rem;
+
+  @include g.mq() {
+    padding-block: 120rem;
+  }
+}
+
+.service__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50rem;
+
+  @include g.mq() {
+    gap: 0;
+  }
+}
+
+.service__item {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include g.mq() {
+    grid-template-columns: 1fr 660rem;
+    border-top: 1px solid rgba(48, 48, 48, 0.2);
+    border-bottom: 1px solid rgba(48, 48, 48, 0.2);
+  }
+
+  /* 二番目の項目を反転 */
+  &:nth-of-type(2) {
+    @include g.mq() {
+      grid-template-columns: 660rem 1fr;
+
+      .service__img {
+        order: 1;
+      }
+    }
+  }
+}
+
+.service__content {
+  padding: 30rem;
+  order: 2;
+
+  @include g.mq() {
+    padding-inline: 120rem;
+    align-self: center;
+  }
+}
+
+.service__title-wrap {
+  display: grid;
+  align-items: center;
+  gap: 0 24rem;
+  grid-template-columns: auto 1fr;
+
+  @include g.mq() {
+    gap: 0 35rem;
+  }
+}
+
+.service__title-number {
+  grid-row: 1/2;
+  font-family: var(--font-family-en);
+  font-weight: 100;
+  letter-spacing: 0.08em;
+  color: #b7c8d0;
+  font-size: 64rem;
+  line-height: 1;
+
+  @include g.mq() {
+    font-size: 80.85rem;
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+}
+
+.service__title-ja {
+  font-size: 27rem;
+  grid-row: 2/3;
+  line-height: 1.3125;
+  margin-top: 8rem;
+
+  @include g.mq() {
+    font-size: 32rem;
+    grid-column: 2/3;
+    grid-row: 1;
+    margin-top: 0;
+  }
+}
+
+.service__title-en {
+  font-size: 14rem;
+  font-family: var(--font-family-en);
+  font-weight: 100;
+  letter-spacing: 0;
+  grid-row: 3/4;
+
+  @include g.mq() {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
+
+.service__features-list {
+  margin-top: 12rem;
+
+  @include g.mq() {
+    margin-top: 23rem;
+  }
+}
+
+.service__features-item {
+  padding-block: 12rem;
+  border-bottom: 1px solid rgba(48, 48, 48, 0.2);
+  color: var(--color-accent);
+  display: grid;
+  grid-template-columns: 80% 1fr;
+  align-items: center;
+  font-weight: 500;
+
+  @include g.mq() {
+    padding-block: 14rem;
+    font-size: 18rem;
+    grid-template-columns: auto auto;
+  }
+}
+
+/* □の装飾の設定 */
+.service__features-item-decoration-wrap {
+  display: flex;
+  flex-direction: row-reverse;
+
+  @include g.mq() {
+    top: 4rem;
+  }
+
+  span {
+    width: 10rem;
+    aspect-ratio: 1/1;
+  }
+
+  span:nth-of-type(1) {
+    background-color: var(--color-accent);
+  }
+
+  span:nth-of-type(2) {
+    background-color: var(--color-light-blue);
+  }
+
+  span:nth-of-type(3) {
+    background-color: #b7c8d0;
+  }
+}
+
+.service__text {
+  margin-top: 24rem;
+
+  @include g.mq() {
+    margin-top: 30rem;
+  }
+}
+
+.service__img {
+  position: relative;
+
+  @include g.mq() {
+    order: 2;
+  }
+}
+
+/*  画像外に配置できるように、絶対座標の機転を画像から要素全体に変更 */
+.service__item {
+  @include g.mq() {
+    position: relative;
+
+    .service__img {
+      position: static;
+    }
+  }
+}
+
+.service__decoration {
+  display: block;
+  position: absolute;
+  @include m.background-img;
+}
+
+.service__decoration-tax-accounting {
+  aspect-ratio: 1/1;
+  background-image: url(../img/service/service-item01-decoration-top.svg);
+  display: none;
+
+  @include g.mq() {
+    display: block;
+    width: 90rem;
+    top: -30rem;
+    left: 0;
+  }
+
+  &:nth-of-type(2) {
+    display: block;
+    width: 51.14rem;
+    background-image: url(../img/service/service-item01-decoration-bottom.svg);
+    bottom: -34.1rem;
+    right: 0;
+
+    @include g.mq() {
+      width: 90rem;
+      bottom: -60rem;
+      right: 0;
+      top: auto;
+      left: auto;
+    }
+  }
+}
+
+.service__decoration-capital-gains {
+  width: 68.14rem;
+  height: 51.14rem;
+  background-image: url(../img/service/service-item02-decoration.svg);
+  left: -17.05rem;
+  bottom: -51.15rem;
+
+  @include g.mq() {
+    width: 120rem;
+    height: 90rem;
+    left: -30rem;
+    bottom: -90rem;
+  }
+}
+
+.service__decoration-support {
+  width: 68.14rem;
+  height: 51.14rem;
+  background-image: url(../img/service/service-item03-decoration.svg);
+  right: 0;
+  bottom: -17.05rem;
+
+  @include g.mq() {
+    width: 120rem;
+    height: 90rem;
+    bottom: -30rem;
+  }
+}
