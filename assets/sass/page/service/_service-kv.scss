@@ -1,0 +1,13 @@
+@use "../../global" as g;
+
+/*!
+page > service > service-kv
+------------------------------
+*/
+.service-kv {
+  background-image: url(../img/service/service-kv-sp.jpg);
+
+  @include g.mq() {
+    background-image: url(../img/service/service-kv.jpg);
+  }
+}
