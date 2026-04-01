@@ -14,9 +14,6 @@ component > voice-item
   display: block;
   width: 100%;
   padding: 30rem;
-  border-top: 1px solid var(--color-border-light);
-  border-right: 1px solid var(--color-border-light);
-  border-bottom: 1px solid var(--color-border-light);
   color: var(--color-white);
 
   @include g.mq() {
@@ -58,7 +55,7 @@ component > voice-item
   color: rgba(255, 255, 255, 0.5);
 }
 
-.c-voice__text {
+.c-voice__title {
   margin-top: 5rem;
   font-size: 18rem;
 }
