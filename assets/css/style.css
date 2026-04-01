@@ -596,9 +596,6 @@ component > voice-item
   display: block;
   width: 100%;
   padding: 30rem;
-  border-top: 1px solid var(--color-border-light);
-  border-right: 1px solid var(--color-border-light);
-  border-bottom: 1px solid var(--color-border-light);
   color: var(--color-white);
 }
 @media screen and (min-width: 900px) {
@@ -637,7 +634,7 @@ component > voice-item
   color: rgba(255, 255, 255, 0.5);
 }
 
-.c-voice__text {
+.c-voice__title {
   margin-top: 5rem;
   font-size: 18rem;
 }
@@ -1177,7 +1174,7 @@ layout > page-kv
 .l-page-kv__content {
   width: 100%;
   position: absolute;
-  bottom: -15rem;
+  bottom: -12rem;
   display: flex;
 }
 @media screen and (min-width: 900px) {
@@ -1211,12 +1208,11 @@ layout > page-kv
 }
 
 .l-page-kv__title--en {
-  font-size: 88rem;
+  font-size: 72rem;
   line-height: 1;
   text-transform: capitalize;
   font-family: var(--font-family-en);
   font-weight: 200;
-  letter-spacing: -0.02em;
 }
 @media screen and (min-width: 900px) {
   .l-page-kv__title--en {
@@ -1225,6 +1221,7 @@ layout > page-kv
 }
 .l-page-kv__title--en span {
   display: block;
+  letter-spacing: -0.02em;
 }
 @media screen and (min-width: 900px) {
   .l-page-kv__title--en span {
@@ -2968,13 +2965,148 @@ page > about > about-access
 ------------------------------
 */
 /*!
-page > voice > voice-list
+page > voice > voice-kv
 ------------------------------
 */
+.voice-kv {
+  background-image: url(../img/voice/voice-kv-sp.jpg);
+}
+@media screen and (min-width: 900px) {
+  .voice-kv {
+    background-image: url(../img/voice/voice-kv.jpg);
+  }
+}
+
 /*!
-page > voice > voice-detail
+page > voice > voice-content
 ------------------------------
 */
+.voice {
+  background-color: var(--color-primary);
+  padding: 64rem 30rem;
+}
+@media screen and (min-width: 900px) {
+  .voice {
+    padding-block: 90rem;
+  }
+}
+
+.voice__list {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 900px) {
+  .voice__list {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .voice__item {
+    /* transform時、要素が隠れるのを防ぐ */
+  }
+  .voice__item:nth-of-type(2), .voice__item:nth-of-type(3) {
+    position: relative;
+    z-index: var(--z-index-default);
+  }
+  .voice__item {
+    /* 段差による2番目の要素の右線の隙間を埋める */
+  }
+  .voice__item:nth-of-type(2)::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 30rem;
+    background-color: var(--color-border-light);
+    position: absolute;
+    top: 0;
+    right: -1rem;
+  }
+  .voice__item {
+    /* 1列目の要素の左の線を非表示に */
+  }
+  .voice__item:nth-of-type(3n + 1) .voice__link {
+    border-left: 0;
+  }
+  .voice__item {
+    /* 1列目の要素の左の線を非表示に */
+  }
+  .voice__item:nth-of-type(3n + 2) {
+    transform: translateY(30rem);
+  }
+  .voice__item:nth-of-type(3n + 2) .voice__link {
+    border-left: 0;
+    border-right: 0;
+  }
+  .voice__item {
+    /* 3列目の要素の右の線を非表示に */
+  }
+  .voice__item:nth-of-type(3n + 3) {
+    transform: translateY(60rem);
+  }
+  .voice__item:nth-of-type(3n + 3) .voice__link {
+    border-right: 0;
+  }
+}
+
+.voice__link {
+  border-top: 1px solid var(--color-border-light);
+  border-left: 1px solid var(--color-border-light);
+  border-right: 1px solid var(--color-border-light);
+}
+@media screen and (min-width: 900px) and (any-hover: hover) {
+  .voice__link:hover .voice__arrow-btn {
+    opacity: 1;
+  }
+}
+
+.voice__arrow-btn {
+  background-color: var(--color-white);
+  margin-top: 24rem;
+}
+@media screen and (min-width: 900px) {
+  .voice__arrow-btn {
+    margin-top: 27rem;
+  }
+}
+
+.voice__pagination {
+  margin-top: 36rem;
+  text-align: center;
+}
+@media screen and (min-width: 900px) {
+  .voice__pagination {
+    margin-top: 60rem;
+    font-size: 18rem;
+  }
+}
+
+.voice__pagination-btn {
+  border: 1px solid var(--color-white);
+  border-radius: 50%;
+  font-family: var(--font-family-en);
+  font-weight: 100;
+  width: 50rem;
+  aspect-ratio: 1/1;
+  color: var(--color-white);
+  background-color: transparent;
+  opacity: 0.4;
+  transition: color var(--duration-base), background-color var(--duration-base), opacity var(--duration-base);
+}
+@media screen and (any-hover: hover) and (min-width: 900px) {
+  .voice__pagination-btn:hover {
+    opacity: 1;
+  }
+}
+
+.voice__pagination-btn.active {
+  background-color: var(--color-white);
+  color: var(--color-font-base);
+  pointer-events: none;
+  opacity: 1;
+}
+
 /*!
 page > news > news-list
 ------------------------------
