@@ -1,0 +1,141 @@
+@use "../../global" as g;
+
+/*!
+page > voice > voice-content
+------------------------------
+*/
+.voice {
+  background-color: var(--color-primary);
+  padding: 64rem 30rem;
+
+  @include g.mq() {
+    padding-block: 90rem;
+  }
+}
+
+.voice__list {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include g.mq() {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+  }
+}
+
+.voice__item {
+  @include g.mq() {
+    /* transform時、要素が隠れるのを防ぐ */
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      position: relative;
+      z-index: var(--z-index-default);
+    }
+
+    /* 段差による2番目の要素の右線の隙間を埋める */
+    &:nth-of-type(2) {
+      &::before {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 30rem;
+        background-color: var(--color-border-light);
+        position: absolute;
+        top: 0;
+        right: -1rem;
+      }
+    }
+
+    /* 1列目の要素の左の線を非表示に */
+    &:nth-of-type(3n + 1) {
+      .voice__link {
+        border-left: 0;
+      }
+    }
+
+    /* 1列目の要素の左の線を非表示に */
+    &:nth-of-type(3n + 2) {
+      transform: translateY(30rem);
+
+      .voice__link {
+        border-left: 0;
+        border-right: 0;
+      }
+    }
+
+    /* 3列目の要素の右の線を非表示に */
+    &:nth-of-type(3n + 3) {
+      transform: translateY(60rem);
+
+      .voice__link {
+        border-right: 0;
+      }
+    }
+  }
+}
+
+.voice__link {
+  border-top: 1px solid var(--color-border-light);
+  border-left: 1px solid var(--color-border-light);
+  border-right: 1px solid var(--color-border-light);
+
+  &:hover {
+    .voice__arrow-btn {
+      @include g.mq() {
+        @media (any-hover: hover) {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.voice__arrow-btn {
+  background-color: var(--color-white);
+  margin-top: 24rem;
+
+  @include g.mq() {
+    margin-top: 27rem;
+  }
+}
+
+.voice__pagination {
+  margin-top: 36rem;
+  text-align: center;
+
+  @include g.mq() {
+    margin-top: 60rem;
+    font-size: 18rem;
+  }
+}
+
+.voice__pagination-btn {
+  border: 1px solid var(--color-white);
+  border-radius: 50%;
+  font-family: var(--font-family-en);
+  font-weight: 100;
+  width: 50rem;
+  aspect-ratio: 1/1;
+  color: var(--color-white);
+  background-color: transparent;
+  opacity: 0.4;
+  transition:
+    color var(--duration-base),
+    background-color var(--duration-base),
+    opacity var(--duration-base);
+
+  @media (any-hover: hover) {
+    @include g.mq() {
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.voice__pagination-btn.active {
+  background-color: var(--color-white);
+  color: var(--color-font-base);
+  pointer-events: none;
+  opacity: 1;
+}

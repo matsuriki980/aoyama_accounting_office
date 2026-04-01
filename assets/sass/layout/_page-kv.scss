@@ -31,7 +31,7 @@ layout > page-kv
 .l-page-kv__content {
   width: 100%;
   position: absolute;
-  bottom: -15rem;
+  bottom: -12rem;
   display: flex;
 
   @include g.mq() {
@@ -67,12 +67,11 @@ layout > page-kv
 }
 
 .l-page-kv__title--en {
-  font-size: 88rem;
+  font-size: 72rem;
   line-height: 1;
   text-transform: capitalize;
   font-family: var(--font-family-en);
   font-weight: 200;
-  letter-spacing: -0.02em;
 
   @include g.mq() {
     font-size: 190rem;
@@ -80,6 +79,7 @@ layout > page-kv
 
   span {
     display: block;
+    letter-spacing: -0.02em;
 
     @include g.mq() {
       display: inline-block;

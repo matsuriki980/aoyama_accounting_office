@@ -1,0 +1,13 @@
+@use "../../global" as g;
+
+/*!
+page > voice > voice-kv
+------------------------------
+*/
+.voice-kv {
+  background-image: url(../img/voice/voice-kv-sp.jpg);
+
+  @include g.mq() {
+    background-image: url(../img/voice/voice-kv.jpg);
+  }
+}
