@@ -12,8 +12,8 @@
 @use "about/about-values";
 @use "about/about-company";
 @use "about/about-access";
-@use "voice/voice-list";
-@use "voice/voice-detail"; 
+@use "voice/voice-kv";
+@use "voice/voice-content";
 @use "news/news-list";
 @use "news/news-detail"; 
 @use "contact/contact-form"; 
