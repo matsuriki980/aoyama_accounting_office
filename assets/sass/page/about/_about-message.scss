@@ -10,9 +10,11 @@ page > about > about-message
   display: grid;
   grid-template-columns: 1fr;
   align-items: flex-start;
+  position: relative;
+  z-index: 2;
 
   @include g.mq() {
-    grid-template-columns: 720rem auto;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -39,10 +41,13 @@ page > about > about-message
   border-top: 1px solid var(--color-border-light-black);
   border-bottom: 1px solid var(--color-border-light-black);
   position: relative;
+  background-color: var(--color-white);
 
   @include g.mq() {
-    padding: 154rem 120rem 48rem 90rem;
+    padding-inline: 90rem 120rem;
+    padding-block: 107rem 0;
     transform: translateY(30rem);
+    aspect-ratio: 1/1;
   }
 }
 
@@ -76,17 +81,17 @@ page > about > about-message
 .about-message__name {
   margin-top: 24rem;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-end;
   gap: 22.96rem;
 
   @include g.mq() {
-    margin-top: 34.4rem;
+    margin-top: 35rem;
   }
 
   span {
     font-size: 14rem;
-    line-height: 1;
+    line-height: 2.2857142;
   }
 
   img {
