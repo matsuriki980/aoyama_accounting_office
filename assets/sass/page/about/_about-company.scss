@@ -4,3 +4,75 @@
 page > about > about-company
 ------------------------------
 */
+.about-company {
+  padding: 64rem 30rem;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include g.mq() {
+    padding: 106rem 120rem 120rem;
+    grid-template-columns: 1fr 630rem;
+  }
+}
+
+.about-company__title-wrap {
+}
+
+.about-company__title-en {
+  span {
+    &::before {
+      width: 160rem;
+    }
+
+    &::after {
+      width: 148rem;
+    }
+  }
+}
+
+.about-company__list {
+  margin-top: 42rem;
+
+  @include g.mq() {
+    margin-top: 30rem;
+  }
+}
+
+.about-company__item {
+  padding-block: 16rem;
+  border-top: 1px solid var(--color-title-border);
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include g.mq() {
+    padding-block: 29rem;
+    grid-template-columns: 75rem 1fr;
+    gap: 0 45rem;
+  }
+
+  /* 最後のitemのみ、下線を追加 */
+  &:last-of-type {
+    border-bottom: 1px solid var(--color-title-border);
+  }
+
+  dt {
+    font-weight: 500;
+
+    @include g.mq() {
+      grid-column: 1/2;
+    }
+  }
+
+  dd {
+    font-weight: 300;
+    font-size: 14rem;
+    
+    @include g.mq() {
+      grid-column: 2/3;
+    }
+
+    span {
+      display: block;
+    }
+  }
+}
