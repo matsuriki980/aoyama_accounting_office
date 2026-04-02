@@ -1,0 +1,13 @@
+@use "../../global" as g;
+
+/*!
+page > about > about-kv
+------------------------------
+*/
+.about-kv {
+      background-image: url(../img/about/about-kv-sp.jpg);
+
+      @include g.mq() {
+        background-image: url(../img/about/about-kv.jpg);
+      }
+}
