@@ -2970,10 +2970,12 @@ page > about > about-message
   display: grid;
   grid-template-columns: 1fr;
   align-items: flex-start;
+  position: relative;
+  z-index: 2;
 }
 @media screen and (min-width: 900px) {
   .about-message {
-    grid-template-columns: 720rem auto;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -2998,11 +3000,14 @@ page > about > about-message
   border-top: 1px solid var(--color-border-light-black);
   border-bottom: 1px solid var(--color-border-light-black);
   position: relative;
+  background-color: var(--color-white);
 }
 @media screen and (min-width: 900px) {
   .about-message__content {
-    padding: 154rem 120rem 48rem 90rem;
+    padding-inline: 90rem 120rem;
+    padding-block: 107rem 0;
     transform: translateY(30rem);
+    aspect-ratio: 1/1;
   }
 }
 
@@ -3036,18 +3041,18 @@ page > about > about-message
 .about-message__name {
   margin-top: 24rem;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-end;
   gap: 22.96rem;
 }
 @media screen and (min-width: 900px) {
   .about-message__name {
-    margin-top: 34.4rem;
+    margin-top: 35rem;
   }
 }
 .about-message__name span {
   font-size: 14rem;
-  line-height: 1;
+  line-height: 2.2857142;
 }
 .about-message__name img {
   width: 100rem;
@@ -3091,6 +3096,91 @@ page > about > about-message
 page > about > about-values
 ------------------------------
 */
+.about-values {
+  height: 560rem;
+  background-image: url(../img/about/about-values-sp.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: var(--z-index-default);
+}
+@media screen and (min-width: 900px) {
+  .about-values {
+    height: 813rem;
+    background-image: url(../img/about/about-values.jpg);
+  }
+}
+
+.about-values__conent {
+  position: absolute;
+  bottom: 24rem;
+  width: 100%;
+}
+@media screen and (min-width: 900px) {
+  .about-values__conent {
+    width: auto;
+    right: 120rem;
+    bottom: 63rem;
+  }
+}
+
+.about-values__title-ja {
+  padding-left: 19rem;
+  line-height: 2.625;
+}
+@media screen and (min-width: 900px) {
+  .about-values__title-ja {
+    padding-left: 0;
+  }
+}
+
+.about-values__lead {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+.about-values__lead span {
+  color: var(--color-white);
+  background-color: var(--color-accent);
+  padding: 17rem 5rem 17rem 10rem;
+  letter-spacing: 0;
+  line-height: 1;
+  font-size: 18rem;
+}
+@media screen and (min-width: 900px) {
+  .about-values__lead span {
+    font-size: 26rem;
+    padding: 17rem 5rem 17rem 14rem;
+  }
+}
+
+.about-values__title-en {
+  font-size: 135.26rem;
+  color: var(--color-white);
+  writing-mode: vertical-rl;
+  line-height: 0.67;
+  height: 100%;
+  transform: translateX(-12rem);
+}
+@media screen and (min-width: 900px) {
+  .about-values__title-en {
+    border-right: 1px solid var(--color-white);
+    font-size: 220rem;
+    transform: translateX(-16rem);
+  }
+}
+.about-values__title-en span {
+  line-height: 0.2;
+  transform: translateY(-8rem);
+}
+@media screen and (min-width: 900px) {
+  .about-values__title-en span {
+    transform: translateY(-10rem);
+  }
+}
+
 /*!
 page > about > about-company
 ------------------------------
