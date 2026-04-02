@@ -3257,6 +3257,59 @@ page > about > about-company
 page > about > about-access
 ------------------------------
 */
+.about-access {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid var(--color-title-border);
+}
+@media screen and (min-width: 900px) {
+  .about-access {
+    grid-template-columns: 1fr 870rem;
+  }
+}
+
+.about-access__content {
+  padding-inline: 30rem;
+  padding-block: 64rem;
+}
+@media screen and (min-width: 900px) {
+  .about-access__content {
+    padding: 0 0 0 120rem;
+    align-self: center;
+  }
+}
+
+.about-access__title-en span::before {
+  width: 96rem;
+}
+@media screen and (min-width: 900px) {
+  .about-access__title-en span::before {
+    width: 189rem;
+  }
+}
+.about-access__title-en span::after {
+  width: 104rem;
+}
+@media screen and (min-width: 900px) {
+  .about-access__title-en span::after {
+    width: 210rem;
+  }
+}
+
+.about-access__address {
+  margin-top: 24rem;
+  font-size: 14rem;
+}
+
+.about-access__map {
+  width: 100%;
+  height: 510rem;
+}
+.about-access__map iframe {
+  width: 100%;
+  height: 100%;
+}
+
 /*!
 page > voice > voice-kv
 ------------------------------

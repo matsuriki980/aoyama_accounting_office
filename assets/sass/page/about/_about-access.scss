@@ -4,3 +4,60 @@
 page > about > about-access
 ------------------------------
 */
+.about-access {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid var(--color-title-border);
+
+  @include g.mq() {
+    grid-template-columns: 1fr 870rem;
+  }
+}
+
+.about-access__content {
+  padding-inline: 30rem;
+  padding-block: 64rem;
+
+  @include g.mq() {
+    padding: 0 0 0 120rem;
+    align-self: center;
+  }
+}
+
+.about-access__title-wrap {
+}
+
+.about-access__title-en {
+  span {
+    &::before {
+      width: 96rem;
+
+      @include g.mq() {
+        width: 189rem;
+      }
+    }
+
+    &::after {
+      width: 104rem;
+
+      @include g.mq() {
+        width: 210rem;
+      }
+    }
+  }
+}
+
+.about-access__address {
+  margin-top: 24rem;
+  font-size: 14rem;
+}
+
+.about-access__map {
+  width: 100%;
+  height: 510rem;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
