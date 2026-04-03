@@ -1,0 +1,74 @@
+@use "../../global" as g;
+@use "../../mixin" as m;
+
+/*!
+page > voice-detail > voice-detail-other
+------------------------------
+*/
+.voice-detail__other {
+  background-color: var(--color-bg-gray);
+  padding: 64rem 30rem;
+  margin-top: 64rem;
+
+  @include g.mq() {
+    padding: 106rem 120rem;
+    margin-top: 120rem;
+  }
+}
+
+.voice-detail__title-wrap {
+}
+
+.voice-detail__title-ja {
+}
+
+.voice-detail__title-en {
+}
+
+.voice-detail__list {
+  margin-top: 48rem;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include g.mq() {
+    margin-top: 79rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.voice-detail__item {
+  background-color: transparent;
+
+  /* 真ん中の項目の横線は削除 */
+  &:nth-of-type(2) {
+    .voice-detail__link {
+      border-top: 0;
+      border-bottom: 0;
+
+      @include g.mq() {
+        border-left: 0;
+        border-right: 0;
+      }
+    }
+  }
+}
+
+.voice-detail__link {
+  color: var(--color-font-base);
+  border: 1px solid var(--color-border-light-black);
+
+  @include g.mq() {
+    padding: 0 50rem;
+    border-top: 0;
+    border-bottom: 0;
+  }
+}
+
+.voice-detail__number {
+  line-height: 1;
+  display: block;
+}
+
+.voice-detail__name {
+  color: var(--color-font-base);
+}

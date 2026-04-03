@@ -1,0 +1,131 @@
+@use "../../global" as g;
+@use "../../mixin" as m;
+
+/*!
+page > voice-detail > voice-detail-article
+------------------------------
+*/
+.voice-detail__article {
+  padding: 64rem 30rem;
+
+  @include g.mq() {
+    padding: 120rem 320rem;
+  }
+}
+
+.voice-detail__header {
+  /* 日付 */
+  time {
+    font-family: var(--font-family-en);
+    font-weight: 100;
+  }
+}
+
+.voice-detail__title {
+  font-size: 27rem;
+  font-weight: 500;
+
+  @include g.mq() {
+    font-size: 32rem;
+  }
+}
+
+/* 画像設定 */
+.voice-detail__figure {
+  margin-top: 24rem;
+  position: relative;
+  width: 100%;
+  height: 390rem;
+  overflow: hidden;
+  border-radius: 10rem;
+
+  /* マスク */
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(48, 48, 48, 0) 0%,
+      rgba(48, 48, 48, 1) 100%
+    );
+  }
+
+  img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  figcaption {
+    position: absolute;
+    bottom: 24rem;
+    left: 50%;
+    width: 90%;
+    color: var(--color-white);
+    transform: translateX(-50%);
+
+    @include g.mq() {
+      font-size: 22rem;
+      width: 744rem;
+      bottom: 28rem;
+    }
+  }
+}
+
+.voice-detail__content {
+  margin-top: 48rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48rem;
+
+  @include g.mq() {
+    margin-top: 60rem;
+    gap: 60rem;
+  }
+}
+
+.voice-detail__qa {
+}
+
+.voice-detail__question {
+  color: var(--color-accent);
+  font-size: 18rem;
+  font-weight: 500;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18rem;
+
+  /* 画像で下の線を表示 */
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 6rem;
+    background-image: url(../img/voice-detail/voice-detail-artticle-line-sp.svg);
+    @include m.background-img;
+
+    @include g.mq() {
+      background-image: url(../img/voice-detail/voice-detail-artticle-line.svg);
+      height: 14rem;
+    }
+  }
+}
+
+.voice-detail__answer {
+  margin-top: 18rem;
+
+  @include g.mq() {
+    margin-top: 30rem;
+  }
+}
+
+.voice-detail__company-name {
+  margin-top: 48rem;
+  text-align: right;
+
+  @include g.mq() {
+    margin-top: 60rem;
+  }
+}
