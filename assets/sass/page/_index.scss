@@ -15,7 +15,10 @@
 @use "about/about-access";
 @use "voice/voice-kv";
 @use "voice/voice-content";
+@use "voice-detail/voice-detail-article";
+@use "voice-detail/voice-detail-btn";
+@use "voice-detail/voice-detail-other";
 @use "news/news-list";
-@use "news/news-detail"; 
-@use "contact/contact-form"; 
-@use "privacy-policy/privacy-policy-layout"; 
+@use "news/news-detail";
+@use "contact/contact-form";
+@use "privacy-policy/privacy-policy-layout";

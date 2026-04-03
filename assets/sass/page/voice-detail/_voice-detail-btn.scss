@@ -1,0 +1,18 @@
+@use "../../global" as g;
+@use "../../mixin" as m;
+
+/*!
+page > voice-detail > voice-detail-btn
+------------------------------
+*/
+.voice-detail__btn-wrap {
+  padding-inline: 30rem;
+
+  @include g.mq() {
+    padding-inline: 320rem;
+  }
+}
+
+.voice-detail__btn-link {
+    justify-content: center;
+}
