@@ -188,7 +188,7 @@
         <!-- =========================================
           news-content
     ======================================== -->
-        <section class="news">
+        <div class="news">
 
             <div class="news__content">
                 <aside class="news__sidebar">
@@ -217,9 +217,9 @@
                     </section>
                 </aside>
 
-                <section class="news__list">
+                <div class="news__list">
                     <article class="c-news__item">
-                        <a href="#" class="c-news__link">
+                        <a href="news-detail.html" class="c-news__link">
                             <div class="c-news__img">
                                 <img src="assets/img/news/news01.jpg" width="315" height="210"
                                     alt="白いデスクの上でパソコン作業を行う人物との手">
@@ -231,11 +231,11 @@
                                 </div>
 
                                 <!-- hタグに差し替える -->
-                                <p class="c-news__title">ホームページをリニューアルしました</p>
+                                <h2 class="c-news__title">ホームページをリニューアルしました</h2>
                             </div>
                         </a>
                     </article>
-                </section>
+                </div>
             </div>
 
             <!-- ページネイションボタン -->
@@ -243,7 +243,7 @@
                 <button class="c-pagination__btn news__pagination-btn active">01</button>
                 <button class="c-pagination__btn news__pagination-btn">02</button>
             </div>
-        </section>
+        </div>
 
         <!-- =========================================
      contact-cta
@@ -431,7 +431,7 @@
     <script src="assets/js/vendor/splide-extension-auto-scroll.min.js" defer></script>
 
     <!-- 各処理をまとめたjsファイルを読み込む -->
-    <script type="module" src="assets/js/main.js" defer></script>
+    <script type="module" src="assets/js/main.js"></script>
 </body>
 
 </html>
