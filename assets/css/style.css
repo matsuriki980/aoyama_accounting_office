@@ -3747,6 +3747,7 @@ page > news > news-content
 
 .news__sidebar-link {
   font-size: 14rem;
+  display: inline-block;
 }
 
 .news__list {
