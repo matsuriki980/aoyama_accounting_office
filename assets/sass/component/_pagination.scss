@@ -1,0 +1,44 @@
+@use "../global" as g;
+@use "../foundation/keyframes";
+
+/*!
+component > pagination
+------------------------------
+*/
+.c-pagination {
+  margin-top: 36rem;
+  text-align: center;
+
+  @include g.mq() {
+    margin-top: 60rem;
+    font-size: 18rem;
+  }
+}
+
+.c-pagination__btn {
+  border-radius: 50%;
+  font-family: var(--font-family-en);
+  font-weight: 100;
+  width: 50rem;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  opacity: 0.4;
+  transition:
+    color var(--duration-base),
+    background-color var(--duration-base),
+    opacity var(--duration-base);
+
+  @media (any-hover: hover) {
+    @include g.mq() {
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/* active時、不透明度を100%に */
+.c-pagination__btn.active {
+  pointer-events: none;
+  opacity: 1;
+}

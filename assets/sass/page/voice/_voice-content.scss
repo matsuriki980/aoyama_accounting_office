@@ -99,43 +99,13 @@ page > voice > voice-content
   }
 }
 
-.voice__pagination {
-  margin-top: 36rem;
-  text-align: center;
-
-  @include g.mq() {
-    margin-top: 60rem;
-    font-size: 18rem;
-  }
-}
 
 .voice__pagination-btn {
-  border: 1px solid var(--color-white);
-  border-radius: 50%;
-  font-family: var(--font-family-en);
-  font-weight: 100;
-  width: 50rem;
-  aspect-ratio: 1/1;
   color: var(--color-white);
-  background-color: transparent;
-  opacity: 0.4;
-  transition:
-    color var(--duration-base),
-    background-color var(--duration-base),
-    opacity var(--duration-base);
-
-  @media (any-hover: hover) {
-    @include g.mq() {
-      &:hover {
-        opacity: 1;
-      }
-    }
-  }
+  border: 1px solid var(--color-white);
 }
 
 .voice__pagination-btn.active {
   background-color: var(--color-white);
   color: var(--color-font-base);
-  pointer-events: none;
-  opacity: 1;
 }
