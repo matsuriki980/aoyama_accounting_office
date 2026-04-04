@@ -1,0 +1,13 @@
+@use "../../global" as g;
+
+/*!
+page > news > news-kv
+------------------------------
+*/
+.news-kv {
+  background-image: url(../img/news/news-kv-sp.jpg);
+
+  @include g.mq() {
+    background-image: url(../img/news/news-kv.jpg);
+  }
+}
