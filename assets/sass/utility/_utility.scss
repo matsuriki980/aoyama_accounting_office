@@ -62,3 +62,10 @@ utility > utility
   }
 }
 
+.sp-hidden {
+  display: none;
+
+  @include g.mq() {
+    display: block;
+  }
+}
