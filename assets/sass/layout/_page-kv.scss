@@ -41,9 +41,9 @@ layout > page-kv
   &::before {
     content: "";
     display: block;
-    width: 30rem;
+    width: 20rem;
     height: 1px;
-    margin: 16rem 20rem 0 0;
+    margin: 16rem 16rem 0 0;
     background-color: var(--color-white);
 
     @include g.mq() {
@@ -72,6 +72,7 @@ layout > page-kv
   text-transform: capitalize;
   font-family: var(--font-family-en);
   font-weight: 200;
+  letter-spacing: -0.02em;
 
   @include g.mq() {
     font-size: 190rem;
