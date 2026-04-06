@@ -6,11 +6,11 @@ layout > contact-cta
 */
 .l-contact-cta {
   background-color: var(--color-primary);
-  padding: 50rem 30rem;
+  padding: 50rem 30rem 0;
   border-top: 1px solid var(--color-white);
 
   @include g.mq() {
-    padding: 90rem 60rem;
+    padding: 90rem 60rem 0;
   }
 }
 

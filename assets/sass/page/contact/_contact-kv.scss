@@ -1,0 +1,15 @@
+@use "../../global" as g;
+
+/*!
+page > contact > contact-kv
+------------------------------
+*/
+
+.contact-kv {
+  background-image: none;
+  background-color: var(--color-primary);
+
+  @include g.mq() {
+    background-image: none;
+  }
+}
