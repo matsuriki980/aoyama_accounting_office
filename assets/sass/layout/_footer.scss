@@ -6,10 +6,10 @@ layout > footer
 */
 .l-footer {
   background: var(--color-primary);
-  padding-bottom: 26rem;
+  padding-block: 50rem 26rem;
 
   @include g.mq() {
-    padding-bottom: 142rem;
+    padding-block: 90rem 142rem;
   }
 }
 
