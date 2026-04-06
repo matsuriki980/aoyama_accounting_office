@@ -1,0 +1,26 @@
+@use "../global" as g;
+
+/*!
+component > form-btn
+------------------------------
+*/
+.c-form__btn-wrap {
+  text-align: center;
+}
+
+.c-form__btn {
+  background-color: var(--color-accent);
+  padding: 10rem 54rem;
+  color: var(--color-white);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  transition: background-color var(--duration-base);
+
+  @include g.mq() {
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #26346a;
+      }
+    }
+  }
+}
