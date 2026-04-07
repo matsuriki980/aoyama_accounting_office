@@ -4340,6 +4340,59 @@ page > contact > contact-form
 }
 
 /*!
-page > privacy-policy > privacy-policy-layout
+page > privacy-policy > privacy-policy-kv
 ------------------------------
-*//*# sourceMappingURL=style.css.map */
+*/
+.privacy-policy-kv {
+  background-image: none;
+  background-color: var(--color-primary);
+}
+@media screen and (min-width: 900px) {
+  .privacy-policy-kv {
+    background-image: none;
+  }
+}
+
+/*!
+page > privacy-policy > privacy-policy-content
+------------------------------
+*/
+.privacy-policy {
+  padding: 64rem 30rem;
+}
+@media screen and (min-width: 900px) {
+  .privacy-policy {
+    padding: 120rem 320rem;
+  }
+}
+
+.privacy-policy__lead {
+  font-weight: 500;
+}
+
+.privacy-policy__section-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40rem;
+  margin-top: 60rem;
+}
+
+.privacy-policy__section {
+  /* タイトル */
+}
+.privacy-policy__section h2 {
+  font-size: 20rem;
+  padding-bottom: 15rem;
+  border-bottom: 1px solid var(--color-border-light-black);
+  font-weight: 500;
+}
+.privacy-policy__section {
+  /* 最後の項目の住所を改行 */
+}
+.privacy-policy__section p span {
+  display: block;
+}
+
+.privacy-policy__section-content {
+  margin-top: 20rem;
+}/*# sourceMappingURL=style.css.map */
