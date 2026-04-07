@@ -30,12 +30,513 @@
 
 <body>
 
+    <!-- =========================================
+     Header
+========================================= -->
+    <header class="l-header l-header--white">
+        <div class="l-header__inner">
+            <div class="l-header__logo">
+                <a href="index.html" class="u-link-hover">
+                    <img src="assets/img/logo_white.svg" width="166" height="22"
+                        alt="青山会計事務所｜静岡市駿河区の税務・会計・相続相談に対応する会計事務所">
+                </a>
+            </div>
+
+            <div class="l-header__content">
+                <nav class="l-gnav__nav" aria-label="グローバルナビゲーション">
+                    <ul class="l-gnav__list">
+                        <li class="l-gnav__item">
+                            <a href="feature.html" class="l-gnav__link u-text-hover">青山会計事務所の強み</a>
+                        </li>
+                        <li class="l-gnav__item">
+                            <a href="service.html" class="l-gnav__link u-text-hover">サービス内容</a>
+                        </li>
+                        <li class="l-gnav__item">
+                            <a href="voice.html" class="l-gnav__link u-text-hover">お客様の声</a>
+                        </li>
+                        <li class="l-gnav__item">
+                            <a href="news.html" class="l-gnav__link u-text-hover">お知らせ</a>
+                        </li>
+                        <li class="l-gnav__item">
+                            <a href="about.html" class="l-gnav__link u-text-hover">事務所案内</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="l-header__btn-wrap">
+                    <a href="contact.html" class="l-header__contact-btn l-header__btn" aria-label="ヘッダー お問い合わせボタン">
+                        <span class="icon"></span>
+                    </a>
+
+                    <button class="l-hamburger l-hamburger_open l-header__btn js-menu__button_open"
+                        aria-label="ハンバーガーボタン">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <!-- /.l-header__content -->
+
+            <dialog class="l-menu js-menu" aria-label="ハンバーガーメニュー">
+                <div class="l-menu__inner">
+                    <nav class="l-menu__nav" aria-label="メニュー内コンテンツ">
+                        <div class="l-menu__logo">
+                            <img src="assets/img/logo.svg" width="166" height="22"
+                                alt="青山会計事務所｜静岡市駿河区の税務・会計・相続相談に対応する会計事務所">
+                        </div>
+                        <!-- /.l-menu__logo -->
+
+                        <ul class="l-menu__list">
+                            <li class="l-menu__item">
+                                <a href="feature.html" class="l-menu__link">青山会計事務所の強み</a>
+                            </li>
+                            <li class="l-menu__item">
+                                <a href="service.html" class="l-menu__link">サービス内容</a>
+                                <ul class="l-menu__list_child c-nav__list_child">
+                                    <li class="l-menu__item_child c-nav__item_child">
+                                        <a href="service.html#tax-accounting"
+                                            class="l-menu__link_child c-nav__link_child">税理・会計</a>
+                                    </li>
+                                    <li class="l-menu__item_child c-nav__item_child">
+                                        <a href="service.html#capital-gains"
+                                            class="l-menu__link_child c-nav__link_child">相続・贈与・譲渡所得</a>
+                                    </li>
+                                    <li class="l-menu__item_child c-nav__item_child">
+                                        <a href="service.html#support"
+                                            class="l-menu__link_child c-nav__link_child">設立・開業支援</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="l-menu__item">
+                                <a href="about.html" class="l-menu__link">事務所案内</a>
+                                <ul class="l-menu__list_child c-nav__list_child">
+                                    <li class="l-menu__item_child c-nav__item_child">
+                                        <a href="about.html#message"
+                                            class="l-menu__link_child c-nav__link_child">代表挨拶</a>
+                                    </li>
+                                    <li class="l-menu__item_child c-nav__item_child">
+                                        <a href="about.html#values"
+                                            class="l-menu__link_child c-nav__link_child">経営理念</a>
+                                    </li>
+                                    <li class="l-menu__item_child c-nav__item_child">
+                                        <a href="about.html#company"
+                                            class="l-menu__link_child c-nav__link_child">事務所概要</a>
+                                    </li>
+                                    <li class="l-menu__item_child c-nav__item_child">
+                                        <a href="about.html#access"
+                                            class="l-menu__link_child c-nav__link_child">アクセス</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="l-menu__item">
+                                <a href="voice.html" class="l-menu__link">お客様の声</a>
+                            </li>
+                            <li class="l-menu__item">
+                                <a href="news.html" class="l-menu__link">お知らせ</a>
+                            </li>
+                            <li class="l-menu__item">
+                                <a href="contact.html" class="l-menu__link">お問い合わせ</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="l-menu__img-wrap">
+                        <span class="l-menu-img">
+                            <img src="assets/img/common/menu01.jpg" width="720" height="806" alt="パソコンの前で笑顔で打ち合わせをする男女">
+                        </span>
+                    </div>
+                    <!-- /.l-menu__img-wrap -->
+
+                    <div class="l-menu__marquee c-marquee">
+                        <div class="l-menu__marquee__inner c-marquee__inner">
+                            <span>Numbers Expert Numbers Expert</span>
+                            <span>Numbers Expert Numbers Expert</span> <!-- 2個配置し途切れるのを防ぐ -->
+                        </div>
+                        <!-- /.l-menu__decoration__inner -->
+                    </div>
+                    <!-- /.l-menu__decoration -->
+                </div>
+                <!-- /.l-menu__inner -->
+
+                <!-- 
+                <button class="l-hamburger l-header__btn l-hamburger_close js-menu__button_close" aria-label="ハンバーガーボタン">
+                    <span></span>
+                    <span></span>
+                </button>
+                -->
+            </dialog>
+        </div>
+        <!-- /.l-header__inner -->
+    </header>
+
+    <main>
+
+        <!-- =========================================
+          page-kv
+    ======================================== -->
+        <div class="l-page-kv privacy-policy-kv">
+            <div class="l-page-kv__content">
+                <div class="l-page-kv__title-wrap">
+                    <h1 class="l-page-kv__title l-page-kv__title--ja">プライバシーポリシー</h1>
+                    <span class="l-page-kv__title l-page-kv__title--en">
+                        <span>privacy</span>
+                        <span>policy</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================================
+          privacy-policy
+    ======================================== -->
+        <div class="privacy-policy">
+            <p class="privacy-policy__lead">
+                青山会計事務所（以下，「当社」といいます。）は，
+                本ウェブサイト上で提供するサービス（以下,「本サービス」といいます。）における，
+                ユーザーの個人情報の取扱いについて，
+                以下のとおりプライバシーポリシー（以下，「本ポリシー」といいます。）を定めます。
+            </p>
+
+            <!-- 各条項 -->
+            <div class="privacy-policy__section-wrap">
+
+                <section class="privacy-policy__section">
+                    <h2>第1条（個人情報）</h2>
+                    <p>
+                        「個人情報」とは，個人情報保護法にいう「個人情報」を指すものとし，
+                        生存する個人に関する情報であって，
+                        当該情報に含まれる氏名，生年月日，住所，電話番号，
+                        連絡先その他の記述等により特定の個人を識別できる情報及び容貌，指紋，声紋にかかるデータ，
+                        及び健康保険証の保険者番号などの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。
+                    </p>
+                </section>
+
+                <section class="privacy-policy__section">
+                    <h2>第2条（個人情報の収集方法）</h2>
+                    <p>
+                        当社は，ユーザーが利用登録をする際に氏名，生年月日，住所，電話番号，
+                        メールアドレスなどの個人情報をお尋ねすることがあります。
+                        また，ユーザーと提携先などとの間でなされたユーザーの個人情報を含む取引記録や決済に関する情報を,
+                        当社の提携先（情報提供元，広告主，広告配信先などを含みます。以下，｢提携先｣といいます。）などから収集することがあります。
+                    </p>
+                </section>
+
+                <section class="privacy-policy__section">
+                    <h2>第3条（個人情報を収集・利用する目的）</h2>
+
+                    <div class="privacy-policy__section-content">
+                        <p>当社が個人情報を収集・利用する目的は，以下のとおりです。</p>
+                        <ol class="privacy-policy__section-list">
+                            <li class="privacy-policy__section-item">1.当社サービスの提供・運営のため</li>
+                            <li class="privacy-policy__section-item">2.ユーザーからのお問い合わせに回答するため（本人確認を行うことを含む）</li>
+                            <li class="privacy-policy__section-item">
+                                3.ユーザーが利用中のサービスの新機能，更新情報，キャンペーン等及び当社が提供する他のサービスの案内のメールを送付するため
+                            </li>
+                            <li class="privacy-policy__section-item">4.メンテナンス，重要なお知らせなど必要に応じたご連絡のため</li>
+                            <li class="privacy-policy__section-item">
+                                5.利用規約に違反したユーザーや，不正・不当な目的でサービスを利用しようとするユーザーの特定をし，ご利用をお断りするため</li>
+                            <li class="privacy-policy__section-item">6.ユーザーにご自身の登録情報の閲覧や変更，削除，ご利用状況の閲覧を行っていただくため</li>
+                            <li class="privacy-policy__section-item">7.有料サービスにおいて，ユーザーに利用料金を請求するため</li>
+                            <li class="privacy-policy__section-item">8.上記の利用目的に付随する目的</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section class="privacy-policy__section">
+                    <h2>第4条（利用目的の変更）</h2>
+
+                    <div class="privacy-policy__section-content">
+                        <p>当社が個人情報を収集・利用する目的は，以下のとおりです。</p>
+                        <ol class="privacy-policy__section-list">
+                            <li class="privacy-policy__section-item">
+                                1.当社は，利用目的が変更前と関連性を有すると合理的に認められる場合に限り，個人情報の利用目的を変更するものとします。
+                            </li>
+                            <li class="privacy-policy__section-item">
+                                2.利用目的の変更を行った場合には，変更後の目的について，当社所定の方法により，ユーザーに通知し，または本ウェブサイト上に公表するものとします。
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section class="privacy-policy__section">
+                    <h2>第5条（個人情報の第三者提供）</h2>
+
+                    <div class="privacy-policy__section-content">
+                        <p>当社が個人情報を収集・利用する目的は，以下のとおりです。</p>
+                        <ol class="privacy-policy__section-list">
+                            <li class="privacy-policy__section-item">
+                                1.当社は，次に掲げる場合を除いて，あらかじめユーザーの同意を得ることなく，第三者に個人情報を提供することはありません。
+                                ただし，個人情報保護法その他の法令で認められる場合を除きます。
+
+                                <!-- 2階層目 -->
+                                <ul class="privacy-policy__section-second-list">
+                                    <li class="privacy-policy__section-second-item">
+                                        a.人の生命，身体または財産の保護のために必要がある場合であって，本人の同意を得ることが困難であるとき
+                                    </li>
+                                    <li class="privacy-policy__section-second-item">
+                                        b.公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって，本人の同意を得ることが困難であるとき
+                                    </li>
+                                    <li class="privacy-policy__section-second-item">
+                                        c.国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって，本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき
+                                    </li>
+                                    <li class="privacy-policy__section-second-item">
+                                        d.予め次の事項を告知あるいは公表し，かつ当社が個人情報保護委員会に届出をしたとき
+
+                                        <!-- 3階層目 -->
+                                        <ul class="privacy-policy__section-three-list">
+                                            <li class="privacy-policy__section-three-item">ⅰ.利用目的に第三者への提供を含むこと</li>
+                                            <li class="privacy-policy__section-three-item">ⅱ.第三者に提供されるデータの項目</li>
+                                            <li class="privacy-policy__section-three-item">ⅲ.第三者への提供の手段または方法</li>
+                                            <li class="privacy-policy__section-three-item">
+                                                ⅳ.本人の求めに応じて個人情報の第三者への提供を停止すること
+                                            </li>
+                                            <li class="privacy-policy__section-three-item">ⅴ.本人の求めを受け付ける方法</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="privacy-policy__section-item">
+                                2.利用目的の変更を行った場合には，変更後の目的について，当社所定の方法により，ユーザーに通知し，または本ウェブサイト上に公表するものとします。
+
+                                <!-- 2階層目 -->
+                                <ul class="privacy-policy__section-second-list">
+                                    <li class="privacy-policy__section-second-item">
+                                        a.当社が利用目的の達成に必要な範囲内において個人情報の取扱いの全部または一部を委託する場合
+                                    </li>
+                                    <li class="privacy-policy__section-second-item">
+                                        b.合併その他の事由による事業の承継に伴って個人情報が提供される場合
+                                    </li>
+                                    <li class="privacy-policy__section-second-item">
+                                        c.個人情報を特定の者との間で共同して利用する場合であって，その旨並びに共同して利用される個人情報の項目，
+                                        共同して利用する者の範囲，利用する者の利用目的および当該個人情報の管理について責任を有する者の氏名または名称について，
+                                        あらかじめ本人に通知し，または本人が容易に知り得る状態に置いた場合
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section class="privacy-policy__section">
+                    <h2>第6条（個人情報の開示）</h2>
+
+                    <div class="privacy-policy__section-content">
+                        <p>当社が個人情報を収集・利用する目的は，以下のとおりです。</p>
+                        <ol class="privacy-policy__section-list">
+                            <li class="privacy-policy__section-item">
+                                1.当社は，本人から個人情報の開示を求められたときは，本人に対し，遅滞なくこれを開示します。
+                                ただし，開示することにより次のいずれかに該当する場合は，
+                                その全部または一部を開示しないこともあり，
+                                開示しない決定をした場合には，
+                                その旨を遅滞なく通知します。なお，
+                                個人情報の開示に際しては，
+                                1件あたり1,000円の手数料を申し受けます。
+
+                                <!-- 2階層目 -->
+                                <ul class="privacy-policy__section-second-list">
+                                    <li class="privacy-policy__section-second-item">
+                                        a.本人または第三者の生命，身体，財産その他の権利利益を害するおそれがある場合
+                                    </li>
+                                    <li class="privacy-policy__section-second-item">
+                                        b.当社の業務の適正な実施に著しい支障を及ぼすおそれがある場合
+                                    </li>
+                                    <li class="privacy-policy__section-second-item">
+                                        c.その他法令に違反することとなる場合
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="privacy-policy__section-item">
+                                2.前項の定めにかかわらず，履歴情報および特性情報などの個人情報以外の情報については，原則として開示いたしません。
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section class="privacy-policy__section">
+                    <h2>第7条（個人情報の訂正および削除）</h2>
+
+                    <div class="privacy-policy__section-content">
+                        <ol class="privacy-policy__section-list">
+                            <li class="privacy-policy__section-item">
+                                1.ユーザーは，当社の保有する自己の個人情報が誤った情報である場合には，当社が定める手続きにより，当社に対して個人情報の訂正，追加または削除（以下，「訂正等」といいます。）を請求することができます。
+                            </li>
+                            <li class="privacy-policy__section-item">
+                                2.当社は，ユーザーから前項の請求を受けてその請求に応じる必要があると判断した場合には，遅滞なく，当該個人情報の訂正等を行うものとします。
+                            </li>
+                            <li class="privacy-policy__section-item">
+                                3.当社は，前項の規定に基づき訂正等を行った場合，または訂正等を行わない旨の決定をしたときは遅滞なく，これをユーザーに通知します。
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section class="privacy-policy__section">
+                    <h2>第8条（個人情報の利用停止等）</h2>
+
+                    <div class="privacy-policy__section-content">
+                        <ol class="privacy-policy__section-list">
+                            <li class="privacy-policy__section-item">
+                                1.当社は，本人から，個人情報が，利用目的の範囲を超えて取り扱われているという理由，または不正の手段により取得されたものであるという理由により，その利用の停止または消去（以下，「利用停止等」といいます。）を求められた場合には，遅滞なく必要な調査を行います。
+                            </li>
+                            <li class="privacy-policy__section-item">
+                                2.前項の調査結果に基づき，その請求に応じる必要があると判断した場合には，遅滞なく，当該個人情報の利用停止等を行います。
+                            </li>
+                            <li class="privacy-policy__section-item">
+                                3.当社は，前項の規定に基づき利用停止等を行った場合，または利用停止等を行わない旨の決定をしたときは，遅滞なく，これをユーザーに通知します。
+                            </li>
+                            <li class="privacy-policy__section-item">
+                                4.前2項にかかわらず，利用停止等に多額の費用を有する場合その他利用停止等を行うことが困難な場合であって，
+                                ユーザーの権利利益を保護するために必要なこれに代わるべき措置をとれる場合は，この代替策を講じるものとします。
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section class="privacy-policy__section">
+                    <h2>第9条（プライバシーポリシーの変更）</h2>
+
+                    <div class="privacy-policy__section-content">
+                        <ol class="privacy-policy__section-list">
+                            <li class="privacy-policy__section-item">
+                                1.本ポリシーの内容は，法令その他本ポリシーに別段の定めのある事項を除いて，ユーザーに通知することなく，変更することができるものとします。
+                            </li>
+                            <li class="privacy-policy__section-item">
+                                2.当社が別途定める場合を除いて，変更後のプライバシーポリシーは，本ウェブサイトに掲載したときから効力を生じるものとします。
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section class="privacy-policy__section">
+                    <h2>第10条（お問い合わせ窓口）</h2>
+
+                    <div class="privacy-policy__section-content">
+                        <p>
+                            <span>本ポリシーに関するお問い合わせは，下記の窓口までお願いいたします。</span>
+                            <span>住所：静岡市駿河区森下町 静岡MMタワー14F</span>
+                            <span>事務所名：青山会計事務所</span>
+                            <span>所長：青山 義弘</span>
+                            <span>Eメールアドレス：info@aoyama-tax-oficce.jp</span>
+                        </p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- =========================================
+     footer
+========================================= -->
+    <footer class="l-footer l-container">
+        <div class="l-footer__inner">
+
+            <div class="l-footer__logo">
+                <a href="index.html" class="u-link-hover">
+                    <img src="assets/img/logo_white.svg" width="166" height="22"
+                        alt="青山会計事務所｜静岡市駿河区の税務・会計・相続相談に対応する会計事務所">
+                </a>
+            </div>
+
+            <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+                <ul class="l-footer__list">
+
+                    <!-- Column 1 -->
+                    <li class="l-footer__list-col">
+                        <ul class="l-footer-nav__group">
+
+                            <li class="l-footer__item">
+                                <a href="feature.html" class="l-footer__link u-text-hover">青山会計事務所の強み</a>
+                            </li>
+
+                            <li class="l-footer__item">
+                                <a href="service.html" class="l-footer__link u-text-hover">サービス内容</a>
+                                <ul class="l-footer__list_child c-nav__list_child">
+                                    <li class="l-footer__item_child c-nav__item_child">
+                                        <a href="service.html#tax-accounting"
+                                            class="l-footer__link_child c-nav__link_child">税理・会計</a>
+                                    </li>
+                                    <li class="l-menu__item_child c-nav__item_child">
+                                        <a href="service.html#capital-gains"
+                                            class="l-footer__link_child c-nav__link_child">相続・贈与・譲渡所得</a>
+                                    </li>
+                                    <li class="l-menu__item_child c-nav__item_child">
+                                        <a href="service.html#support"
+                                            class="l-footer__link_child c-nav__link_child">設立・開業支援</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <!-- Column 2 -->
+                    <li class="l-footer__list-col">
+                        <ul class="l-footer-nav__group">
+                            <li class="l-footer__item">
+                                <a href="about.html" class="l-footer__link u-text-hover">事務所案内</a>
+                                <ul class="l-footer__list_child c-nav__list_child">
+                                    <li class="l-footer__item_child c-nav__item_child">
+                                        <a href="about.html#message"
+                                            class="l-footer__link_child c-nav__link_child">代表挨拶</a>
+                                    </li>
+                                    <li class="l-menu__item_child c-nav__item_child">
+                                        <a href="about.html#values"
+                                            class="l-footer__link_child c-nav__link_child">経営理念</a>
+                                    </li>
+                                    <li class="l-menu__item_child c-nav__item_child">
+                                        <a href="about.html#company"
+                                            class="l-footer__link_child c-nav__link_child">事務所概要</a>
+                                    </li>
+                                    <li class="l-menu__item_child c-nav__item_child">
+                                        <a href="about.html#access"
+                                            class="l-footer__link_child c-nav__link_child">アクセス</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Column 3 -->
+                    <li class="l-footer__list-col">
+                        <ul class="l-footer-nav__group">
+                            <li class="l-footer__item">
+                                <a href="voice.html" class="l-footer__link u-text-hover">お客様の声</a>
+                            </li>
+
+                            <li class="l-footer__item">
+                                <a href="news.html" class="l-footer__link u-text-hover">お知らせ</a>
+                            </li>
+
+                            <li class="l-footer__item">
+                                <a href="contact.html" class="l-footer__link u-text-hover">お問い合わせ</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <p class="l-footer__address">
+                <span>〒422-0000</span>
+                <span>静岡市駿河区森下町 静岡MMタワー14F</span>
+            </p>
+
+            <div class="l-footer__legal">
+                <small class="l-footer__copyright">©2024 Aoyama Tax Office.</small>
+                <a href="privacy-policy.html" class="l-foter__privacy-policy">プライバシーポリシー</a>
+            </div>
+
+        </div>
+        <!-- /.l-footer__inner -->
+    </footer>
+
     <!-- splideを読み込む -->
     <script src="assets/js/vendor/splide.min.js" defer></script>
     <script src="assets/js/vendor/splide-extension-auto-scroll.min.js" defer></script>
-   
+
     <!-- 各処理をまとめたjsファイルを読み込む -->
-    <script src="assets/js/main.js" defer></script>
+    <script type="module" src="assets/js/main.js"></script>
 </body>
 
 </html>
