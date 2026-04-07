@@ -1,0 +1,14 @@
+@use "../../global" as g;
+
+/*!
+page > privacy-policy > privacy-policy-kv
+------------------------------
+*/
+.privacy-policy-kv {
+  background-image: none;
+  background-color: var(--color-primary);
+
+  @include g.mq() {
+    background-image: none;
+  }
+}
