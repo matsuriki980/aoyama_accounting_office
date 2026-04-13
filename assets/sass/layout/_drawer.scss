@@ -1,0 +1,161 @@
+@use "../global" as g;
+@use "../mixin" as m;
+
+/*!
+layout > drawer
+------------------------------
+*/
+.l-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background-color: var(--color-primary);
+  width: 100vw;
+  height: 100vh;
+  padding: 88rem 18rem 40rem;
+  overflow: scroll;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity var(--duration-base),
+    visibility var(--duration-base);
+
+  /* ボタンクリック時に表示・非表示を切り替え */
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* 背景の格子模様 */
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    mask-image: url(../img/bg_texture.png);
+    @include m.mask-img;
+    mask-size: cover;
+    background-color: var(--color-white);
+    position: absolute;
+    inset: 0;
+  }
+
+  @include g.mq() {
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+.l-drawer__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+
+  @include g.mq() {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.l-drawer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+
+  @include g.mq() {
+    padding-inline: 120rem;
+    gap: 16rem;
+    justify-content: center;
+  }
+}
+
+.l-drawer__item {
+  padding-bottom: 16rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.l-drawer__link {
+  font-weight: 500;
+  color: var(--color-white);
+
+  @include g.mq() {
+    font-size: 17rem;
+  }
+}
+
+/* 2階層目を持つリストの設定 */
+.l-drawer__primary-item {
+  display: grid;
+  grid-template-columns: 120rem 1fr;
+  align-items: flex-start;
+  gap: 12rem;
+
+  @include g.mq() {
+    gap: 60rem;
+  }
+}
+
+/* 2階層目の設定 */
+.l-drawer__secondary-list {
+  display: flex;
+  flex-direction: column;
+
+  @include g.mq() {
+    flex-direction: row;
+    gap: 0 27rem;
+    flex-wrap: wrap;
+  }
+}
+
+.l-drawer__secondary-item {
+  display: flex;
+}
+
+.l-drawer__secondary-link {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 6rem;
+  font-size: 15rem;
+  transition: color var(--duration-base);
+  line-height: 2;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 8rem;
+    height: 1px;
+    background-color: currentColor;
+    // transition: background-color var(--duration-base);
+  }
+
+  &:hover {
+    color: var(--color-white);
+  }
+}
+
+.l-drawer__img {
+  @include g.mq() {
+    height: 100%;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.l-drawer__marquee {
+  display: none;
+
+  @include g.mq() {
+    display: block;
+    position: absolute;
+    bottom: -35rem;
+    color: rgba(255, 255, 255, 0.4);
+    z-index: 20;
+  }
+}

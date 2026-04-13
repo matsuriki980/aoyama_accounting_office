@@ -6,43 +6,55 @@ layout > header
 ------------------------------
 */
 .l-header {
-  position: fixed;
-  z-index: var(--z-index-header);
-  inset: 0;
   height: 76rem;
   padding-inline: 18rem;
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-index-header);
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
   @include g.mq() {
     height: 92rem;
-    padding-inline: 36rem;
+    padding-inline: 60rem 30rem;
   }
 }
 
 .l-header__inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
 .l-header__logo {
-  width: 125rem;
+  width: 124.5rem;
+  height: 16.51rem;
+  mask-image: url(../img/logo.svg);
+  @include m.mask-img;
+  background-color: var(--color-primary);
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 
   @include g.mq() {
-    width: 165rem;
+    width: 165.98rem;
+    height: 22.01rem;
   }
 }
 
-.l-header__content {
-  display: flex;
-  align-items: center;
-  gap: 36rem;
+.l-header__block-right {
+  @include g.mq() {
+    display: flex;
+    align-items: center;
+    gap: 37rem;
+  }
 }
 
-.l-gnav__nav {
+.l-header__gnav {
   display: none;
 
   @include g.mq() {
@@ -50,33 +62,91 @@ layout > header
   }
 }
 
-.l-gnav__list {
+.l-header__gnav-inner {
+  @include g.mq() {
+  }
+}
+
+.l-header__gnav-list {
   @include g.mq() {
     display: flex;
+    align-items: center;
     gap: 36rem;
   }
 }
 
-.l-gnav__link {
+.l-header__item {
+  @include g.mq() {
+  }
+}
+
+.l-header__link {
   @include g.mq() {
     font-size: 14rem;
   }
 }
 
 .l-header__btn-wrap {
-  display: flex;
+  display: grid;
   gap: 7rem;
-  align-items: center;
+  grid-template-columns: repeat(2, 38rem);
+
+  @include g.mq() {
+    gap: 12rem;
+    grid-template-columns: repeat(2, 56rem);
+  }
 }
 
 .l-header__btn {
-  width: 39rem;
-  aspect-ratio: 1/1;
+  border: 1px solid var(--color-primary);
   border-radius: 50%;
-  border: 1px var(--color-primary) solid;
+  aspect-ratio: 1/1;
+  display: block;
 }
 
-.l-header__contact-btn {
+.l-header__btn-contact {
+  display: grid;
+  place-items: center;
+  background-color: transparent;
+  opacity: 1;
+  visibility: visible;
+  transition:
+    background-color var(--duration-base),
+    opacity var(--duration-base),
+    visibility var(--duration-base);
+
+  /* アイコンを設定する */
+  &::before {
+    content: "";
+    display: block;
+    width: 16rem;
+    aspect-ratio: 1/1;
+    mask-image: url(../img/mail-icon.svg);
+    @include m.mask-img;
+    mask-size: contain;
+    background-color: var(--color-primary);
+    transition: background-color var(--duration-base);
+
+    @include g.mq() {
+      width: 23.2rem;
+    }
+  }
+
+  @include g.mq() {
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--color-primary);
+
+        &::before {
+          background-color: var(--color-white);
+        }
+      }
+    }
+  }
+}
+
+.l-header__btn-drawer {
+  background-color: var(--color-primary);
   display: grid;
   place-items: center;
   transition: background-color var(--duration-base);
@@ -84,261 +154,103 @@ layout > header
   @include g.mq() {
     @media (any-hover: hover) {
       &:hover {
-        background-color: var(--color-primary);
+        background-color: var(--color-white);
 
-        .icon {
-          background-color: var(--color-white);
+        .l-header__btn-drawer__inner {
+          span {
+            background-color: var(--color-primary);
+          }
         }
       }
     }
   }
+}
 
-  .icon {
-    width: 16rem;
-    aspect-ratio: 1/1;
-    mask-image: url(../../assets/img/mail-icon.svg);
-    @include m.mask-img;
-    mask-size: contain;
-    background-color: var(--color-primary);
-    transition: background-color var(--duration-base);
+.l-header__btn-drawer__inner {
+  width: 17.15rem;
+  height: 4.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  position: relative;
+
+  @include g.mq() {
+    width: 24rem;
+    height: 6.65rem;
+  }
+
+  span {
+    width: 100%;
+    height: 1rem;
+    background-color: var(--color-white);
+    display: block;
+    transition:
+      background-color var(--duration-base),
+      transform var(--duration-base),
+      top var(--duration-base),
+      width var(--duration-base);
+
+    /* 2本目の線 */
+    &:nth-of-type(2) {
+      width: 12rem;
+
+      @include g.mq() {
+        width: 17rem;
+      }
+    }
   }
 }
 
-.l-hamburger {
-  background: var(--color-primary);
-  position: relative;
-  transition: background-color var(--duration-base);
+/* メニューopen時、×に変形 */
+.l-header__btn-drawer.is-open {
+  background-color: var(--color-white);
 
   @include g.mq() {
+    background-color: var(--color-primary);
+
     @media (any-hover: hover) {
       &:hover {
         background-color: var(--color-white);
 
-        span {
-          background-color: var(--color-primary);
-        }
-      }
-    }
-  }
-
-  span {
-    display: inline-block;
-    width: 16rem;
-    height: 1px;
-    background-color: var(--color-white);
-    position: absolute;
-    transition: background-color var(--duration-base);
-  }
-}
-
-.l-hamburger_open {
-  span {
-    right: 11.5rem;
-
-    &:nth-of-type(1) {
-      width: 17rem;
-      top: 16rem;
-    }
-    &:nth-of-type(2) {
-      width: 12rem;
-      bottom: 16rem;
-    }
-  }
-}
-
-.l-hamburger_close {
-  position: fixed;
-  top: 18rem;
-  right: 18rem;
-  border: 1px var(--color-white) solid;
-
-  &:nth-of-type(1) {
-    transform: rotate(160deg);
-  }
-  &:nth-of-type(2) {
-    width: 12rem;
-    bottom: 16rem;
-  }
-}
-
-.l-menu {
-  @include g.mq() {
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-  }
-
-  &::backdrop {
-    display: none;
-  }
-}
-
-.l-menu__inner {
-  @include g.mq() {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: 100%;
-  }
-}
-
-.l-menu__nav {
-  background: var(--color-primary);
-  padding: 24rem 18rem;
-  width: 100vw;
-  background-image: url(../img/bg_texture.png);
-  @include m.background-img;
-
-  @include g.mq() {
-    width: auto;
-  }
-}
-
-.l-menu__logo {
-  width: 125rem;
-
-  @include g.mq() {
-    margin-left: 60rem;
-    width: 165rem;
-  }
-}
-
-.l-menu__list {
-  margin-top: 16rem;
-
-  @include g.mq() {
-    margin-top: 40rem;
-    padding-inline: 120rem;
-  }
-}
-
-.l-menu__item {
-  border-bottom: 1px solid var(--color-border-light);
-  color: var(--color-white);
-  padding-block: 16rem;
-  background-image: linear-gradient(var(--color-white), var(--color-white));
-  background-position: 0 100%;
-  background-size: 0 1px;
-  background-repeat: no-repeat;
-  transition: background-size var(--duration-base);
-
-  @media (any-hover: hover) {
-    &:has(.l-menu__link:hover) {
-      /* 1階層目のリンクをホバーしたときのみ、下線を100% */
-      background-size: 100% 1px;
-    }
-  }
-
-  &:nth-of-type(2),
-  &:nth-of-type(3) {
-    /* 2階層があるナビのみ幅指定 */
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  @include g.mq() {
-    &:nth-of-type(2) {
-      grid-template-columns: 145rem 300rem;
-    }
-    &:nth-of-type(3) {
-      grid-template-columns: 145rem 200rem;
-    }
-  }
-}
-
-.l-menu__link {
-  display: block;
-
-  @include g.mq() {
-    font-size: 17rem;
-  }
-}
-
-/* 2階層目 */
-.l-menu__list_child {
-  @include g.mq() {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-  }
-}
-
-.l-menu__img-wrap {
-  display: none;
-
-  @include g.mq() {
-    display: block;
-  }
-}
-
-.l-menu-img {
-  @include g.mq() {
-    img {
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-}
-
-.l-menu__marquee {
-  display: none;
-
-  @include g.mq() {
-    position: absolute;
-    bottom: -18rem;
-  }
-
-  @include g.mq() {
-    span {
-      color: rgba(255, 255, 255, 0.4);
-    }
-  }
-}
-
-/* 下層ページのヘッダー設定 */
-.l-header--white {
-  .l-gnav__link {
-    @include g.mq() {
-      color: var(--color-white);
-    }
-  }
-
-  // 下層ページのハンバーガーボタンの色を変更する
-  .l-hamburger {
-    background-color: var(--color-white);
-
-    span {
-      background-color: var(--color-primary);
-    }
-
-    @include g.mq() {
-      @media (any-hover: hover) {
-        &:hover {
-          background-color: transparent;
-          border: 1px solid var(--color-white);
-
+        .l-header__btn-drawer__inner {
           span {
-            background-color: var(--color-white);
-          }
-        }
-      }
-    }
-  }
-
-  .l-header__contact-btn {
-    background-color: transparent;
-    border: 1px solid var(--color-white);
-
-    .icon {
-      background-color: var(--color-white);
-    }
-
-    @include g.mq() {
-      @media (any-hover: hover) {
-        &:hover {
-          background-color: var(--color-white);
-
-          .icon {
             background-color: var(--color-primary);
           }
+        }
+      }
+    }
+  }
+
+  .l-header__btn-drawer__inner {
+    span {
+      position: absolute;
+      transform-origin: right;
+      right: 1rem;
+      background-color: var(--color-primary);
+
+      @include g.mq() {
+        background-color: var(--color-white);
+      }
+
+      /* 1本目の線 */
+      &:nth-of-type(1) {
+        transform: rotate(-30deg);
+        top: -2.5rem;
+
+        @include g.mq() {
+          top: -1.5rem;
+        }
+      }
+
+      /* 2本目の線 */
+      &:nth-of-type(2) {
+        width: 100%;
+        transform: rotate(30deg);
+        top: 7rem;
+
+        @include g.mq() {
+          top: 10rem;
         }
       }
     }
