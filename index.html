@@ -84,10 +84,10 @@
     <nav class="l-drawer js-drawer" aria-label="ドロワーメニュー">
         <div class="l-drawer__inner">
             <ul class="l-drawer__list">
-                <li class="l-drawer__item">
+                <li class="l-drawer__item is-selected js-drawer__item" data-item="feature">
                     <a href="feature.html" class="l-drawer__link">青山会計事務所の強み</a>
                 </li>
-                <li class="l-drawer__item l-drawer__primary-item">
+                <li class="l-drawer__item l-drawer__primary-item js-drawer__item" data-item="service">
                     <a href="service.html" class="l-drawer__link l-drawer__primary-link">サービス内容</a>
                     <ul class="l-drawer__secondary-list">
                         <li class="l-drawer__secondary-item">
@@ -101,7 +101,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="l-drawer__item l-drawer__primary-item">
+                <li class="l-drawer__item l-drawer__primary-item js-drawer__item" data-item="about">
                     <a href="about.html" class="l-drawer__link l-drawer__primary-link">事務所案内</a>
                     <ul class="l-drawer__secondary-list">
                         <li class="l-drawer__secondary-item">
@@ -118,19 +118,29 @@
                         </li>
                     </ul>
                 </li>
-                <li class="l-drawer__item">
+                <li class="l-drawer__item js-drawer__item" data-item="voice">
                     <a href="voice.html" class="l-drawer__link">お客様の声</a>
                 </li>
-                <li class="l-drawer__item">
+                <li class="l-drawer__item js-drawer__item" data-item="news">
                     <a href="news.html" class="l-drawer__link">お知らせ</a>
                 </li>
-                <li class="l-drawer__item">
+                <li class="l-drawer__item js-drawer__item" data-item="contact">
                     <a href="contact.html" class="l-drawer__link">お問い合わせ</a>
                 </li>
             </ul>
 
-            <div class="l-drawer__img sp-hidden">
-                <img src="assets/img/common/menu01.jpg" width="720" height="806" alt="パソコンの前で笑顔で打ち合わせをする男女">
+            <div class="l-drawer__img js-drawer__img sp-hidden">
+                <img data-img="feature" class="is-selected" src="assets/img/common/menu01.jpg" width="720" height="806"
+                    alt="パソコンの前で笑顔で打ち合わせをする男女">
+                <img data-img="service" src="assets/img/common/menu02.jpg" width="720" height="806"
+                    alt="パソコンを手に目の前の資料に指を指すスーツ姿の笑顔の男性">
+                <img data-img="about" src="assets/img/common/menu03.jpg" width="720" height="806"
+                    alt="デスクが並ぶ白基調の綺麗なオフィス">
+                <img data-img="voice" src="assets/img/common/menu04.jpg" width="720" height="806" alt="スマートフォンを触る人物の手">
+                <img data-img="news" src="assets/img/common/menu05.jpg" width="720" height="806"
+                    alt="新聞のタイトルをピックアップしている写真">
+                <img data-img="contact" src="assets/img/common/menu06.jpg" width="720" height="806"
+                    alt="パソコンを手にするキャリアウーマンの女性">
             </div>
         </div>
 
@@ -740,6 +750,9 @@
         </div>
         <!-- /.l-footer__inner -->
     </footer>
+
+    <!-- gsapを読み込む -->
+     <script src="assets/js/vendor/gsap.min.js" defer></script>
 
     <!-- splideを読み込む 
     <script src="assets/js/vendor/splide.min.js" defer></script>
