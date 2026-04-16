@@ -13,6 +13,16 @@ layout > header
   z-index: var(--z-index-header);
   display: flex;
   align-items: center;
+  background-color: transparent;
+  transition:
+    background-color var(--duration-base),
+    box-shadow var(--duration-base);
+
+  // スクロールがトリガー要素を超えたら背景表示
+  &.is-active {
+    background-color: var(--color-white);
+    box-shadow: 0 7rem 30rem 0 rgba(48, 48, 48, 0.15);
+  }
 
   @include g.mq() {
     height: 92rem;
