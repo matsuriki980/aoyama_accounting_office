@@ -834,6 +834,12 @@ layout > header
   z-index: var(--z-index-header);
   display: flex;
   align-items: center;
+  background-color: transparent;
+  transition: background-color var(--duration-base), box-shadow var(--duration-base);
+}
+.l-header.is-active {
+  background-color: var(--color-white);
+  box-shadow: 0 7rem 30rem 0 rgba(48, 48, 48, 0.15);
 }
 @media screen and (min-width: 900px) {
   .l-header {
