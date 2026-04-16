@@ -9,6 +9,7 @@ export const initializeDrawerMenu = () => {
   const toggleDrawer = () => {
     const drawer = document.querySelector(".js-drawer");
     const drawerBtn = document.querySelector(".js-btn-drawer");
+    const header = document.querySelector(".js-header");
     const headerLogo = document.querySelector(".js-header-logo");
     const headerContactBtn = document.querySelector(".js-btn-contact");
     const gnav = document.querySelector(".js-gnav");
@@ -21,14 +22,14 @@ export const initializeDrawerMenu = () => {
       drawer.classList.toggle("is-open");
       drawerBtn.classList.toggle("is-open");
 
-      const drawerPlag = drawer.classList.contains("is-open"); // ドロワーメニューのクラスを判定
+      const drawerPlug = drawer.classList.contains("is-open"); // ドロワーメニューのクラスを判定
 
       hiddenItem.forEach((item) => {
-        if (drawerPlag) {
+        if (drawerPlug) {
           headerLogo.style.backgroundColor = "var(--color-white)";
           item.style.opacity = "0";
           item.style.visibility = "hidden";
-        } else if (!drawerPlag) {
+        } else if (!drawerPlug) {
           headerLogo.style.backgroundColor = "var(--color-primary)";
           item.style.opacity = "1";
           item.style.visibility = "visible";
