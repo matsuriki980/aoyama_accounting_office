@@ -179,11 +179,15 @@ layout > drawer
       position: absolute;
       inset: 0;
       opacity: 0;
+      transition: opacity var(--duration-base);
+    }
+  }
+}
 
-      /* 初期表示 */
-      &.is-selected {
-        opacity: 1;
-      }
+.l-drawer__img {
+  img.is-active {
+    @include g.mq() {
+      opacity: 1;
     }
   }
 }
