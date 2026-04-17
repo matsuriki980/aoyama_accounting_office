@@ -43,6 +43,7 @@ layout > header
   mask-image: url(../img/logo.svg);
   @include m.mask-img;
   background-color: var(--color-primary);
+  transition: background-color var(--duration-base);
 
   a {
     display: block;
@@ -212,19 +213,32 @@ layout > header
   }
 }
 
-/* メニューopen時、×に変形 */
-.l-header__btn-drawer.is-open {
-  background-color: var(--color-white);
+/* 下層ページでは文字色を白に */
+.l-header--sub-page {
+  .l-header__logo {
+    a {
+      background-color: var(--color-white);
+      transition: background-color var(--duration-base);
+    }
+  }
 
-  @include g.mq() {
-    background-color: var(--color-primary);
+  .l-header__link {
+    color: var(--color-white);
+  }
 
-    @media (any-hover: hover) {
-      &:hover {
-        background-color: var(--color-white);
+  .l-header__btn-contact {
+    border: 1px solid var(--color-white);
 
-        .l-header__btn-drawer__inner {
-          span {
+    &::before {
+      background-color: var(--color-white);
+    }
+
+    @include g.mq() {
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: var(--color-white);
+
+          &::before {
             background-color: var(--color-primary);
           }
         }
@@ -232,6 +246,129 @@ layout > header
     }
   }
 
+  .l-header__btn-drawer {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-white);
+
+    @include g.mq() {
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: transparent;
+
+          .l-header__btn-drawer__inner {
+            span {
+              background-color: var(--color-white);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .l-header__btn-drawer__inner {
+    span {
+      background-color: var(--color-primary);
+    }
+  }
+
+  &.is-active {
+    .l-header__logo {
+      a {
+        background-color: var(--color-primary);
+      }
+    }
+
+    .l-header__link {
+      color: var(--color-primary);
+    }
+
+    .l-header__btn-contact {
+      border: 1px solid var(--color-primary);
+
+      &::before {
+        background-color: var(--color-primary);
+      }
+
+      @include g.mq() {
+        @media (any-hover: hover) {
+          &:hover {
+            background-color: var(--color-primary);
+
+            &::before {
+              background-color: var(--color-white);
+            }
+          }
+        }
+      }
+    }
+
+    .l-header__btn-drawer {
+      background-color: var(--color-primary);
+      border: 1px solid var(--color-primary);
+
+      .l-header__btn-drawer__inner {
+        span {
+          background-color: var(--color-white);
+        }
+      }
+
+      @include g.mq() {
+        @media (any-hover: hover) {
+          &:hover {
+            background-color: transparent;
+
+            .l-header__btn-drawer__inner {
+              span {
+                background-color: var(--color-primary);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ========================================
+// トリガー要素を通過したら背景表示
+// ========================================
+.l-header.is-active {
+  background-color: var(--color-white);
+}
+
+// ========================================
+// ドロワーメニューが開いているときのスタイル
+// ========================================
+.l-header.is-drawer-open {
+  .l-header__logo {
+    background-color: var(--color-white);
+  }
+
+  .l-header__gnav,
+  .l-header__btn-contact {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .l-header__btn-drawer {
+    @include g.mq() {
+      background-color: var(--color-primary);
+
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: var(--color-white);
+
+          .l-header__btn-drawer__inner {
+            span {
+              background-color: var(--color-primary);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* ドロワーメニューopen時、2本線を×に変形 */
   .l-header__btn-drawer__inner {
     span {
       position: absolute;
@@ -261,6 +398,18 @@ layout > header
 
         @include g.mq() {
           top: 10rem;
+        }
+      }
+    }
+  }
+}
+
+.l-header--sub-page.is-drawer-open {
+  .l-header__btn-drawer {
+    @include g.mq() {
+      @media (any-hover: hover) {
+        &:hover {
+          border: 1px solid var(--color-primary);
         }
       }
     }
