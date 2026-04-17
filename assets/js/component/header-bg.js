@@ -7,9 +7,11 @@ export const initializeHeaderBg = () => {
   const triggerItem = document.querySelector(".js-trigger");
   const drawerBtn = document.querySelector(".js-btn-drawer");
 
-  // 読み込み時に位置を取得し、表示・非表示を切り替える
+  if (!header || !triggerItem || !drawerBtn) return;
+
+  // リロード時の位置に応じて表示を切り替え
   const initTriggerPassed = () => {
-    const triggerTop = triggerItem.getBoundingClientRect().top;
+    const triggerTop = triggerItem.getBoundingClientRect().top; //画面上部からトリガー要素上部の距離を計算
     if (triggerTop < 0) {
       header.classList.add("is-active");
     }
@@ -17,28 +19,29 @@ export const initializeHeaderBg = () => {
 
   initTriggerPassed();
 
-  // トリガー要素を通過、かつドロワーメニューを閉じているときのみ背景表示
+  // プラグでトリガー要素通過、ドロワーメニューの状態を判定
   let drawerPlug = false;
   let isTriggerPassed = false;
 
-  const updateHeader = () => {
-    if (!drawerPlug && isTriggerPassed) {
+  // トリガー要素を通過かつ、ドロワーメニューが閉じているときに背景表示
+  const headerIsActive = () => {
+    if (isTriggerPassed && !drawerPlug) {
       header.classList.add("is-active");
     } else {
       header.classList.remove("is-active");
     }
   };
 
-  // クリックと同時に開閉状態を判定
+  // クリック時に開閉状態を判定する
   drawerBtn.addEventListener("click", () => {
     drawerPlug = !drawerPlug;
-    updateHeader();
+    headerIsActive();
   });
 
-  // 画面上部がトリガー要素の上部を超えたら背景表示
+  // 画面上部がトリガー要素上部を通過したらtrue
   window.addEventListener("scroll", () => {
-    const triggerTop = triggerItem.getBoundingClientRect().top;
+    const triggerTop = triggerItem.getBoundingClientRect().top; //画面上部からトリガー要素上部の距離を計算
     isTriggerPassed = triggerTop < 0;
-    updateHeader();
+    headerIsActive();
   });
 };
