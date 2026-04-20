@@ -351,6 +351,8 @@ layout > header
   }
 
   .l-header__btn-drawer {
+    background-color: var(--color-white);
+
     @include g.mq() {
       background-color: var(--color-primary);
 

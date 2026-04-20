@@ -4,7 +4,7 @@
 
 export const initializeHeaderBg = () => {
   const header = document.querySelector(".js-header");
-  const triggerItem = document.querySelector(".js-trigger");
+  const triggerItem = document.querySelector(".js-header-trigger");
   const drawerBtn = document.querySelector(".js-btn-drawer");
 
   if (!header || !triggerItem || !drawerBtn) return;
