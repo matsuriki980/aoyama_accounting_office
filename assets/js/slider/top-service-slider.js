@@ -11,16 +11,14 @@ export const initializeServiceSlider = () => {
     // 全デバイス共通
     arrows: false,
     pagination: false,
-    autoWidth: true,
-
-    // pcではdragをfalseにし疑似的にスライダーを無効化
     drag: false,
 
     breakpoints: {
       900: {
-        type: "loop",
+        perPage: 1,
         drag: true,
-        perMove: "1",
+        focus: 0,
+        padding: { right: "12%" },
       },
     },
   }).mount();
