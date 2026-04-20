@@ -54,13 +54,20 @@ page > top > top-service
   }
 }
 
+.top-service__splide {
+  padding-top: 40rem;
+
+  @include g.mq() {
+    padding-top: 80rem;
+  }
+}
+
 .top-service__list {
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: repeat(3, 330rem);
+  display: flex;
   margin-top: 40rem;
 
   @include g.mq() {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     position: relative;
@@ -74,8 +81,10 @@ page > top > top-service
   border-right: 1px solid var(--color-border-light-black);
   border-bottom: 1px solid var(--color-border-light-black);
   background-color: var(--color-white);
+  width: 330rem;
 
   @include g.mq() {
+    width: auto;
     padding: 90rem 60rem 150rem;
     border-top: 0px solid var(--color-border-light-black);
     border-bottom: 0px solid var(--color-border-light-black);
