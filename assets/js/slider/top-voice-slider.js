@@ -14,6 +14,18 @@ export const initializeTopVoiceSlider = () => {
   if (!topVoiceSplide) return;
 
   const topVoiceSplideInstance = new Splide(topVoiceSplide, {
+    arrows: false,
+    pagination: false,
+    perPage: 1,
+    focus: 0,
+    rewind: true,
+    padding: { right: "56.25%" },
+
+    breakpoints: {
+      900: {
+        padding: { right: "12%" },
+      },
+    },
   });
 
   topVoiceSplideInstance.mount();

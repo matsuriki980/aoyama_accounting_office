@@ -2617,15 +2617,6 @@ page > top > top-voice
   }
 }
 
-.top-voice__item {
-  width: 330rem;
-}
-@media screen and (min-width: 900px) {
-  .top-voice__item {
-    width: 420rem;
-  }
-}
-
 .top-voice__link {
   border-top: 1px solid var(--color-border-light);
   border-bottom: 1px solid var(--color-border-light);
