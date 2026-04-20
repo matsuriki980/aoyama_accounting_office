@@ -83,7 +83,15 @@ page > top > top-voice
   }
 }
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 .top-voice__splide-btn-wrap {
+=======
+.top-voice__slide-btn-wrap {
+>>>>>>> Stashed changes
+=======
+.top-voice__slide-btn-wrap {
+>>>>>>> Stashed changes
   display: none;
 
   @include g.mq() {
@@ -92,6 +100,8 @@ page > top > top-voice
   }
 }
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 .top-voice__splide-btn {
   background-color: var(--color-white);
 }
@@ -109,10 +119,28 @@ page > top > top-voice
   @include g.mq() {
     padding-top: 0;
   }
+=======
+=======
+>>>>>>> Stashed changes
+.top-voice__slide-btn {
+  background-color: var(--color-white);
+}
+
+.top-voice__slide-btn--prev {
+  transform: scale(-1, 1);
+}
+
+.top-voice__slide-btn--next {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 }
 
 .top-voice__list {
   margin-top: 37rem;
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
   border-top: 1px solid var(--color-border-light);
   border-bottom: 1px solid var(--color-border-light);
 
@@ -139,6 +167,26 @@ page > top > top-voice
     border-top: 0;
     border-bottom: 0;
   }
+=======
+=======
+>>>>>>> Stashed changes
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 330rem);
+
+  @include g.mq() {
+    grid-template-columns: repeat(3, 420rem);
+    margin-top: 0;
+  }
+}
+
+.top-voice__link {
+  border-top: 0;
+  border-bottom: 0;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 }
 
 .top-voice__btn {
