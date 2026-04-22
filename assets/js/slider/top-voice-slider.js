@@ -2,40 +2,24 @@
  top-voice カルーセルスライダー
 */
 
-export const initializeTopVoiceSlider = () => {
-  const topVoiceSplide = document.querySelector(".top-voice__splide");
-  const topVoiceSplideBtnPrev = document.querySelector(
-    ".top-voice__splide-btn--prev",
-  );
-  const topVoiceSplideBtnNext = document.querySelector(
-    ".top-voice__splide-btn--next",
-  );
+export const initTopVoiceSlider = () => {
+  const topVoiceSwiper = document.querySelector(".top-voice__slider");
 
-  if (!topVoiceSplide) return;
+  if (!topVoiceSwiper) return;
 
-  const topVoiceSplideInstance = new Splide(topVoiceSplide, {
-    arrows: false,
-    pagination: false,
-    perPage: 1,
-    focus: 0,
-    rewind: true,
-    padding: { right: "56.25%" },
+  const mySwiper = new Swiper(topVoiceSwiper, {
+    slidesPerView: 1.135,
 
     breakpoints: {
       900: {
-        padding: { right: "12%" },
+        slidesPerView: 2.286,
+
+        // ナビゲーションボタン
+        navigation: {
+          nextEl: ".top-voice__slider-btn--next",
+          prevEl: ".top-voice__slider-btn--prev",
+        },
       },
     },
-  });
-
-  topVoiceSplideInstance.mount();
-
-  // カスタム矢印で制御する
-  topVoiceSplideBtnPrev.addEventListener("click", () => {
-    topVoiceSplideInstance.go("<");
-  });
-
-  topVoiceSplideBtnNext.addEventListener("click", () => {
-    topVoiceSplideInstance.go(">");
   });
 };
