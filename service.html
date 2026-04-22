@@ -23,8 +23,10 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Zen+Kaku+Gothic+Antique:wght@400;500&display=swap"
         rel="stylesheet">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <!-- cssを読み込む -->
-    <link rel="stylesheet" href="assets/css/vendor/splide-core.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -323,69 +325,120 @@
                         <h2 class="c-title-ja">お問い合わせ</h2>
                         <span class="c-title-en">contact us</span>
                     </div>
-                    <!-- /.l-contact-cta__title-wrap .c-title-wrap -->
 
                     <p class="l-contact-cta__text">
-                        <span>税務や会計について確認したいことなど、どのようなご相談でも構いません。</span>
+                        <span>税務や会計について確認したいことなど、</span>
+                        <span>どのようなご相談でも構いません。</span>
                         <span>まずはお気軽にご相談ください。</span>
                     </p>
 
-                    <a href="contact.html" class="l-contact-cta__btn c-btn c-btn_arrow" aria-label="お問い合わせCTAボタン"></a>
+                    <div class="l-contact-cta__btn-wrap">
+                        <a href="contact.html" class="l-contact-cta__btn c-btn c-btn_arrow"
+                            aria-label="お問い合わせCTAボタン"></a>
+                    </div>
                 </div>
-                <!-- /.l-contact-cta__content -->
                 <div class="l-contact-cta__img-area">
-                    <div class="l-contact-cta__img-wrap l-contact-cta__img-wrap_primary">
-                        <span class="l-contact-cta__img">
-                            <picture>
-                                <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta01.jpg ">
-                                <img src="assets/img/common/contact-cta01-sp.jpg" width="150" height="90"
-                                    alt="電卓とペンを使って事務作業を行うスーツの人物" loading="lazy" decoding="async">
-                            </picture>
-                        </span>
-                        <span class="l-contact-cta__img">
-                            <picture>
-                                <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta02.jpg ">
-                                <img src="assets/img/common/contact-cta02-sp.jpg" width="150" height="90"
-                                    alt="笑顔でこちらを向くスーツ姿の、50歳前後の白髪の男性と30歳前後のショートカットの女性" loading="lazy" decoding="async">
-                            </picture>
-                        </span>
-                        <span class="l-contact-cta__img">
-                            <picture>
-                                <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta03.jpg ">
-                                <img src="assets/img/common/contact-cta03-sp.jpg" width="150" height="90"
-                                    alt="スマホを触る人物の手" loading="lazy" decoding="async">
-                            </picture>
-                        </span>
+                    <div class="swiper l-contact-cta__slider l-contact-cta__slider--primary">
+                        <div class="swiper-wrapper">
+
+                            <!-- loop時の不具合を防ぐため、2週配置する -->
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta01.jpg ">
+                                    <img src="assets/img/common/contact-cta01-sp.jpg" width="150" height="90"
+                                        alt="電卓とペンを使って事務作業を行うスーツの人物" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta02.jpg ">
+                                    <img src="assets/img/common/contact-cta02-sp.jpg" width="150" height="90"
+                                        alt="笑顔でこちらを向くスーツ姿の、50歳前後の白髪の男性と30歳前後のショートカットの女性" loading="lazy"
+                                        decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta03.jpg ">
+                                    <img src="assets/img/common/contact-cta03-sp.jpg" width="150" height="90"
+                                        alt="スマホを触る人物の手" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta01.jpg ">
+                                    <img src="assets/img/common/contact-cta01-sp.jpg" width="150" height="90"
+                                        alt="電卓とペンを使って事務作業を行うスーツの人物" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta02.jpg ">
+                                    <img src="assets/img/common/contact-cta02-sp.jpg" width="150" height="90"
+                                        alt="笑顔でこちらを向くスーツ姿の、50歳前後の白髪の男性と30歳前後のショートカットの女性" loading="lazy"
+                                        decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta03.jpg ">
+                                    <img src="assets/img/common/contact-cta03-sp.jpg" width="150" height="90"
+                                        alt="スマホを触る人物の手" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                        </div>
                     </div>
-                    <!-- /.l-contact-cta__img-wrap _primary -->
-                    <div class="l-contact-cta__img-wrap l-contact-cta__img-wrap_secondary">
-                        <span class="l-contact-cta__img">
-                            <picture>
-                                <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta04.jpg ">
-                                <img src="assets/img/common/contact-cta04-sp.jpg" width="150" height="90"
-                                    alt="パソコンを前に打ち合わせをする、女性2人と男性1人" loading="lazy" decoding="async">
-                            </picture>
-                        </span>
-                        <span class="l-contact-cta__img">
-                            <picture>
-                                <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta05.jpg ">
-                                <img src="assets/img/common/contact-cta05-sp.jpg" width="150" height="90"
-                                    alt="管理職席を中心に、デスクが並ぶ白基調のオフィス" loading="lazy" decoding="async">
-                            </picture>
-                        </span>
-                        <span class="l-contact-cta__img">
-                            <picture>
-                                <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta06.jpg ">
-                                <img src="assets/img/common/contact-cta06-sp.jpg" width="150" height="90"
-                                    alt="電卓を手に提案をするスーツ男性とそれに応じる女性" loading="lazy" decoding="async">
-                            </picture>
-                        </span>
+
+                    <div class="swiper l-contact-cta__slider l-contact-cta__slider--secondaryary">
+                        <div class="swiper-wrapper">
+
+                            <!-- loop時の不具合を防ぐため、2週配置する -->
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta04.jpg ">
+                                    <img src="assets/img/common/contact-cta04-sp.jpg" width="150" height="90"
+                                        alt="パソコンを前に打ち合わせをする、女性2人と男性1人" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta05.jpg ">
+                                    <img src="assets/img/common/contact-cta05-sp.jpg" width="150" height="90"
+                                        alt="管理職席を中心に、デスクが並ぶ白基調のオフィス" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta06.jpg ">
+                                    <img src="assets/img/common/contact-cta06-sp.jpg" width="150" height="90"
+                                        alt="電卓を手に提案をするスーツ男性とそれに応じる女性" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta04.jpg ">
+                                    <img src="assets/img/common/contact-cta04-sp.jpg" width="150" height="90"
+                                        alt="パソコンを前に打ち合わせをする、女性2人と男性1人" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta05.jpg ">
+                                    <img src="assets/img/common/contact-cta05-sp.jpg" width="150" height="90"
+                                        alt="管理職席を中心に、デスクが並ぶ白基調のオフィス" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta06.jpg ">
+                                    <img src="assets/img/common/contact-cta06-sp.jpg" width="150" height="90"
+                                        alt="電卓を手に提案をするスーツ男性とそれに応じる女性" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                        </div>
                     </div>
-                    <!-- /.l-contact-cta__img-wrap _secondary -->
                 </div>
-                <!-- /.l-contact-cta__img-area -->
             </div>
-            <!-- /.l-contact-cta__inner -->
         </section>
     </main>
 
@@ -402,7 +455,7 @@
                 </a>
             </div>
 
-            <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+            <nav class="l-footer__nav">
                 <ul class="l-footer__list">
 
                     <!-- Column 1 -->
@@ -494,9 +547,8 @@
         <!-- /.l-footer__inner -->
     </footer>
 
-    <!-- splideを読み込む -->
-    <script src="assets/js/vendor/splide.min.js" defer></script>
-    <script src="assets/js/vendor/splide-extension-auto-scroll.min.js" defer></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
     <!-- 各処理をまとめたjsファイルを読み込む -->
     <script type="module" src="assets/js/main.js"></script>

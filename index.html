@@ -28,8 +28,10 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Zen+Kaku+Gothic+Antique:wght@400;500&display=swap"
         rel="stylesheet">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <!-- cssを読み込む -->
-    <link rel="stylesheet" href="assets/css/vendor/splide-core.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -274,76 +276,70 @@
                 </div>
             </div>
 
-            <div class="splide top-service__splide">
-                <div class="splide__track">
-                    <ol class="top-service__list splide__list">
-                        <li class="top-service__item splide__slide">
-                            <a href="service.html#tax-accounting" class="top-service__link">
-                                <div class="top-service__img">
-                                    <img src="assets/img/top/top-service01.jpg" width="270" height="300"
-                                        alt="打ち合わせの資料と電卓を使う人物の手" loading="lazy" decoding="async">
+            <div class="swiper top-service__slider">
+                <ol class="swiper-wrapper top-service__list">
+                    <li class="swiper-slide top-service__item">
+                        <a href="service.html#tax-accounting" class="top-service__link">
+                            <div class="top-service__img">
+                                <img src="assets/img/top/top-service01.jpg" width="270" height="300"
+                                    alt="打ち合わせの資料と電卓を使う人物の手" loading="lazy" decoding="async">
+                            </div>
+
+                            <div class="top-service__item-title-wrap">
+                                <h3 class="top-service__item-title-ja">税務・会計</h3>
+                                <span class="top-service__item-title-en">Tax & Accounting</span>
+
+                                <div class="top-service__decoration-wrap">
+                                    <span></span>
                                 </div>
+                            </div>
 
-                                <div class="top-service__item-title-wrap">
-                                    <h3 class="top-service__item-title-ja">税務・会計</h3>
-                                    <span class="top-service__item-title-en">Tax & Accounting</span>
+                            <span class="top-service__arrow-btn c-btn c-btn_arrow"></span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide top-service__item">
+                        <a href="service.html#capital-gains" class="top-service__link">
+                            <div class="top-service__img">
+                                <img src="assets/img/top/top-service02.jpg" width="270" height="300"
+                                    alt="電卓を手に提案をするスーツ男性とそれに応じる女性" loading="lazy" decoding="async">
+                            </div>
 
-                                    <div class="top-service__decoration-wrap">
-                                        <span></span>
-                                    </div>
+                            <div class="top-service__item-title-wrap">
+                                <h3 class="top-service__item-title-ja">相続・贈与・譲渡所得</h3>
+                                <span class="top-service__item-title-en">Capital gains</span>
+
+                                <div class="top-service__decoration-wrap">
+                                    <span></span>
+                                    <span></span>
                                 </div>
+                            </div>
 
-                                <span class="top-service__arrow-btn c-btn c-btn_arrow"></span>
-                            </a>
-                        </li>
+                            <span class="top-service__arrow-btn c-btn c-btn_arrow"></span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide top-service__item">
+                        <a href="service.html#support" class="top-service__link">
+                            <div class="top-service__img">
+                                <img src="assets/img/top/top-service03.jpg" width="270" height="300"
+                                    alt="ビル群の中で上を見上げるキャリアウーマン" loading="lazy" decoding="async">
+                            </div>
 
-                        <li class="top-service__item splide__slide">
-                            <a href="service.html#capital-gains" class="top-service__link">
-                                <div class="top-service__img">
-                                    <img src="assets/img/top/top-service02.jpg" width="270" height="300"
-                                        alt="電卓を手に提案をするスーツ男性とそれに応じる女性" loading="lazy" decoding="async">
+                            <div class="top-service__item-title-wrap">
+                                <h3 class="top-service__item-title-ja">設立・開業支援</h3>
+                                <span class="top-service__item-title-en">Support for opening a business</span>
+
+                                <div class="top-service__decoration-wrap">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
                                 </div>
+                            </div>
 
-                                <div class="top-service__item-title-wrap">
-                                    <h3 class="top-service__item-title-ja">相続・贈与・譲渡所得</h3>
-                                    <span class="top-service__item-title-en">Capital gains</span>
-
-                                    <div class="top-service__decoration-wrap">
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-
-                                <span class="top-service__arrow-btn c-btn c-btn_arrow"></span>
-                            </a>
-                        </li>
-
-                        <li class="top-service__item splide__slide">
-                            <a href="service.html#support" class="top-service__link">
-                                <div class="top-service__img">
-                                    <img src="assets/img/top/top-service03.jpg" width="270" height="300"
-                                        alt="ビル群の中で上を見上げるキャリアウーマン" loading="lazy" decoding="async">
-                                </div>
-
-                                <div class="top-service__item-title-wrap">
-                                    <h3 class="top-service__item-title-ja">設立・開業支援</h3>
-                                    <span class="top-service__item-title-en">Support for opening a business</span>
-
-                                    <div class="top-service__decoration-wrap">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-
-                                <span class="top-service__arrow-btn c-btn c-btn_arrow"></span>
-                            </a>
-                        </li>
-                    </ol>
-                </div>
-                <!-- /.splide__track -->
+                            <span class="top-service__arrow-btn c-btn c-btn_arrow"></span>
+                        </a>
+                    </li>
+                </ol>
             </div>
-            <!-- /.splide -->
         </section>
 
         <!-- =========================================
@@ -421,20 +417,20 @@
                             </span>
                         </div>
 
-                        <div class="top-voice__splide-btn-wrap">
-                            <button class="top-voice__splide-btn top-voice__splide-btn--prev c-btn c-btn_arrow"
+                        <div class="top-voice__slider-btn-wrap">
+                            <button class="top-voice__slider-btn top-voice__slider-btn--prev c-btn c-btn_arrow"
                                 aria-label="カルーセルボタン（戻る）"></button>
-                            <button class="top-voice__splide-btn top-voice__splide-btn--next c-btn c-btn_arrow"
+                            <button class="top-voice__slider-btn top-voice__slider-btn--next c-btn c-btn_arrow"
                                 aria-label="カルーセルボタン（進む）"></button>
                         </div>
 
                     </div>
                     <!-- /.top-voice__content -->
 
-                    <div class="splide top-voice__splide">
-                        <div class="splide__track">
-                            <div class="splide__list top-voice__list">
-                                <article class="splide__slide c-voice__item top-voice__item">
+                    <div class="swiper top-voice__slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide top-voice__slide-item">
+                                <article class="c-voice__item">
                                     <a href="voice-detail-01.html" class="c-voice__link top-voice__link">
                                         <span class="c-voice__number">(01)</span>
                                         <div class="c-voice__img">
@@ -447,8 +443,10 @@
                                         </div>
                                     </a>
                                 </article>
+                            </div>
 
-                                <article class="splide__slide c-voice__item top-voice__item">
+                            <div class="swiper-slide top-voice__slide-item">
+                                <article class="c-voice__item">
                                     <a href="voice-detail-02.html" class="c-voice__link top-voice__link">
                                         <span class="c-voice__number">(02)</span>
                                         <div class="c-voice__img">
@@ -462,8 +460,10 @@
                                         </div>
                                     </a>
                                 </article>
+                            </div>
 
-                                <article class="splide__slide c-voice__item top-voice__item">
+                            <div class="swiper-slide top-voice__slide-item">
+                                <article class="c-voice__item">
                                     <a href="voice-detail-03.html" class="c-voice__link top-voice__link">
                                         <span class="c-voice__number">(03)</span>
                                         <div class="c-voice__img">
@@ -477,57 +477,9 @@
                                         </div>
                                     </a>
                                 </article>
-
-                                <article class="splide__slide c-voice__item top-voice__item">
-                                    <a href="voice-detail-04.html" class="c-voice__link top-voice__link">
-                                        <span class="c-voice__number">(04)</span>
-                                        <div class="c-voice__img">
-                                            <img src="assets/img/voice/voice04.jpg" width="270" height="300"
-                                                alt="商談を行う、スーツ姿の男性">
-                                        </div>
-                                        <div class="c-voice__content">
-                                            <p class="c-voice__name">株式会社中央パートナーズ Y・K様</p>
-                                            <h3 class="c-voice__title">いつも丁寧に進めてくれるので助かっています。困ったときに真っ先に相談したくなります。
-                                            </h3>
-                                        </div>
-                                    </a>
-                                </article>
-
-                                <article class="splide__slide c-voice__item top-voice__item">
-                                    <a href="voice-detail-05.html" class="c-voice__link top-voice__link">
-                                        <span class="c-voice__number">(05)</span>
-                                        <div class="c-voice__img">
-                                            <img src="assets/img/voice/voice05.jpg" width="270" height="300"
-                                                alt="制服を着た女性カフェ店員">
-                                        </div>
-                                        <div class="c-voice__content">
-                                            <p class="c-voice__name">カフェ・ルミエール A・S様</p>
-                                            <h3 class="c-voice__title">いつも頼れる心強い存在。丁寧で的確に対応してくれるので、安心して相談できます
-                                            </h3>
-                                        </div>
-                                    </a>
-                                </article>
-
-                                <article class="splide__slide c-voice__item top-voice__item">
-                                    <a href="voice-detail-06.html" class="c-voice__link top-voice__link">
-                                        <span class="c-voice__number">(06)</span>
-                                        <div class="c-voice__img">
-                                            <img src="assets/img/voice/voice06.jpg" width="270" height="300"
-                                                alt="商談を行う、スーツ姿の男性">
-                                        </div>
-                                        <div class="c-voice__content">
-                                            <p class="c-voice__name">株式会社東和企画 H・R様</p>
-                                            <h3 class="c-voice__title">親身でどんなことでも相談しやすいです。信頼してお願いできます。
-                                            </h3>
-                                        </div>
-                                    </a>
-                                </article>
                             </div>
-                            <!-- /.splide__list -->
                         </div>
-                        <!-- /.splide__track -->
                     </div>
-                    <!-- /.splide -->
                 </div>
                 <!-- /.top-voice__head -->
 
@@ -541,8 +493,6 @@
         </section>
 
         <!-- =========================================
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
      top-news
 ========================================= -->
         <section class="top-news l-container">
@@ -619,10 +569,6 @@
         </section>
 
         <!-- =========================================
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
      contact-cta
 ========================================= -->
         <section class="l-contact-cta">
@@ -632,71 +578,121 @@
                         <h2 class="c-title-ja">お問い合わせ</h2>
                         <span class="c-title-en">contact us</span>
                     </div>
-                    <!-- /.l-contact-cta__title-wrap .c-title-wrap -->
 
                     <p class="l-contact-cta__text">
-                        <span>税務や会計について確認したいことなど、どのようなご相談でも構いません。</span>
+                        <span>税務や会計について確認したいことなど、</span>
+                        <span>どのようなご相談でも構いません。</span>
                         <span>まずはお気軽にご相談ください。</span>
                     </p>
 
-                    <a href="contact.html" class="l-contact-cta__btn c-btn c-btn_arrow" aria-label="お問い合わせCTAボタン"></a>
+                    <div class="l-contact-cta__btn-wrap">
+                        <a href="contact.html" class="l-contact-cta__btn c-btn c-btn_arrow"
+                            aria-label="お問い合わせCTAボタン"></a>
+                    </div>
                 </div>
-                <!-- /.l-contact-cta__content -->
                 <div class="l-contact-cta__img-area">
-                    <div class="l-contact-cta__img-wrap l-contact-cta__img-wrap_primary">
-                        <span class="l-contact-cta__img">
-                            <picture>
-                                <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta01.jpg ">
-                                <img src="assets/img/common/contact-cta01-sp.jpg" width="150" height="90"
-                                    alt="電卓とペンを使って事務作業を行うスーツの人物" loading="lazy" decoding="async">
-                            </picture>
-                        </span>
-                        <span class="l-contact-cta__img">
-                            <picture>
-                                <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta02.jpg ">
-                                <img src="assets/img/common/contact-cta02-sp.jpg" width="150" height="90"
-                                    alt="笑顔でこちらを向くスーツ姿の、50歳前後の白髪の男性と30歳前後のショートカットの女性" loading="lazy" decoding="async">
-                            </picture>
-                        </span>
-                        <span class="l-contact-cta__img">
-                            <picture>
-                                <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta03.jpg ">
-                                <img src="assets/img/common/contact-cta03-sp.jpg" width="150" height="90"
-                                    alt="スマホを触る人物の手" loading="lazy" decoding="async">
-                            </picture>
-                        </span>
-                    </div>
-                    <!-- /.l-contact-cta__img-wrap _primary -->
-                    <div class="l-contact-cta__img-wrap l-contact-cta__img-wrap_secondaryary">
-                        <span class="l-contact-cta__img">
-                            <picture>
-                                <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta04.jpg ">
-                                <img src="assets/img/common/contact-cta04-sp.jpg" width="150" height="90"
-                                    alt="パソコンを前に打ち合わせをする、女性2人と男性1人" loading="lazy" decoding="async">
-                            </picture>
-                        </span>
-                        <span class="l-contact-cta__img">
-                            <picture>
-                                <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta05.jpg ">
-                                <img src="assets/img/common/contact-cta05-sp.jpg" width="150" height="90"
-                                    alt="管理職席を中心に、デスクが並ぶ白基調のオフィス" loading="lazy" decoding="async">
-                            </picture>
-                        </span>
-                        <span class="l-contact-cta__img">
-                            <picture>
-                                <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta06.jpg ">
-                                <img src="assets/img/common/contact-cta06-sp.jpg" width="150" height="90"
-                                    alt="電卓を手に提案をするスーツ男性とそれに応じる女性" loading="lazy" decoding="async">
-                            </picture>
-                        </span>
-                    </div>
-                    <!-- /.l-contact-cta__img-wrap _secondaryary -->
-                </div>
-                <!-- /.l-contact-cta__img-area -->
-            </div>
-            <!-- /.l-contact-cta__inner -->
-        </section>
+                    <div class="swiper l-contact-cta__slider l-contact-cta__slider--primary">
+                        <div class="swiper-wrapper">
 
+                            <!-- loop時の不具合を防ぐため、2週配置する -->
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta01.jpg ">
+                                    <img src="assets/img/common/contact-cta01-sp.jpg" width="150" height="90"
+                                        alt="電卓とペンを使って事務作業を行うスーツの人物" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta02.jpg ">
+                                    <img src="assets/img/common/contact-cta02-sp.jpg" width="150" height="90"
+                                        alt="笑顔でこちらを向くスーツ姿の、50歳前後の白髪の男性と30歳前後のショートカットの女性" loading="lazy"
+                                        decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta03.jpg ">
+                                    <img src="assets/img/common/contact-cta03-sp.jpg" width="150" height="90"
+                                        alt="スマホを触る人物の手" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta01.jpg ">
+                                    <img src="assets/img/common/contact-cta01-sp.jpg" width="150" height="90"
+                                        alt="電卓とペンを使って事務作業を行うスーツの人物" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta02.jpg ">
+                                    <img src="assets/img/common/contact-cta02-sp.jpg" width="150" height="90"
+                                        alt="笑顔でこちらを向くスーツ姿の、50歳前後の白髪の男性と30歳前後のショートカットの女性" loading="lazy"
+                                        decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta03.jpg ">
+                                    <img src="assets/img/common/contact-cta03-sp.jpg" width="150" height="90"
+                                        alt="スマホを触る人物の手" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper l-contact-cta__slider l-contact-cta__slider--secondaryary">
+                        <div class="swiper-wrapper">
+
+                            <!-- loop時の不具合を防ぐため、2週配置する -->
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta04.jpg ">
+                                    <img src="assets/img/common/contact-cta04-sp.jpg" width="150" height="90"
+                                        alt="パソコンを前に打ち合わせをする、女性2人と男性1人" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta05.jpg ">
+                                    <img src="assets/img/common/contact-cta05-sp.jpg" width="150" height="90"
+                                        alt="管理職席を中心に、デスクが並ぶ白基調のオフィス" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta06.jpg ">
+                                    <img src="assets/img/common/contact-cta06-sp.jpg" width="150" height="90"
+                                        alt="電卓を手に提案をするスーツ男性とそれに応じる女性" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta04.jpg ">
+                                    <img src="assets/img/common/contact-cta04-sp.jpg" width="150" height="90"
+                                        alt="パソコンを前に打ち合わせをする、女性2人と男性1人" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta05.jpg ">
+                                    <img src="assets/img/common/contact-cta05-sp.jpg" width="150" height="90"
+                                        alt="管理職席を中心に、デスクが並ぶ白基調のオフィス" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta06.jpg ">
+                                    <img src="assets/img/common/contact-cta06-sp.jpg" width="150" height="90"
+                                        alt="電卓を手に提案をするスーツ男性とそれに応じる女性" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- =========================================
@@ -804,12 +800,8 @@
         <!-- /.l-footer__inner -->
     </footer>
 
-    <!-- gsapを読み込む -->
-    <script src="assets/js/vendor/gsap.min.js" defer></script>
-
-    <!-- splideを読み込む -->
-    <script src="assets/js/vendor/splide.min.js" defer></script>
-    <script src="assets/js/vendor/splide-extension-auto-scroll.min.js" defer></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
     <!-- 各処理をまとめたjsファイルを読み込む -->
     <script type="module" src="assets/js/main.js"></script>
