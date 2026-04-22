@@ -37,8 +37,7 @@ page > top > top-voice
 .top-voice__head {
   @include g.mq() {
     margin-inline: 30rem;
-    display: grid;
-    grid-template-columns: 450rem 1fr;
+    display: flex;
     border-top: 1px solid var(--color-border-light);
     border-bottom: 1px solid var(--color-border-light);
   }
@@ -48,7 +47,7 @@ page > top > top-voice
   padding-inline: 26rem;
 
   @include g.mq() {
-    padding: 90rem 0.47rem 60rem 90rem;
+    padding: 90rem 47rem 60rem 90rem;
     border-right: 1px solid var(--color-border-light);
     display: flex;
     flex-direction: column;
@@ -83,15 +82,7 @@ page > top > top-voice
   }
 }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-.top-voice__splide-btn-wrap {
-=======
-.top-voice__slide-btn-wrap {
->>>>>>> Stashed changes
-=======
-.top-voice__slide-btn-wrap {
->>>>>>> Stashed changes
+.top-voice__slider-btn-wrap {
   display: none;
 
   @include g.mq() {
@@ -100,65 +91,23 @@ page > top > top-voice
   }
 }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-.top-voice__splide-btn {
+.top-voice__slider-btn {
   background-color: var(--color-white);
 }
 
-.top-voice__splide-btn--prev {
+.top-voice__slider-btn--prev {
   transform: scale(-1, 1);
 }
 
-.top-voice__splide-btn--next {
-}
-
-.top-voice__splide {
-  padding-top: 40rem;
-
-  @include g.mq() {
-    padding-top: 0;
-  }
-=======
-=======
->>>>>>> Stashed changes
-.top-voice__slide-btn {
-  background-color: var(--color-white);
-}
-
-.top-voice__slide-btn--prev {
-  transform: scale(-1, 1);
-}
-
-.top-voice__slide-btn--next {
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-}
-
-.top-voice__list {
-  margin-top: 37rem;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  border-top: 1px solid var(--color-border-light);
-  border-bottom: 1px solid var(--color-border-light);
+.top-voice__slider {
+  margin-top: 40rem;
 
   @include g.mq() {
     margin-top: 0;
-    border-top: 0;
-    border-bottom: 0;
   }
 }
 
-//  .top-voice__item {
-//   width: 330rem;
-//   @include g.mq() {
-//     width: 420rem;
-//   }
-//  }
-
-.top-voice__link {
+.top-voice__slide-item {
   border-top: 1px solid var(--color-border-light);
   border-bottom: 1px solid var(--color-border-light);
   border-right: 1px solid var(--color-border-light);
@@ -167,26 +116,6 @@ page > top > top-voice
     border-top: 0;
     border-bottom: 0;
   }
-=======
-=======
->>>>>>> Stashed changes
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: repeat(3, 330rem);
-
-  @include g.mq() {
-    grid-template-columns: repeat(3, 420rem);
-    margin-top: 0;
-  }
-}
-
-.top-voice__link {
-  border-top: 0;
-  border-bottom: 0;
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 }
 
 .top-voice__btn {
