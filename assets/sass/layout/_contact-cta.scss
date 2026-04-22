@@ -5,9 +5,8 @@ layout > contact-cta
 ------------------------------
 */
 .l-contact-cta {
-  background-color: var(--color-primary);
   padding: 50rem 30rem 0;
-  border-top: 1px solid var(--color-white);
+  background-color: var(--color-primary);
 
   @include g.mq() {
     padding: 90rem 60rem 0;
@@ -16,94 +15,86 @@ layout > contact-cta
 
 .l-contact-cta__inner {
   background-color: var(--color-white);
-  background-image: url(../img/contact_cta_bg_texture.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 10rem;
-  padding-block: 45rem;
+  padding-block: 30rem 36rem;
+  border-radius: 9rem;
 
   @include g.mq() {
-    display: grid;
-    grid-template-columns: 485rem 570rem;
-    justify-content: space-between;
+    padding: 0 60rem;
+    width: 100%;
+    height: 540rem;
+    display: flex;
     align-items: center;
-    padding-block: 0;
-    padding-inline: 72rem 60rem;
-    background-image: none;
+    justify-content: space-between;
+    border-radius: 10rem;
   }
 }
 
 .l-contact-cta__content {
-  padding-inline: 30rem;
+  padding-inline: 28rem;
 
   @include g.mq() {
-    padding-inline: 0;
+    padding: 0;
+    width: 485rem;
   }
 }
+
 .l-contact-cta__text {
-  text-align: center;
   margin-top: 16rem;
 
   @include g.mq() {
-    text-align: left;
-    margin-top: 38rem;
-  }
-
-  span {
-    display: block;
+    margin-top: 40rem;
   }
 }
 
-.l-contact-cta__btn {
+.l-contact-cta__btn-wrap {
   margin-top: 16rem;
-  margin-inline: auto;
+  display: flex;
+  justify-content: center;
 
   @include g.mq() {
     margin-top: 34rem;
-    margin-inline: 0 auto;
+    display: block;
   }
 }
 
 .l-contact-cta__img-area {
   margin-top: 30rem;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  gap: 8rem;
 
   @include g.mq() {
-    height: 540rem;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(2, 1fr);
+    margin-top: 0;
+    width: 570rem;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
     gap: 30rem;
-    margin: 0;
+    overflow: hidden;
   }
 }
 
-.l-contact-cta__img-wrap {
-  display: flex;
-  gap: 8rem;
+.l-contact-cta__slider {
+  /* スライドの動き等速 */
+  .swiper-wrapper {
+    transition-timing-function: linear;
 
-  @include g.mq() {
-    flex-direction: column;
-    gap: 16rem;
+    @include g.mq() {
+      height: 1020rem;
+    }
   }
 }
 
-.l-contact-cta__img-wrap_primary {
-}
-
-.l-contact-cta__img {
-  width: 150rem;
-  border-radius: 5rem;
+.l-contact-cta__slider-item {
   overflow: hidden;
+  border-radius: 5rem;
 
   @include g.mq() {
-    width: 270rem;
+    border-radius: 10rem;
   }
 }
 
-.l-contact-cta__img-wrap_secondary {
+.l-contact-cta__slider--secondaryary {
+  margin-top: 9rem;
+
+  @include g.mq() {
+    margin-top: 0;
+  }
 }
