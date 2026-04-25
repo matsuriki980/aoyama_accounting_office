@@ -126,11 +126,10 @@ page > top > top-voice
   @include g.mq() {
     margin-top: 89rem;
     margin-inline: auto;
+    text-align: center;
   }
 }
 
-.top-voice__btn-link {
-  @include g.mq() {
-    justify-content: center;
-  }
+.top-voice__btn-text-wrap {
+  width: 170rem;
 }

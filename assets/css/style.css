@@ -339,28 +339,107 @@ utility > utility
 component > button
 ------------------------------
 */
+.c-btn {
+  display: block;
+}
+@media screen and (min-width: 900px) {
+  .c-btn {
+    display: inline-block;
+  }
+}
+
 .c-btn__link {
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 15rem;
   align-items: center;
+  gap: 15rem;
 }
 @media screen and (min-width: 900px) {
   .c-btn__link {
-    width: auto;
     grid-template-columns: 163rem auto;
-    gap: 20rem;
   }
 }
-.c-btn__link::before {
+
+/* ---------- border設定 ---------- */
+.c-btn__border {
+  height: 1px;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (min-width: 900px) {
+  .c-btn__border {
+    height: 0.8px;
+  }
+}
+.c-btn__border::before, .c-btn__border::after {
   content: "";
   display: block;
-  height: 1px;
+  width: 100%;
+  height: 100%;
   background-color: currentColor;
+  position: absolute;
+}
+.c-btn__border::before {
+  left: 0;
+}
+.c-btn__border::after {
+  left: -100%;
 }
 
-/* 矢印付 */
+@media screen and (min-width: 900px) and (any-hover: hover) {
+  .c-btn__link:hover .c-btn__border::before {
+    animation-name: btn-border-animation;
+    animation-duration: 0.4s;
+    animation-delay: 0s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
+  .c-btn__link:hover .c-btn__border::after {
+    animation-name: btn-border-animation;
+    animation-duration: 0.6s;
+    animation-delay: 0s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
+}
+@keyframes btn-border-animation {
+  to {
+    transform: translateX(100%);
+  }
+}
+/* ---------- text設定 ---------- */
+.c-btn__text-wrap {
+  height: 25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.c-btn__text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.c-btn__text--second {
+  top: 100%;
+}
+
+@media screen and (min-width: 900px) and (any-hover: hover) {
+  .c-btn__link:hover .c-btn__text {
+    animation-name: btn-text-animation;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
+}
+@keyframes btn-text-animation {
+  to {
+    transform: translateY(-100%);
+  }
+}
+/* ---------- 矢印付 ---------- */
 .c-btn_arrow {
   display: inline-block;
   width: 84rem;
@@ -2005,6 +2084,10 @@ page > top > top-about
   }
 }
 
+.top-about__btn-text-wrap {
+  width: 120rem;
+}
+
 .top-about__img {
   display: none;
 }
@@ -2125,6 +2208,12 @@ page > top > top-service
     display: flex;
     align-items: center;
     height: 105rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .top-service__btn-text-wrap {
+    width: 255rem;
   }
 }
 
@@ -2441,6 +2530,10 @@ page > top > top-feature
   margin-top: 39rem;
 }
 
+.top-feature__btn-text-wrap {
+  width: 225rem;
+}
+
 .top-feature__marquee {
   position: absolute;
   z-index: 0;
@@ -2627,13 +2720,12 @@ page > top > top-voice
   .top-voice__btn {
     margin-top: 89rem;
     margin-inline: auto;
+    text-align: center;
   }
 }
 
-@media screen and (min-width: 900px) {
-  .top-voice__btn-link {
-    justify-content: center;
-  }
+.top-voice__btn-text-wrap {
+  width: 170rem;
 }
 
 /*!
@@ -2681,11 +2773,12 @@ page > top > top-news
 @media screen and (min-width: 900px) {
   .top-news__btn {
     margin-top: 60rem;
+    text-align: right;
   }
 }
 
-.top-news__btn-link {
-  justify-content: flex-end;
+.top-news__btn-text-wrap {
+  width: 155rem;
 }
 
 /*!
