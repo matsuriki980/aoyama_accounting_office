@@ -47,9 +47,10 @@ page > top > top-news
 
   @include g.mq() {
     margin-top: 60rem;
+    text-align: right;
   }
 }
 
-.top-news__btn-link {
-  justify-content: flex-end;
+.top-news__btn-text-wrap {
+  width: 155rem;
 }

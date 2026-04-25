@@ -51,6 +51,12 @@ page > top > top-service
   }
 }
 
+.top-service__btn-text-wrap {
+  @include g.mq() {
+    width: 255rem;
+  }
+}
+
 .top-service__slider {
   margin-top: 40rem;
 
