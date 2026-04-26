@@ -4098,14 +4098,22 @@ page > news > news-content
   }
 }
 
-.news__content {
+.news__inner {
   display: grid;
   grid-template-columns: 1fr;
 }
 @media screen and (min-width: 900px) {
-  .news__content {
+  .news__inner {
     grid-template-columns: 1fr 900rem;
     gap: 90rem;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .news__sidebar {
+    position: sticky;
+    top: 120rem;
   }
 }
 

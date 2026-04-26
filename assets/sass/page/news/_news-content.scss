@@ -13,13 +13,21 @@ page > news > news-content
   }
 }
 
-.news__content {
+.news__inner {
   display: grid;
   grid-template-columns: 1fr;
 
   @include g.mq() {
     grid-template-columns: 1fr 900rem;
     gap: 90rem;
+    align-items: flex-start;
+  }
+}
+
+.news__sidebar {
+  @include g.mq() {
+    position: sticky;
+    top: 120rem;
   }
 }
 
