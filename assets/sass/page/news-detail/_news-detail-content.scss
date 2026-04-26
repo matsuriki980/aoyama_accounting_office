@@ -17,32 +17,27 @@ page > news-detail > news-detail-content
   padding-inline: 30rem;
 
   @include g.mq() {
-    position: relative;
-    padding-inline: 420rem 215rem;
+    padding: 0 210rem 0 115rem;
+    display: grid;
+    grid-template-columns: 1fr 810rem;
+    align-items: flex-start;
+    gap: 90rem;
   }
 }
 
-.news-detail__fixed {
+/* 記事内のみサイドバーを追従 */
+.news-detail__sidebar {
   @include g.mq() {
-    width: 210rem;
-    position: fixed;
-    left: 114rem;
+    position: sticky;
     top: 120rem;
   }
 }
+
 .news-detail__title-en {
   font-size: 64rem;
 
   @include g.mq() {
     font-size: 70rem;
-  }
-}
-
-.news-detail__sidebar {
-  margin-top: 48rem;
-
-  @include g.mq() {
-    margin-top: 36rem;
   }
 }
 
@@ -398,6 +393,7 @@ page > news-detail > news-detail-content
 
   @include g.mq() {
     margin-top: 86rem;
+    text-align: center;
   }
 }
 
@@ -405,4 +401,8 @@ page > news-detail > news-detail-content
   @include g.mq() {
     justify-content: center;
   }
+}
+
+.news-detail__btn-text-wrap {
+  width: 155rem;
 }
