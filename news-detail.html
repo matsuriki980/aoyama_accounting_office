@@ -158,52 +158,39 @@
     <main>
 
         <div class="news-detail js-header-trigger">
-
             <div class="news-detail__inner">
-
-                <div class="news-detail__fixed">
+                <aside class="news-detail__sidebar c-news__sidebar">
 
                     <p class="c-title-en news-detail__title-en">
                         news
                     </p>
 
-                    <aside class="c-news__sidebar news-detail__sidebar">
-                        <section class="c-news__sidebar-category">
-                            <h2 class="c-news__sidebar-title">Category</h2>
-                            <ul class="c-news__sidebar-list">
-                                <li class="c-news__sidebar-item"><a class="c-news__sidebar-link u-text-hover"
-                                        href="#">すべて
-                                        <span>()</span></a></li>
-                                <li class="c-news__sidebar-item"><a class="c-news__sidebar-link u-text-hover"
-                                        href="#">お知らせ
-                                        <span>()</span></a></li>
-                                <li class="c-news__sidebar-item"><a class="c-news__sidebar-link u-text-hover"
-                                        href="#">カテゴリー
-                                        <span>()</span></a></li>
-                            </ul>
-                        </section>
+                    <section class="c-news__sidebar-category">
+                        <h2 class="c-news__sidebar-title">Category</h2>
+                        <ul class="c-news__sidebar-list">
+                            <li class="c-news__sidebar-item"><a class="c-news__sidebar-link u-text-hover" href="#">すべて
+                                    <span>()</span></a></li>
+                            <li class="c-news__sidebar-item"><a class="c-news__sidebar-link u-text-hover" href="#">お知らせ
+                                    <span>()</span></a></li>
+                            <li class="c-news__sidebar-item"><a class="c-news__sidebar-link u-text-hover" href="#">カテゴリー
+                                    <span>()</span></a></li>
+                        </ul>
+                    </section>
 
-                        <section class="c-c-news__sidebar-archive">
-                            <h2 class="c-news__sidebar-title">Archive</h2>
-                            <ul class="c-news__sidebar-list">
-                                <li class="c-news__sidebar-item"><a class="c-news__sidebar-link u-text-hover"
-                                        href="#">2026年
-                                        <span>()</span></a></li>
-                                <li class="c-news__sidebar-item"><a class="c-news__sidebar-link u-text-hover"
-                                        href="#">2025年
-                                        <span>()</span></a></li>
-                                <li class="c-news__sidebar-item"><a class="c-news__sidebar-link u-text-hover"
-                                        href="#">2024年
-                                        <span>()</span></a></li>
-                            </ul>
-                        </section>
-                    </aside>
-
-                </div>
-
+                    <section class="c-c-news__sidebar-archive">
+                        <h2 class="c-news__sidebar-title">Archive</h2>
+                        <ul class="c-news__sidebar-list">
+                            <li class="c-news__sidebar-item"><a class="c-news__sidebar-link u-text-hover" href="#">2026年
+                                    <span>()</span></a></li>
+                            <li class="c-news__sidebar-item"><a class="c-news__sidebar-link u-text-hover" href="#">2025年
+                                    <span>()</span></a></li>
+                            <li class="c-news__sidebar-item"><a class="c-news__sidebar-link u-text-hover" href="#">2024年
+                                    <span>()</span></a></li>
+                        </ul>
+                    </section>
+                </aside>
                 <article class="news-detail__article">
 
-                    <!-- title -->
                     <header>
                         <div class="news-detail__meta">
                             <span class="news-detail__category">お知らせ</span>
@@ -215,7 +202,6 @@
                         </h1>
                     </header>
 
-                    <!-- アイキャッチ -->
                     <figure class="news-detail__thumbnail">
                         <img src="assets/img/news-detail/news-detail01.jpg" width="315" height="390"
                             alt="白いデスクの上でパソコン作業を行う人物との手">
@@ -317,8 +303,6 @@
 
                     <div class="news-detail__link">
                         <h2 class="news-detail__article-section-title">リンク</h2>
-
-                        <!-- ボタン -->
                         <div class="news-detail__link-btn-wrap">
                             <a href="#" class="news-detail__link-btn"><span
                                     class="news-detail__link-arrow"></span>リンクボタンが入ります</a>
@@ -332,18 +316,21 @@
                         </p>
 
                     </div>
-                </article>
 
-                <!-- =========================================
-          news-detail__btn
-    ======================================== -->
-                <div class="news-detail__btn-wrap">
-                    <div class="news-detail__btn">
-                        <div class="c-btn">
-                            <a href="news.html" class="c-btn__link news-detail__btn-link">お知らせ一覧へ戻る</a>
+                    <div class="news-detail__btn-wrap">
+                        <div class="news-detail__btn">
+                            <div class="c-btn">
+                                <a href="news.html" class="c-btn__link news-detail__btn-link">
+                                    <span class="c-btn__border"></span>
+                                    <span class="c-btn__text-wrap news-detail__btn-text-wrap">
+                                        <span class="c-btn__text c-btn__text--first">お知らせ一覧へ戻る</span>
+                                        <span class="c-btn__text c-btn__text--second">お知らせ一覧へ戻る</span>
+                                    </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
 
