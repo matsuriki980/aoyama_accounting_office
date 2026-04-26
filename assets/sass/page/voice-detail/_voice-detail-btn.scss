@@ -10,9 +10,14 @@ page > voice-detail > voice-detail-btn
 
   @include g.mq() {
     padding-inline: 320rem;
+    text-align: center;
   }
 }
 
 .voice-detail__btn-link {
     justify-content: center;
+}
+
+.voice-detail__btn-text-wrap {
+  width: 170rem;
 }
