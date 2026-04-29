@@ -37,6 +37,7 @@ page > contact > contact-form
   display: grid;
   grid-template-columns: 1fr;
   gap: 30rem;
+  width: 100%;
 
   @include g.mq() {
     gap: 22rem;

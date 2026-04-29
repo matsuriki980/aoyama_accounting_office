@@ -815,12 +815,14 @@ component > form-item
   display: flex;
   flex-direction: column;
   gap: 12rem;
+  width: 100%;
 }
 
 .c-form__label {
   display: flex;
   align-items: center;
   gap: 5rem;
+  width: 100%;
 }
 
 .c-form__label-text {
@@ -837,6 +839,7 @@ component > form-item
   background-color: var(--color-bg-gray);
   border: 1px solid rgba(48, 48, 48, 0.1);
   padding: 7rem 17rem;
+  width: 100%;
 }
 
 .c-form__text::-moz-placeholder {
@@ -4605,6 +4608,7 @@ page > contact > contact-form
   display: grid;
   grid-template-columns: 1fr;
   gap: 30rem;
+  width: 100%;
 }
 @media screen and (min-width: 900px) {
   .contact__form {
