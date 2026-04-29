@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- og設定 -->
+    <meta property="og:title" content="セミナー・研修の様子をご紹介します | news-detail-02">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://matsuyamarikiya.jp/aoyama_accounting_office/news-detail-02.html">
+    <meta property="og:image" content="https://matsuyamarikiya.jp/aoyama_accounting_ office/assets/img/og-img.jpg">
+
+    <title>セミナー・研修の様子をご紹介します | news-detail-02</title>
+
+    <!-- ファビコンを設定する -->
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- google fontを読み込む -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Zen+Kaku+Gothic+Antique:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- cssを読み込む -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+     Header
+========================================= -->
+    <header class="l-header js-header">
+        <div class="l-header__inner">
+            <div class="l-header__logo js-header-logo">
+                <a href="index.html" aria-label="ヘッダー ロゴ"></a>
+            </div>
+
+            <div class="l-header__block-right">
+                <nav class="l-header__gnav js-gnav" aria-label="グローバルナビゲーション">
+                    <div class="l-header__gnav-inner">
+                        <ul class="l-header__gnav-list">
+                            <li class="l-header__item">
+                                <a href="feature.html" class="l-header__link u-text-hover">青山会計事務所の強み</a>
+                            </li>
+                            <li class="l-header__item">
+                                <a href="service.html" class="l-header__link u-text-hover">サービス内容</a>
+                            </li>
+                            <li class="l-header__item">
+                                <a href="voice.html" class="l-header__link u-text-hover">お客様の声</a>
+                            </li>
+                            <li class="l-header__item">
+                                <a href="news.html" class="l-header__link u-text-hover">お知らせ</a>
+                            </li>
+                            <li class="l-header__item">
+                                <a href="about.html" class="l-header__link u-text-hover">事務所案内</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="l-header__btn-wrap">
+                    <a href="contact.html" class="l-header__btn l-header__btn-contact js-btn-contact"
+                        aria-label="ヘッダー お問い合わせボタン"></a>
+                    <button class="l-header__btn l-header__btn-drawer js-btn-drawer" aria-label="ドロワーボタン">
+                        <span class="l-header__btn-drawer__inner">
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- グローバルナビゲーションと項目が異なるため、別要素で構築 -->
+    <nav class="l-drawer js-drawer" aria-label="ドロワーメニュー">
+        <div class="l-drawer__inner">
+            <ul class="l-drawer__list">
+                <li class="l-drawer__item is-selected js-drawer__item" data-item="feature">
+                    <a href="feature.html" class="l-drawer__link">青山会計事務所の強み</a>
+                </li>
+                <li class="l-drawer__item l-drawer__primary-item js-drawer__item" data-item="service">
+                    <a href="service.html" class="l-drawer__link l-drawer__primary-link">サービス内容</a>
+                    <ul class="l-drawer__secondary-list">
+                        <li class="l-drawer__secondary-item">
+                            <a href="service.html#tax-accounting" class="l-drawer__secondary-link">税務・会計</a>
+                        </li>
+                        <li class="l-drawer__secondary-item">
+                            <a href="service.html#capital-gains" class="l-drawer__secondary-link">相続・贈与・譲渡所得</a>
+                        </li>
+                        <li class="l-drawer__secondary-item">
+                            <a href="service.html#support" class="l-drawer__secondary-link">設立・開業支援</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="l-drawer__item l-drawer__primary-item js-drawer__item" data-item="about">
+                    <a href="about.html" class="l-drawer__link l-drawer__primary-link">事務所案内</a>
+                    <ul class="l-drawer__secondary-list">
+                        <li class="l-drawer__secondary-item">
+                            <a href="about.html#message" class="l-drawer__secondary-link">代表挨拶</a>
+                        </li>
+                        <li class="l-drawer__secondary-item">
+                            <a href="about.html#values" class="l-drawer__secondary-link">経営理念</a>
+                        </li>
+                        <li class="l-drawer__secondary-item">
+                            <a href="about.html#company" class="l-drawer__secondary-link">事務所概要</a>
+                        </li>
+                        <li class="l-drawer__secondary-item">
+                            <a href="about.html#access" class="l-drawer__secondary-link">アクセス</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="l-drawer__item js-drawer__item" data-item="voice">
+                    <a href="voice.html" class="l-drawer__link">お客様の声</a>
+                </li>
+                <li class="l-drawer__item js-drawer__item" data-item="news">
+                    <a href="news.html" class="l-drawer__link">お知らせ</a>
+                </li>
+                <li class="l-drawer__item js-drawer__item" data-item="contact">
+                    <a href="contact.html" class="l-drawer__link">お問い合わせ</a>
+                </li>
+            </ul>
+
+            <div class="l-drawer__img js-drawer__img sp-hidden">
+                <img data-img="feature" class="is-active" src="assets/img/common/menu01.jpg" width="720" height="806"
+                    alt="パソコンの前で笑顔で打ち合わせをする男女">
+                <img data-img="service" src="assets/img/common/menu02.jpg" width="720" height="806"
+                    alt="パソコンを手に目の前の資料に指を指すスーツ姿の笑顔の男性">
+                <img data-img="about" src="assets/img/common/menu03.jpg" width="720" height="806"
+                    alt="デスクが並ぶ白基調の綺麗なオフィス">
+                <img data-img="voice" src="assets/img/common/menu04.jpg" width="720" height="806" alt="スマートフォンを触る人物の手">
+                <img data-img="news" src="assets/img/common/menu05.jpg" width="720" height="806"
+                    alt="新聞のタイトルをピックアップしている写真">
+                <img data-img="contact" src="assets/img/common/menu06.jpg" width="720" height="806"
+                    alt="パソコンを手にするキャリアウーマンの女性">
+            </div>
+        </div>
+
+        <div class="l-drawer__marquee c-marquee">
+            <div class="l-drawer__marquee__inner c-marquee__inner">
+                <span>Numbers Expert Numbers Expert</span>
+                <span>Numbers Expert Numbers Expert</span> <!-- 2個配置し途切れるのを防ぐ -->
+            </div>
+            <!-- /.l-drawer__marquee__inner -->
+        </div>
+        <!-- /.l-drawer__marquee -->
+    </nav>
+
+    <!-- =========================================
+          news-detail
+    ======================================== -->
+    <main>
+
+        <div class="news-detail js-header-trigger">
+            <div class="news-detail__inner">
+                <aside class="news-detail__sidebar c-news__sidebar">
+
+                    <p class="c-title-en news-detail__title-en">
+                        news
+                    </p>
+
+                    <section class="c-news__sidebar-category">
+                        <h2 class="c-news__sidebar-title">Category</h2>
+                        <ul class="c-news__sidebar-list">
+                            <li class="news__sidebar-item"><a class="news__sidebar-link u-text-hover" href="#">すべて
+                                    <span>(3)</span></a></li>
+                            <li class="news__sidebar-item"><a class="news__sidebar-link u-text-hover" href="#">お知らせ
+                                    <span>(3)</span></a></li>
+                            <li class="news__sidebar-item"><a class="news__sidebar-link u-text-hover" href="#">カテゴリー
+                                    <span>(0)</span></a></li>
+                        </ul>
+                    </section>
+
+                    <section class="c-c-news__sidebar-archive">
+                        <h2 class="c-news__sidebar-title">Archive</h2>
+                        <ul class="c-news__sidebar-list">
+                            <li class="c-news__sidebar-item"><a class="c-news__sidebar-link u-text-hover" href="#">2026年
+                                    <span>(3)</span></a></li>
+                        </ul>
+                    </section>
+                </aside>
+                <article class="news-detail__article">
+
+                    <header>
+                        <div class="news-detail__meta">
+                            <span class="news-detail__category">お知らせ</span>
+                            <time datetime="2026-01-20">2026.01.20</time>
+                        </div>
+
+                        <h1 class="news-detail__title">
+                            セミナー・研修の様子をご紹介します
+                        </h1>
+                    </header>
+
+                    <figure class="news-detail__thumbnail">
+                        <picture>
+                            <source media="(min-width: 900px)" srcset="assets/img/news-detail/news-detail02.jpg">
+                            <img src="assets/img/news/news02.jpg" width="315" height="390"
+                                alt="グラフが示されたスクリーンとその内容を説明するスーツ姿の男性とそれを聞く男女">
+                        </picture>
+                    </figure>
+
+                    <section class="news-detail__content">
+
+                        <div class="news-detail__content-item">
+                            <h2 class="news-detail__article-section-title">セミナー開催のご報告と今後の情報提供について</h2>
+                            <p>
+                                先日、当事務所主催のセミナーを開催いたしました。
+                                経営者様やご担当者様を対象に、税務・会計に関する実務的な内容を中心に解説させていただきました。
+                                参加者の皆様には、日々の業務に活かせる具体的な情報をお届けできたのではないかと考えております。
+                                また、質疑応答の時間も設けることで、個別のお悩みや疑問点についても直接ご相談いただける機会となりました。
+                                今後もこのような場を通じて、有益な情報発信を行ってまいります。
+                            </p>
+                        </div>
+
+                        <div class="news-detail__content-item">
+                            <h3>セミナー内容について</h3>
+                            <p>
+                                今回のセミナーでは、最新の税制改正のポイントや、実務における対応方法について解説いたしました。
+                                具体的な事例を交えながら説明することで、より理解しやすい内容となるよう心がけております。
+                                初めてご参加いただいた方にも分かりやすい構成とし、基礎から応用まで幅広くカバーした内容となりました。
+                            </p>
+                        </div>
+
+                        <div class="news-detail__content-item">
+                            <h4>当日の様子と参加者の反応</h4>
+                            <p>
+                                当日は多くの方にご参加いただき、終始活発な雰囲気の中で進行いたしました。
+                                講師からの説明に対して熱心に耳を傾けていただき、メモを取られている姿も多く見受けられました。
+                                また、セミナー終了後には個別相談のお時間も設け、多くのご質問をいただくなど、高い関心を持っていただけたことが印象的でした。
+                            </p>
+                        </div>
+
+                        <div class="news-detail__content-item">
+                            <h5>今後のセミナー開催について</h5>
+                            <p>
+                                今後も定期的にセミナーや勉強会の開催を予定しております。
+                                内容については、税務・会計に限らず、経営に役立つテーマを幅広く取り上げていく予定です。
+                                参加しやすい形式や分かりやすい内容を意識し、より多くの方にご活用いただける機会を提供してまいります。
+                            </p>
+                        </div>
+
+                        <div class="news-detail__content-item">
+                            <h6>サポート体制とフォローアップ</h6>
+                            <p>
+                                セミナーにご参加いただいた方には、必要に応じて個別のご相談にも対応しております。
+                                実務に落とし込む際の具体的なサポートについても、丁寧にご案内いたします。
+                                引き続き、お客様の状況に応じた最適なご提案ができるよう努めてまいります。
+                            </p>
+                        </div>
+                    </section>
+
+                    <div class="news-detail__list-wrap">
+
+                        <h2 class="news-detail__article-section-title">リスト</h2>
+
+                        <ul class="news-detail__list news-detail__list-bullet">
+                            <li class="news-detail__item">税制改正に関する最新情報の解説</li>
+                            <li class="news-detail__item">実務に役立つ具体的な事例紹介</li>
+                            <li class="news-detail__item">初心者にも分かりやすい内容構成</li>
+                        </ul>
+
+                        <ol class="news-detail__list news-detail__list-number">
+                            <li class="news-detail__item"><span>1.</span>個別相談の実施</li>
+                            <li class="news-detail__item"><span>2.</span>質疑応答の時間を確保</li>
+                            <li class="news-detail__item"><span>3.</span>参加者同士の情報共有の機会</li>
+                        </ol>
+                    </div>
+
+                    <div class="news-detail__img-wrap">
+                        <h2 class="news-detail__article-section-title">画像</h2>
+
+                        <div class="news-detail-img">
+                            <span><img src="assets/img/news-detail/news-detail-img.jpg" width="315" height="194"
+                                    alt=""></span>
+                            <span><img src="assets/img/news-detail/news-detail-img.jpg" width="127" height="78"
+                                    alt=""></span>
+                            <span><img src="assets/img/news-detail/news-detail-img.jpg" width="127" height="78"
+                                    alt=""></span>
+                            <span class="sp-hidden"><img src="assets/img/news-detail/news-detail-img.jpg" width="256"
+                                    height="158" alt=""></span>
+                            <span class="sp-hidden"><img src="assets/img/news-detail/news-detail-img.jpg" width="256"
+                                    height="158" alt=""></span>
+                            <span class="sp-hidden"><img src="assets/img/news-detail/news-detail-img.jpg" width="256"
+                                    height="158" alt=""></span>
+                        </div>
+                    </div>
+
+                    <div class="news-detail__link">
+                        <h2 class="news-detail__article-section-title">リンク</h2>
+                        <div class="news-detail__link-btn-wrap">
+                            <a href="#" class="news-detail__link-btn"><span
+                                    class="news-detail__link-arrow"></span>セミナーの詳細・開催情報はこちら</a>
+                            <a href="#" class="news-detail__link-btn"><span
+                                    class="news-detail__link-arrow"></span>個別相談のお問い合わせはこちら</a>
+                        </div>
+
+                        <p class="news-detail__link-text">
+                            当事務所では、セミナーを通じて得た知識を実務に活かしていただけるよう、継続的なサポートを行っております。
+                            <a href="#">ご興味のある方はぜひお気軽にお問い合わせください。</a>
+                            今後ともどうぞよろしくお願いいたします。
+
+                    </div>
+
+                    <div class="news-detail__btn-wrap">
+                        <div class="news-detail__btn">
+                            <div class="c-btn">
+                                <a href="news.html" class="c-btn__link news-detail__btn-link">
+                                    <span class="c-btn__border"></span>
+                                    <span class="c-btn__text-wrap news-detail__btn-text-wrap">
+                                        <span class="c-btn__text c-btn__text--first">お知らせ一覧へ戻る</span>
+                                        <span class="c-btn__text c-btn__text--second">お知らせ一覧へ戻る</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- =========================================
+     contact-cta
+========================================= -->
+        <section class="l-contact-cta">
+            <div class="l-contact-cta__inner">
+                <div class="l-contact-cta__content">
+                    <div class="l-contact-cta__title-wrap c-title-wrap">
+                        <h2 class="c-title-ja">お問い合わせ</h2>
+                        <span class="c-title-en">contact us</span>
+                    </div>
+
+                    <p class="l-contact-cta__text">
+                        <span>税務や会計について確認したいことなど、</span>
+                        <span>どのようなご相談でも構いません。</span>
+                        <span>まずはお気軽にご相談ください。</span>
+                    </p>
+
+                    <div class="l-contact-cta__btn-wrap">
+                        <a href="contact.html" class="l-contact-cta__btn c-btn c-btn_arrow"
+                            aria-label="お問い合わせCTAボタン"></a>
+                    </div>
+                </div>
+                <div class="l-contact-cta__img-area">
+                    <div class="swiper l-contact-cta__slider l-contact-cta__slider--primary">
+                        <div class="swiper-wrapper">
+
+                            <!-- loop時の不具合を防ぐため、2週配置する -->
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta01.jpg ">
+                                    <img src="assets/img/common/contact-cta01-sp.jpg" width="150" height="90"
+                                        alt="電卓とペンを使って事務作業を行うスーツの人物" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta02.jpg ">
+                                    <img src="assets/img/common/contact-cta02-sp.jpg" width="150" height="90"
+                                        alt="笑顔でこちらを向くスーツ姿の、50歳前後の白髪の男性と30歳前後のショートカットの女性" loading="lazy"
+                                        decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta03.jpg ">
+                                    <img src="assets/img/common/contact-cta03-sp.jpg" width="150" height="90"
+                                        alt="スマホを触る人物の手" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta01.jpg ">
+                                    <img src="assets/img/common/contact-cta01-sp.jpg" width="150" height="90"
+                                        alt="電卓とペンを使って事務作業を行うスーツの人物" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta02.jpg ">
+                                    <img src="assets/img/common/contact-cta02-sp.jpg" width="150" height="90"
+                                        alt="笑顔でこちらを向くスーツ姿の、50歳前後の白髪の男性と30歳前後のショートカットの女性" loading="lazy"
+                                        decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta03.jpg ">
+                                    <img src="assets/img/common/contact-cta03-sp.jpg" width="150" height="90"
+                                        alt="スマホを触る人物の手" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper l-contact-cta__slider l-contact-cta__slider--secondaryary">
+                        <div class="swiper-wrapper">
+
+                            <!-- loop時の不具合を防ぐため、2週配置する -->
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta04.jpg ">
+                                    <img src="assets/img/common/contact-cta04-sp.jpg" width="150" height="90"
+                                        alt="パソコンを前に打ち合わせをする、女性2人と男性1人" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta05.jpg ">
+                                    <img src="assets/img/common/contact-cta05-sp.jpg" width="150" height="90"
+                                        alt="管理職席を中心に、デスクが並ぶ白基調のオフィス" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta06.jpg ">
+                                    <img src="assets/img/common/contact-cta06-sp.jpg" width="150" height="90"
+                                        alt="電卓を手に提案をするスーツ男性とそれに応じる女性" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta04.jpg ">
+                                    <img src="assets/img/common/contact-cta04-sp.jpg" width="150" height="90"
+                                        alt="パソコンを前に打ち合わせをする、女性2人と男性1人" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta05.jpg ">
+                                    <img src="assets/img/common/contact-cta05-sp.jpg" width="150" height="90"
+                                        alt="管理職席を中心に、デスクが並ぶ白基調のオフィス" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide l-contact-cta__slider-item">
+                                <picture>
+                                    <source media="(min-width: 900px)" srcset="assets/img/common/contact-cta06.jpg ">
+                                    <img src="assets/img/common/contact-cta06-sp.jpg" width="150" height="90"
+                                        alt="電卓を手に提案をするスーツ男性とそれに応じる女性" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================
+     footer
+========================================= -->
+    <footer class="l-footer l-container">
+        <div class="l-footer__inner">
+
+            <div class="l-footer__logo">
+                <a href="index.html" class="u-link-hover">
+                    <img src="assets/img/logo_white.svg" width="166" height="22"
+                        alt="青山会計事務所｜静岡市駿河区の税務・会計・相続相談に対応する会計事務所">
+                </a>
+            </div>
+
+            <nav class="l-footer__nav">
+                <ul class="l-footer__list">
+
+                    <!-- Column 1 -->
+                    <li class="l-footer__list-col">
+                        <ul class="l-footer-nav__group">
+
+                            <li class="l-footer__item">
+                                <a href="feature.html" class="l-footer__link u-text-hover">青山会計事務所の強み</a>
+                            </li>
+
+                            <li class="l-footer__item">
+                                <a href="service.html" class="l-footer__link u-text-hover">サービス内容</a>
+                                <ul class="l-footer__list_child c-nav__list_child">
+                                    <li class="l-footer__item_child c-nav__item_child">
+                                        <a href="service.html#tax-accounting"
+                                            class="l-footer__link_child c-nav__link_child">税理・会計</a>
+                                    </li>
+                                    <li class="l-menu__item_child c-nav__item_child">
+                                        <a href="service.html#capital-gains"
+                                            class="l-footer__link_child c-nav__link_child">相続・贈与・譲渡所得</a>
+                                    </li>
+                                    <li class="l-menu__item_child c-nav__item_child">
+                                        <a href="service.html#support"
+                                            class="l-footer__link_child c-nav__link_child">設立・開業支援</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <!-- Column 2 -->
+                    <li class="l-footer__list-col">
+                        <ul class="l-footer-nav__group">
+                            <li class="l-footer__item">
+                                <a href="about.html" class="l-footer__link u-text-hover">事務所案内</a>
+                                <ul class="l-footer__list_child c-nav__list_child">
+                                    <li class="l-footer__item_child c-nav__item_child">
+                                        <a href="about.html#message"
+                                            class="l-footer__link_child c-nav__link_child">代表挨拶</a>
+                                    </li>
+                                    <li class="l-menu__item_child c-nav__item_child">
+                                        <a href="about.html#values"
+                                            class="l-footer__link_child c-nav__link_child">経営理念</a>
+                                    </li>
+                                    <li class="l-menu__item_child c-nav__item_child">
+                                        <a href="about.html#company"
+                                            class="l-footer__link_child c-nav__link_child">事務所概要</a>
+                                    </li>
+                                    <li class="l-menu__item_child c-nav__item_child">
+                                        <a href="about.html#access"
+                                            class="l-footer__link_child c-nav__link_child">アクセス</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Column 3 -->
+                    <li class="l-footer__list-col">
+                        <ul class="l-footer-nav__group">
+                            <li class="l-footer__item">
+                                <a href="voice.html" class="l-footer__link u-text-hover">お客様の声</a>
+                            </li>
+
+                            <li class="l-footer__item">
+                                <a href="news.html" class="l-footer__link u-text-hover">お知らせ</a>
+                            </li>
+
+                            <li class="l-footer__item">
+                                <a href="contact.html" class="l-footer__link u-text-hover">お問い合わせ</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <p class="l-footer__address">
+                <span>〒422-0000</span>
+                <span>静岡市駿河区森下町 静岡MMタワー14F</span>
+            </p>
+
+            <div class="l-footer__legal">
+                <small class="l-footer__copyright">©2024 Aoyama Tax Office.</small>
+                <a href="privacy-policy.html" class="l-foter__privacy-policy">プライバシーポリシー</a>
+            </div>
+
+        </div>
+        <!-- /.l-footer__inner -->
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+    <!-- 各処理をまとめたjsファイルを読み込む -->
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>
