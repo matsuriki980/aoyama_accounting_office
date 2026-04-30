@@ -949,7 +949,7 @@ layout > header
   -webkit-mask-size: cover;
           mask-size: cover;
   background-color: var(--color-primary);
-  transition: background-color var(--duration-base);
+  transition: opacity var(--duration-base), background-color var(--duration-base);
 }
 .l-header__logo a {
   display: block;
