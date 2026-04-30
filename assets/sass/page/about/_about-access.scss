@@ -8,9 +8,11 @@ page > about > about-access
   display: grid;
   grid-template-columns: 1fr;
   border-top: 1px solid var(--color-title-border);
+  scroll-margin-top: 76rem;
 
   @include g.mq() {
     grid-template-columns: 1fr 870rem;
+    scroll-margin-top: 92rem;
   }
 }
 
@@ -22,9 +24,6 @@ page > about > about-access
     padding: 0 0 0 120rem;
     align-self: center;
   }
-}
-
-.about-access__title-wrap {
 }
 
 .about-access__title-en {
