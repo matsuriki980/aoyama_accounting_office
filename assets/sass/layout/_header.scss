@@ -43,7 +43,7 @@ layout > header
   mask-image: url(../img/logo.svg);
   @include m.mask-img;
   background-color: var(--color-primary);
-  transition: background-color var(--duration-base);
+  transition: opacity var(--duration-base), background-color var(--duration-base);
 
   a {
     display: block;
