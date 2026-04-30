@@ -3309,9 +3309,13 @@ page > service > service-content
 }
 
 /*  画像外に配置できるように、絶対座標の機転を画像から要素全体に変更 */
+.service__item {
+  scroll-margin-top: 76rem;
+}
 @media screen and (min-width: 900px) {
   .service__item {
     position: relative;
+    scroll-margin-top: 92rem;
   }
   .service__item .service__img {
     position: static;
