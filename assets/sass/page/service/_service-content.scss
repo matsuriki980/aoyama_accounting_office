@@ -178,8 +178,11 @@ page > service > service-content
 
 /*  画像外に配置できるように、絶対座標の機転を画像から要素全体に変更 */
 .service__item {
+  scroll-margin-top: 76rem;
+
   @include g.mq() {
     position: relative;
+    scroll-margin-top: 92rem;
 
     .service__img {
       position: static;
